@@ -99,4 +99,15 @@ return [
         'filter_placeholder' => '过滤',
     ],
     'menu_titles' => [],
+    'nav' => '导航',
+    'url' => '路由',
+    'keywords' => '关键词',
+    'config' => '配置',
+    'phone' => '手机',
+    'email' => '邮箱',
+    'copyright' => '版权',
+    'icp' => 'icp备案',
+    'bln' => '经营许可证',
+    'website' => '网站名',
+
 ];

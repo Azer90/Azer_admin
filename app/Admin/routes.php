@@ -12,4 +12,7 @@ Route::group([
 
     $router->get('/', 'HomeController@index');
 
+    $router->resource('nav', 'NavController');
+    $router->resource('seo', 'SeoController');
+    $router->resource('config', 'ConfigController');
 });

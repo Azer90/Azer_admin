@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
+
+Route::get('/', 'IndexController@index')->name('/');
+Route::get('software', 'SoftwareController@index')->name('software');
+Route::get('download', 'DownloadController@index')->name('download');
+Route::get('buy', 'BuyController@index')->name('buy');

@@ -1,0 +1,97 @@
+﻿.border_t {border-top: 1px solid #e1e1e1; }
+.selectImgBox{width: 360px; height: 140px; overflow: hidden; padding: 20px 0;}
+#selectImg{position: absolute; left: 0px; top:0px;}
+#selectImg img{margin:20px 10px; width: 100px; box-sizing: border-box;}
+#boxImg, #selectImg img{border:1px solid #eee;}
+#productMoney, .productMoneySQ{margin: 20px 0; background: url(../images/buyinfobg.jpg) no-repeat top left; padding: 8px 4px;}
+#productMoney .totalPrice{color: #E53E26;}
+.infoTag{display: inline-block; height: 28px; line-height: 28px; padding: 0 8px; border: 1px solid #E73C19; color: #E73C19; margin: 0 10px 0 0;}
+.selProducts .products{display:inline-block; width: 430px; height:38px; line-height: 38px;cursor: pointer; border: 1px solid #888; margin:0 20px 15px 0; padding: 0 0 0 14px;}
+.selProducts .active{border: 1px solid #E73C19; color: #E73C19;}
+.selProducts img{cursor: pointer;}
+.selBaozhuang label,
+.selOS label,
+#goumaiType label,
+.voiceInfo label,
+.selPayType span{display:inline-block; border:1px solid #888 ; width: 88px; height: 38px; line-height: 38px; text-align: center; margin:5px 20px 5px 0; cursor: pointer;}
+.selBaozhuang .active2,
+.selOS .active2,
+#goumaiType .active2,
+.voiceInfo .active2,
+.selPayType .active2{border-color: #E73C19 ; color:#E73C19; }
+.selNumBox{width: 122px; height: 38px; border:1px solid #888;}
+.Minus{position: absolute; left: 0; top:0; display: block; width: 38px;height: 38px; line-height: 38px; border:none; background: none; font-size: 20px; text-align:center; color: #888;}
+.selNum{position: absolute; left: 38px; top:0; display: block; width: 38px;height: 36px; line-height: 36px; border:none; font-size: 16px; text-align:center;}
+.Plus{position: absolute; right: 0; top:0; display: block; width: 38px;height: 38px; line-height: 38px; border:none; background: none; font-size: 14px; text-align:center; color: #888;}
+.Minus:hover,
+.Plus:hover{color: #E73C19;}
+.disanfangzhifu .layui-unselect{margin-right: 50px;}
+#orderForm  .layui-form-checkbox[lay-skin="primary"]:hover i {border-color: #2C94FF; }
+#orderForm .layui-form-checked[lay-skin="primary"] i {background-color: #50A6FF; }
+#orderForm  .layui-form-radio i:hover, .layui-form-radioed i {color: #2C94FF; }
+.serviceInfo span{font-size: 12px;}
+.serviceInfo  i{width: 12px !important; height: 12px !important; font-size: 10px !important; margin-top:2px; line-height: 12px !important;}
+.voiceInfo label{width: 150px;}
+.selPayType span{width: 120px;}
+#btnSubmitOrder {background: none; border: 1px solid #e53e26; color: #e53e26; cursor: pointer; display: inline-block; height: 48px; text-align: center; width: 158px; font-size: 18px; margin: 0 20px 0 0;}
+#btnSubmitOrder:hover{color: #fff; background-color: #e53e26}
+.yanzhengHui{filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1); -webkit-filter: grayscale(100%); opacity:0.4;}
+/*购买页申请购买*/
+#sendverifyBtnSQGM{padding: 0 6px;}
+#btnSubmitOrderSQGM {background: none; border: 1px solid #e53e26; color: #e53e26; cursor: pointer; display: inline-block; height: 48px; text-align: center; width: 158px; font-size: 18px; margin: 0 20px 0 0;}
+#btnSubmitOrderSQGM:hover{color: #fff; background-color: #e53e26}
+/*购买流程功能css（勿删）*/
+.hander { display: none; width: 100%; height: 100%;  position: fixed; top: 0; left: 0; z-index: 3;  background:url(../images/handerbg.png);}
+.hander p { background: url("../images/payinfo.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0); height: 326px; margin: 12% auto; text-align: center; width: 520px; }
+.hander p input { border: medium none; cursor: pointer; height: 48px; margin: 235px 10px 0; width: 172px; }
+#payed { background: url("../images/payed.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0); }
+#nopay { background: url("../images/nopay.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0); }
+.handerInfo { border-collapse: collapse; border-spacing: 0; margin-top: 20px; text-align: center; width: 100%; }
+.handerInfo td { padding: 5px; }
+.tbg1 { background-color: #edebe2; }
+.tbg2 { background-color: #fcfbf8; }
+#shuaxin { background: url("../images/shuaxin.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0); border: medium none; cursor: pointer; height: 24px; margin-right: 20px; vertical-align: middle; width: 65px; }
+.hktab td{padding: 10px 0;}
+.daofu_goPay{color: #2B78E4;  margin-left: 10px; cursor: pointer;}
+.daofu_Info{width: 100%; border-collapse:collapse; border-spacing:0;}
+.daofu_Info th{padding: 20px;}
+.daofu_Info td{padding: 20px; border: 1px solid #666; text-align: center;}
+/*手机购买页*/
+@media screen and (max-width:1px) {
+	#boxImg2{max-width: 93%;}
+	#prodTitle{padding:0.533rem 0.467rem; border-bottom: 1px solid #eee;}
+	.prodDis{padding:0.533rem 0.467rem; border-bottom: 1px solid #eee;}
+	.products{width: 9.133rem !important; height: 1.2rem !important; line-height: 1.2rem !important; border-radius: 0.133rem; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+	.selBaozhuang label,
+	.selOS label,
+	#goumaiType label,
+	.voiceInfo label,
+	.selPayType span{border-radius: 0.133rem; width: 2.5rem; height: 1.2rem; line-height: 1.2rem; margin-right: 0.4rem;}
+	.totalPriceBox{padding: 20px; border-top: 1px solid #e1e1e1;}
+	.totalPrice{color: #E73C19;}
+	.selNumBox{border:1px solid #e1e1e1; border-radius: 0.133rem; width: 2.4rem; height: 1.2rem; float: right;}
+	.Minus{top:50%; margin-top:-0.253rem; width: 0.507rem;height: 0.507rem; line-height: 0.507rem; border:none; background: none; font-size: 0.533rem; }
+	.selNum{top:50%; margin-top:-0.240rem; left:50%; margin-left:-0.300rem; font-size: 0.48rem; width: 0.600rem;height: 0.48rem; line-height: 0.48rem;}
+	.Plus{top:50%; margin-top:-0.253rem; width: 0.507rem;height: 0.507rem; line-height: 0.507rem; border:none; background: none; font-size: 0.533rem;}
+	.xinxiTitle{margin:0 auto 0.4rem auto !important; padding:1.067rem 0 0.267rem 0.467rem !important; background-color: #EFEFF4; font-size: 0.613rem !important; border-top: 1px solid #e1e1e1; border-bottom: 1px solid #e1e1e1;}
+	.goumaiInfo input[type=text]{border:none; font-size: 0.347rem !important; height: 0.6rem; line-height: 0.6rem;}
+	.goumaiInfo .layui-select-title input[type=text]{border:1px solid #e6e6e6;}
+	.inputBorder{border-top:1px solid #e1e1e1; padding-top: 15px;}
+	.goumaiInfo .layui-form-switch{width: 1.227rem; height: 0.667rem; margin-top: 0; border-radius: 0.48rem;}
+	.goumaiInfo .layui-form-switch i{width: 0.587rem; height: 0.587rem; left:0.027rem; top: 0.013rem;}
+	.goumaiInfo .layui-form-onswitch i{left:0.573rem; top: 0.013rem;}
+	.voiceInfo label{width: 4.0rem;}
+	.disanfangzhifu div{padding-bottom: 0.133rem;}
+	.buyFooter{background-color: #EFEFF4; border-top: 1px solid #e1e1e1;}
+	.buyFooter p{text-align: center !important;}
+	#btnSubmitOrder{border-radius: 0.507rem; width: 3.467rem; height: 1.013rem; line-height: 1.013rem; font-size: 0.48rem; background-color: #e53e26; color: #fff;}
+	.hander p { background: url("../images/payinfo.jpg") no-repeat; background-size: cover;  height: 4.400rem; margin: 2rem auto; text-align: center; width: 7.000rem; }
+	.hander p input { border: medium none; cursor: pointer; height: 0.64rem; margin: 3.000rem 0.133rem 0; width: 2.293rem; }
+	#payed { background: url("../images/payed.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0); background-size: cover; }
+	#nopay { background: url("../images/nopay.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0); background-size: cover;}
+}
+
+
+/*testGM  AB测试*/
+.testGM{background: url(../images/testgm_bg.png) no-repeat top #f3f3f3;}
+.h600{height: 600px;} .h220{height: 220px;}
