@@ -8,7 +8,7 @@ class IndexController extends Controller
 {
     use BaseController;
     /**
-     * 网站首页
+     * 网站首页111111111
      */
     public function index(){
         $nav=$this->nav;
