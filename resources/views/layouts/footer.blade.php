@@ -6,7 +6,7 @@
 
         <div class="layui-row pt50 pb30 bd-b-2 m_n_pt5 m_n_pb5 m_n_bn">
             <div class="layui-col-xs2 col-12 pr">
-                <img class="jia layui-hide" src="picture/jia.png">
+                <img class="jia layui-hide" src="{{asset('picture/jia.png')}}">
                 <p class="fs20 pb20 m_n_pb10r m_n_fs32r">会声会影</p>
                 <ul class="lh32 hide-n-xs m_n_lh40r m_n_fs24r">
                     <li><a target="_blank" href="jiaocheng.html">功能特性</a></li>
@@ -16,7 +16,7 @@
                 </ul>
             </div>
             <div class="layui-col-xs2 col-12 pr">
-                <img class="jia layui-hide" src="picture/jia.png">
+                <img class="jia layui-hide" src="{{asset('picture/jia.png')}}">
                 <p class="fs20 pb20  m_n_pb10r m_n_fs32r">支持</p>
                 <ul class="lh32 hide-n-xs m_n_lh40r m_n_fs24r">
                     <li><a target="_blank" href="rumen/">新手入门</a></li>

@@ -114,7 +114,7 @@
 {{--侧边栏--}}
 @include('layouts.side')
 {{--js--}}
-@extends('layouts.script')
+@include('layouts.script')
 
 
 

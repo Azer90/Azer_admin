@@ -4,19 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class BuyController extends Controller
+class AboutController extends Controller
 {
     use BaseController;
-
     /**
-     * 购买
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View|\think\response\View
+     * 关于页
      */
     public function index(){
         $nav=$this->nav;
         $name=$this->name;
         $seo=$this->seo;
         $config=$this->config;
-        return view('buy')->with(compact('nav','name','seo','config'));
+        return view('about')->with(compact('nav','name','seo','config'));
     }
 }

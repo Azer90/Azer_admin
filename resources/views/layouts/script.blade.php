@@ -1,4 +1,6 @@
-<script src="js/home/31cada2e907c4bf8b68d23794f9714f8.js"></script>
+<script type="text/javascript" src="{{asset('js/home/jquery.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/home/layui.all.js')}}"></script>
+<script src="{{asset('js/home/31cada2e907c4bf8b68d23794f9714f8.js')}}"></script>
 <div class="dn">
    {{-- 百度站长自动推送--}}
   {{--  <script>(function(){var bp = document.createElement("script"); bp.src ="//push.zhanzhang.baidu.com/push.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(bp, s);})();</script>--}}
@@ -12,9 +14,9 @@
 
 
 </div>
-<script type="text/javascript" src="js/home/common.js"></script>
-<script type="text/javascript" src="js/home/main.js"></script>
-<script type="text/javascript" src="js/home/store.js"></script>
+<script type="text/javascript" src="{{asset('js/home/common.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/home/main.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/home/store.js')}}"></script>
 <script>layui.form.render();layui.flow.lazyimg();</script>
 <script type="text/javascript">
     window.easemobim = window.easemobim || {};
@@ -27,9 +29,9 @@
         visitor: {userNickname:location.host},
     };
 </script>
-<script src="js/home/easemob.js"></script>
+<script src="{{asset('js/home/easemob.js')}}"></script>
 
 <!--[if lt IE 9]>
-<script src="js/home/html5shiv.min.js"></script>
-<script src="js/home/respond.min.js"></script>
+<script src="{{asset('js/home/html5shiv.min.js')}}"></script>
+<script src="{{asset('js/home/respond.min.js')}}"></script>
 <![endif]-->

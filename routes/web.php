@@ -16,6 +16,20 @@
 });*/
 
 Route::get('/', 'IndexController@index')->name('/');
+
+
+
+
 Route::get('software', 'SoftwareController@index')->name('software');
 Route::get('download', 'DownloadController@index')->name('download');
 Route::get('buy', 'BuyController@index')->name('buy');
+
+Route::group(['prefix' => 'surpport'], function () {
+
+    Route::get('/', 'SurpportController@index')->name('surpport');
+    Route::get('help', 'SurpportController@help')->name('help');
+
+});
+
+
+Route::get('about', 'AboutController@index')->name('about');
