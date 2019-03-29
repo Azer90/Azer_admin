@@ -28,7 +28,9 @@ Route::group(['prefix' => 'surpport'], function () {
 
     Route::get('/', 'SurpportController@index')->name('surpport');
     Route::get('help', 'SurpportController@help')->name('help');
-
+    Route::get('problems', 'SurpportController@problems')->name('problems');
+    Route::get('library', 'SurpportController@library')->name('library');
+    Route::get('/{id}', 'SurpportController@detail')->where('id', '[0-9]+')->name('detail');
 });
 
 

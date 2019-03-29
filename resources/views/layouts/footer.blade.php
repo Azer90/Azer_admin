@@ -6,7 +6,6 @@
 
         <div class="layui-row pt50 pb30 bd-b-2 m_n_pt5 m_n_pb5 m_n_bn">
             <div class="layui-col-xs2 col-12 pr">
-                <img class="jia layui-hide" src="{{asset('picture/jia.png')}}">
                 <p class="fs20 pb20 m_n_pb10r m_n_fs32r">会声会影</p>
                 <ul class="lh32 hide-n-xs m_n_lh40r m_n_fs24r">
                     <li><a target="_blank" href="jiaocheng.html">功能特性</a></li>
@@ -16,7 +15,6 @@
                 </ul>
             </div>
             <div class="layui-col-xs2 col-12 pr">
-                <img class="jia layui-hide" src="{{asset('picture/jia.png')}}">
                 <p class="fs20 pb20  m_n_pb10r m_n_fs32r">支持</p>
                 <ul class="lh32 hide-n-xs m_n_lh40r m_n_fs24r">
                     <li><a target="_blank" href="rumen/">新手入门</a></li>
@@ -26,7 +24,6 @@
                 </ul>
             </div>
             <div class="layui-col-xs2 col-12 pr">
-                <img class="jia layui-hide" src="picture/jia.png">
                 <p class="fs20 pb20  m_n_pb10r m_n_fs32r">关于</p>
                 <ul class="lh32 hide-n-xs m_n_lh40r m_n_fs24r">
                     <li><a target="_blank" href="aboutus.html">关于我们</a></li>
@@ -40,27 +37,27 @@
                 <h3 class="fs20 pb20 m_n_pb10r m_n_fs32r"><a target="_blank" href="lianxiwomen.html">联系我们</a></h3>
                 <ul class="lh32 hide-n-xs m_n_lh40r m_n_fs24r">
                     @if (isset($config['phone']))
-                        <li><img src="picture/footertel.png" class="mr15">{{ $config['phone'] }}</li>
+                        <li><img src="{{asset('picture/footertel.png')}}" class="mr15">{{ $config['phone'] }}</li>
                     @endif
 
                     @if (isset($config['email']))
-                        <li><img src="picture/footermail.png" class="mr15"><a href="mailto:{{ $config['email'] }}" rel="nofollow">{{ $config['email'] }}</a></li>
+                        <li><img src="{{asset('picture/footermail.png')}}" class="mr15"><a href="mailto:{{ $config['email'] }}" rel="nofollow">{{ $config['email'] }}</a></li>
                     @endif
 
 
                 </ul>
             </div>
             <div class="layui-col-xs4 col-12 pl100">
-                <img src="picture/logo.png">
+                <img src="{{asset('picture/logo.png')}}">
                 <div class="oh pt20">
                     <p class="fl fs16 c6 pt30">扫一扫<br>关注微课堂</p>
-                    <img class="fl ml10" src="picture/erweima.jpg" alt="会声会影官方微信">
+                    <img class="fl ml10" src="{{asset('picture/erweima.jpg')}}" alt="会声会影官方微信">
                 </div>
             </div>
         </div>
         <p class="pt10 pb5" align="center">
-            <img src="picture/szwj.png" alt="苏州网警">
-            <script id="jsgovicon" src="js/home/govicon.js" type="text/javascript" charset="utf-8"></script>
+            <img src="{{asset('picture/szwj.png')}}" alt="苏州网警">
+            <script id="jsgovicon" src="{{asset('js/home/govicon.js')}}" type="text/javascript" charset="utf-8"></script>
         </p>
         @if (isset($config['qq']))
             <center class="pt10">【友链交换要求：百度权重≥6，友链QQ：{{ $config['qq'] }}】</center>
@@ -70,7 +67,7 @@
 
                 @if (isset($config['bln']))
             <p class="c6 tac pt20 pb20 m_n_pt10r m_n_pb30r m_n_fs24r m_n_lh40r">
-                <span class="ml30 m_n_ml0 show-xs-n-block">经营许可证编号：<a href="dxywxkz.jpg" target="_blank">{{ $config['bln'] }}</a> </span>
+                <span class="ml30 m_n_ml0 show-xs-n-block">经营许可证编号：<a href="{{asset('dxywxkz.jpg')}}" target="_blank">{{ $config['bln'] }}</a> </span>
             </p>
                 @endif
 

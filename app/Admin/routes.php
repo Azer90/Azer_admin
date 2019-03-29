@@ -15,4 +15,7 @@ Route::group([
     $router->resource('nav', 'NavController');
     $router->resource('seo', 'SeoController');
     $router->resource('config', 'ConfigController');
+    $router->resource('link', 'LinkController');
+    $router->resource('article', 'ArticleController');
+    $router->resource('classify', 'ClassifyController');
 });

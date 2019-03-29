@@ -90,8 +90,6 @@ class SeoController extends Controller
         $grid->created_at(trans('admin.created_at'));
         $grid->updated_at(trans('admin.updated_at'));
         $grid->disableExport();
-        return $grid;
-
 
         return $grid;
     }
@@ -123,9 +121,9 @@ class SeoController extends Controller
         $nav=array_column($nav,'name','id');
         $form->display('id', 'ID');
 
-        $form->text('keywords', trans('admin.keywords'))->rules('required');
-        $form->text('description', trans('admin.description'))->rules('required');
-        $form->select('nav_id','页面')->options($nav);
+        $form->text('keywords', trans('admin.keywords'))->placeholder('多关键词之间用英文逗号隔开')->rules('required');
+        $form->text('description', trans('admin.description'))->placeholder('网站页面描述')->rules('required|max:100');
+        $form->select('nav_id','页面选择')->options($nav)->rules('required');
 
         $form->display('created_at', trans('admin.created_at'));
         $form->display('updated_at', trans('admin.updated_at'));

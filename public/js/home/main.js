@@ -95,13 +95,13 @@ $(function() {
 
     $('.mobel, .Rtop').hover(function() {
 
-        $(this).find('.imghover').attr('src', 'images/' + $(this).attr('imgname') + '_h.png');
+        $(this).find('.imghover').attr('src', host+'/images/' + $(this).attr('imgname') + '_h.png');
 
         $(this).find('.hidemobelBox').css("display", "block");
 
     }, function() {
 
-        $(this).find('.imghover').attr('src', 'images/' + $(this).attr('imgname') + '.png');
+        $(this).find('.imghover').attr('src', host+'/images/' + $(this).attr('imgname') + '.png');
 
         $(this).find('.hidemobelBox').css("display", "none");
 
@@ -111,11 +111,6 @@ $(function() {
 
 
 
-    /***********index.html start******************************/
-
-    setTimeout(alsList, 500);
-
-    /***********index.html end******************************/
 
 
 
@@ -349,37 +344,7 @@ function setQuanNumInfo(quanNumInfo){
 
 
 
-function alsList() {
 
-    layui.use(['als'], function(als) {
-
-        $("#my-als-list").als({
-
-            visible_items: 5, //可见个数
-
-            scrolling_items: 1, //每次滚动个数
-
-            orientation: "horizontal", //滚动方向
-
-            circular: "yes", //是否循环滚动
-
-            autoscroll: "no", //自动播放
-
-            interval: 5000, //滚动间隔时间
-
-            speed: 500, //滚动动画速度
-
-            easing: "linear", //动画效果
-
-            direction: "left", //滚动方向
-
-            start_from: 0 //初始化索引，从0开始
-
-        });
-
-    });
-
-}
 
 
 
@@ -481,6 +446,43 @@ function openVideoBox(img, url, title, number, type, format, size, downloadUrl, 
 
 }
 
+/*播放视频弹窗*/
+
+function modalVideo(videoUrl, width, height) {
+
+    if (!width) { width = '800px'; }
+
+    if (!height) { height = '600px'; }
+
+    var w = $(window).width();
+
+    if (w <= 767) {
+
+        width = '90%';
+
+        height = ($(window).height() - 20) + 'px';
+
+    }
+
+    layui.layer.open({
+
+        type: 2,
+
+        title: false,
+
+        area: [width, height],
+
+        shade: 0.8,
+
+        closeBtn: 1,
+
+        shadeClose: false,
+
+        content: videoUrl,
+
+    });
+
+}
 
 
 function openBuyVideoBox(img, url, title, customId, price) {

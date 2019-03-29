@@ -1,5 +1,4 @@
-<script type="text/javascript" src="{{asset('js/home/jquery.js')}}"></script>
-<script type="text/javascript" src="{{asset('js/home/layui.all.js')}}"></script>
+
 <script src="{{asset('js/home/31cada2e907c4bf8b68d23794f9714f8.js')}}"></script>
 <div class="dn">
    {{-- 百度站长自动推送--}}
@@ -14,9 +13,9 @@
 
 
 </div>
-<script type="text/javascript" src="{{asset('js/home/common.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/home/main.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/home/store.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/home/surpport.js')}}"></script>
 <script>layui.form.render();layui.flow.lazyimg();</script>
 <script type="text/javascript">
     window.easemobim = window.easemobim || {};

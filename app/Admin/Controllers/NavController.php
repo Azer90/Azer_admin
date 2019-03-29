@@ -119,7 +119,7 @@ class NavController extends Controller
         $form->display('id', 'ID');
 
         $form->text('name', trans('admin.name'))->rules('required');
-        $form->text('url', trans('admin.url'))->rules('required');
+        $form->text('url', trans('admin.url'))->prepend('<i class="fa fa-internet-explorer fa-fw"></i>')->rules('required');
         $states = [
             'on'  => ['value' => 1, 'text' => '打开', 'color' => 'success'],
             'off' => ['value' => 0, 'text' => '关闭', 'color' => 'danger'],

@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-
+use Illuminate\Support\Facades\Request;
 
 class IndexController extends Controller
 {
     use BaseController;
     /**
-     * 网站首页111111111
+     * 首页
      */
     public function index(){
         $nav=$this->nav;

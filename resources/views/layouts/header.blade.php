@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ app()->getLocale() }}">
 <head>
-    <title>{{ $config['title'] }}-会声会影2018中文版|照片视频制作,剪辑软件</title>
+    <title>{{ $config['title'] }}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width">
     {{--google-analytics 看是否需要--}}
@@ -11,6 +11,11 @@
 
      @include('layouts.css')
 
+    <script type="text/javascript" src="{{asset('js/home/jquery.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/home/layui.all.js')}}"></script>
+    <script>
+       let host= "{{ get_host()}}";
+    </script>
 
     <!-- TinyMCE Session vars empty -->
 </head>

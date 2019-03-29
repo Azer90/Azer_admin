@@ -109,5 +109,10 @@ return [
     'icp' => 'icp备案',
     'bln' => '经营许可证',
     'website' => '网站名',
+    'link' => '链接',
+    'article' => '文章',
+    'content' => '内容',
+    'hits' => '浏览量',
+    'class' => '分类',
 
 ];
