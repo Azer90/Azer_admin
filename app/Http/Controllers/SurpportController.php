@@ -60,6 +60,7 @@ class SurpportController extends Controller
             $article=Article::find($id);
             $article['class_name']= $article->classify['name'];
             $article['class_url']= $article->classify['url'];
+            $article['hits']=number_format($article['hits']);
             $article['time']= date('Y-m-d',strtotime($article['created_at']));
             $nav=$this->nav;
             $name=$this->name;

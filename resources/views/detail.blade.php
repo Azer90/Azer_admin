@@ -8,30 +8,18 @@
         <div id="crumbs">当前位置：
             <a href="{{ route('/') }}">首页</a>  >
             <a href ="{{ route($article['class_url']) }}">{{ $article['class_name'] }}</a>
-            > 多份Excel批量转换成PDF格式的方法
+            > {{ $article['title'] }}
         </div>
         <ul class="article-content">
-            <h1><a href="http://www.xjpdf.com/1222.html">多份Excel批量转换成PDF格式的方法</a></h1>
+
+            <h1><a href="http://www.xjpdf.com/1222.html">{{ $article['title'] }}</a></h1>
             <h6 class="post-update-time">
-                <span class="post-time">发布于：2019-03-24</span>
-                <span class="post-cat">分类：<a href="http://www.xjpdf.com/category/library" rel="category tag">知识库</a></span>
-                <span class="view-count">浏览：5,899次</span>
+                <span class="post-time">发布于：{{ $article['time'] }}</span>
+                <span class="post-cat">分类：<a href="http://www.xjpdf.com/category/library" rel="category tag">{{ $article['class_name'] }}</a></span>
+                <span class="view-count">浏览：{{ $article['hits'] }}次</span>
             </h6>
-            <div class="post-content"><p>在工作中将文件格式相互转换是我们经常需要进行的一种操作，比如有时候需要将<span style="color: #0000ff;"><a style="color: #0000ff;" href="http://www.xjpdf.com/1005.html">Excel批量转换成PDF</a></span>格式，那么如果想要将多份Excel批量转换成PDF格式应该怎么进行操作呢？通过这篇文章，就来告诉大家多份Excel批量转换成PDF格式的方法。</p>
-                <p><strong>Excel批量转换成PDF格式的方法：</strong></p>
-                <p>如果想要将多份Excel批量转换成PDF格式，那么就需要使用功能强大的文件转换器进行转换，因此使用迅捷PDF转换器这款操作简单的PDF转换器进行转换是非常不错的选择，这款软件拥有非常强大的功能，能够对PDF、Excel、Word、PPT、图片等多种常用的格式进行批量转换，而且软件的操作也非常简单，以下便是这款软件的操作过程。</p>
-                <p><strong>Excel批量转换成PDF格式的步骤：</strong></p>
-                <p>步骤一、首先运行这款<span style="color: #0000ff;"><a style="color: #0000ff;" href="http://www.xjpdf.com">迅捷PDF转换器</a></span>，软件打开之后，然后选择软件左边的“其他文件转换成PDF”，并选择里的“Excel转PDF”选项，接下来即可利用这个功能将批量的Excel文件转换成PDF格式。</p>
-                <p><img class="aligncenter size-full wp-image-1788" src="static/picture/q5j@t_dh62esqss@m.jpg" alt="迅捷PDF转换器" width="701" height="471" srcset="http://www.xjpdf.com/wp-content/uploads/2017/06/Q5J@T_DH62ESQSS@M.jpg 701w, http://www.xjpdf.com/wp-content/uploads/2017/06/Q5J@T_DH62ESQSS@M-300x202.jpg 300w" sizes="(max-width: 701px) 100vw, 701px" /></p>
-                <p>步骤二、如果想要对文件的保存位置进行修改，那么可以点击软件右上方的文件夹图标进行修改。</p>
-                <p><img class="aligncenter size-full wp-image-1224" src="static/picture/2-17.png" alt="保存位置修改" width="699" height="496" srcset="http://www.xjpdf.com/wp-content/uploads/2017/06/2-17.png 699w, http://www.xjpdf.com/wp-content/uploads/2017/06/2-17-300x213.png 300w, http://www.xjpdf.com/wp-content/uploads/2017/06/2-17-155x110.png 155w" sizes="(max-width: 699px) 100vw, 699px" /></p>
-                <p>步骤三、接下来点击“添加文件”选项，可以添加需要进行批量转换的Excel文件。</p>
-                <p><img class="aligncenter size-full wp-image-1225" src="static/picture/3-17.png" alt="添加文件" width="699" height="499" srcset="http://www.xjpdf.com/wp-content/uploads/2017/06/3-17.png 699w, http://www.xjpdf.com/wp-content/uploads/2017/06/3-17-300x214.png 300w, http://www.xjpdf.com/wp-content/uploads/2017/06/3-17-155x110.png 155w" sizes="(max-width: 699px) 100vw, 699px" /></p>
-                <p>步骤四、最后再点击右下角的“开始转换”按钮，即可将批量的Excel转换成PDF格式。</p>
-                <p><img class="aligncenter size-full wp-image-1226" src="static/picture/4-16.png" alt="开始转换" width="699" height="500" srcset="http://www.xjpdf.com/wp-content/uploads/2017/06/4-16.png 699w, http://www.xjpdf.com/wp-content/uploads/2017/06/4-16-300x215.png 300w, http://www.xjpdf.com/wp-content/uploads/2017/06/4-16-155x110.png 155w" sizes="(max-width: 699px) 100vw, 699px" /></p>
-                <p>如果想要将多份Excel批量转换成PDF格式，那么只需要按照上述方法进行操作，就可以成功的将批量的Excel文件转换成PDF格式。</p>
-                <p>延伸阅读：<span style="color: #0000ff;"><a style="color: #0000ff;" href="http://www.xjpdf.com/1100.html">PDF转换器的功能分类及作用</a></span></p>
-                <p>以上就是将Excel转换成PDF格式的全部过程了，如果对PDF转换器的功能还有什么不明白的，可以前往延伸阅读的PDF转换器的功能分类及作用了解。</p>
+            <div class="post-content">
+                {!! $article['content'] !!}
             </div>
             <div class="single-pagination">
                 <div class="prev">上一篇: <a href="http://www.xjpdf.com/1235.html" rel="prev">如何获取PDF文档中的图片内容</a></div>

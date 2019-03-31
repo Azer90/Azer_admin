@@ -24,10 +24,10 @@
 
             <li class="category-list-help">
                 <div class="item-wrap">
-                    <h1 class="title"><a href="http://www.xjpdf.com/1323.html" title="{{ $value['title'] }}" rel="bookmark">{{ $value['title'] }}</a></h1>
+                    <h1 class="title"><a href="{{ route('detail',['id'=>$value['id']]) }}" title="{{ $value['title'] }}" rel="bookmark">{{ $value['title'] }}</a></h1>
                     <div class="excerpt">{{ $value['description'] }}</div>
                     <p class="more">
-                        <a href="http://www.xjpdf.com/1323.html" title="{{ $value['title'] }}" rel="bookmark">更多>></a>
+                        <a href="{{ route('detail',['id'=>$value['id']]) }}" title="{{ $value['title'] }}" rel="bookmark">更多>></a>
                     </p>
                 </div>
             </li>
