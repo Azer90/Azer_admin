@@ -16,6 +16,10 @@
 <script type="text/javascript" src="{{asset('js/home/main.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/home/store.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/home/surpport.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/home/md5.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/home/jquery.qrcode.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/home/qrcode.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/home/pay.js')}}"></script>
 <script>layui.form.render();layui.flow.lazyimg();</script>
 <script type="text/javascript">
     window.easemobim = window.easemobim || {};

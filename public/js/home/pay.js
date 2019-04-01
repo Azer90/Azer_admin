@@ -1,4 +1,4 @@
-var checkednum = false;
+/*var checkednum = false;
 function checkPhone(id) {
     var phone = document.getElementById(id).value;
     if (!(/^1[34578]\d{9}$/.test(phone))) {
@@ -8,7 +8,7 @@ function checkPhone(id) {
     } else {
         checkednum = true;
     }
-}
+}*/
 
 function isIE(){
     var theUA = window.navigator.userAgent.toLowerCase();
@@ -23,18 +23,17 @@ function isIE(){
  * 手机号验证
  */
 
-$(function () {
+/*$(function () {
     $('#mobilenum').blur(function (event) {
         checkPhone('mobilenum');
     });
-});
+});*/
 
 
 /**
  * 支付方式
  */
 $(function () {
-    // $("#aliPay").attr({ checked: true });
     $('.payment a').click(function () {
         $(this).addClass("current").siblings().removeClass("current");
     });
@@ -76,33 +75,7 @@ function erroCode() {
     }
 }
 
-/**
- * 选择商品
- */
-function getSoftPack(){
-    var _index1 = $('.xjpdf-plans a.current').attr('data-type');
-    var softpack;
-    switch (_index1) {
-        case '1':
-            softpack = 'pdfconverter';
-            break;
-        case '2':
-            softpack = 'pdfconverter';
-            break;
-        case '3':
-            softpack = 'pdfconverter';
-            break;
-        case '4':
-            softpack = 'pdfconverter|PDF在线转换器';
-            break;
-        case '5':
-            softpack = 'pdfconverter|pdfeditor|PDF在线转换器';
-            break;
-        default:
-            break;
-    }
-    return softpack;
-}
+
 $(function () {
     $('.xjpdf-plans a').click(function (event) {
         var _index = $(this).attr('data-type')-1;
@@ -121,42 +94,28 @@ $(function () {
  */
 
 function payWay() {
-    var account = $('#mobilenum').val();
     var paymethod = $('.payment a.current').attr('value');
     var package = $('.xjpdf-plans a.current').attr('value');
-    var noticeurl = '';
-    var truename = '';
-    var softname = getSoftPack();
-    var softversion = '7.0.0.0';
-    var timestamp = Math.round(new Date().getTime() / 1000);
-    var datasign = $.md5('account=' + account + '&noticeurl=' + noticeurl + '&package=' + package + '&paymethod=' + paymethod + '&softname=' + softname + '&softversion=' + softversion + '&timestamp=' + timestamp + '&truename=' + truename + 'hUuPd20171206LuOnD');
-    if (checkednum && $('#aliPay').hasClass('current')) {
+
+
+    if ( $('#aliPay').hasClass('current')) {
         var newTab = window.open('/loading', '_blank');
     }
     $.ajax({
-        url: $('.themeUrl').text() + '/request.php',
+        url: $('.themeUrl').text(),
         type: 'post',
         dataType: 'json',
         data: {
-            "path":'',
-            "json":1,
-            "params":{
-                "account": account,
-                "paymethod": paymethod,
-                "package": package,
-                "noticeurl": noticeurl,
-                "truename": truename,
-                "softname": softname,
-                "softversion": softversion,
-                "timestamp": timestamp,
-                "datasign": datasign
-            }
+            "paymethod": paymethod,
+            "package": package,
+            '_token':$('.token').text(),
         },
         success: function (data) {
-            if (data.code == 10000) {
+            console.log(data);
+            if (data.code == 1000) {
                 if (paymethod == 'alipay') {
                     newTab.location = data.message;
-                } else if (paymethod == 'weixinpay') {
+                } else if (paymethod == 'wechat') {
                     var render;
                     if (isIE()) {
                         render = 'table';
@@ -178,10 +137,10 @@ function payWay() {
 }
 $(function () {
     $('#payNow').click(function () {
-        if (checkednum) {
+       // if (checkednum) {
             payWay();
-        } else {
-            errorMsgShow();
-        };
+       // } else {
+         //   errorMsgShow();
+       // };
     });
 })

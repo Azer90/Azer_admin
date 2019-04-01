@@ -35,3 +35,6 @@ Route::group(['prefix' => 'surpport'], function () {
 
 
 Route::get('about', 'AboutController@index')->name('about');
+
+Route::get('loading', 'BuyController@load')->name('loading'); //加载页
+Route::post('pay', 'BuyController@pay')->name('pay'); //支付

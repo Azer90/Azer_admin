@@ -1,4 +1,4 @@
-﻿als(function( $ ){
+﻿(function( $ ){
 	$.fn.qrcode = function(options) {
 		// if options is string,
 		if( typeof options === 'string' ){

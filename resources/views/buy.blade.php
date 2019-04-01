@@ -1,109 +1,393 @@
 @include('layouts.header')
+<link rel="stylesheet" type="text/css" href="{{asset('css/home/surpport.css')}}">
 <body>
 @include('layouts.nav')
 
-<div class="testGM full m0a pb100">
-    <div class="all m0a">
-        <h1 class="fs26 tac pt40 pb40">选择您需要的会声会影版本</h1>
-        <div class="layui-row layui-col-space20">
-            <div class="layui-col-xs6">
-                <div class="bg-5 h600 pl50 pr50 pt30 pr"><img src="picture/testgm_2019.png" />
-                    <h2 class="fs24 pt20 pb20">会声会影 2019 电子版 <span class="fs18">|新品来袭 终身授权</span></h2>
-                    <p class="fs46"><span class="26">¥</span>599<span class="fs14 bg-2 c0 fwb ml10 pr t-20 dib pl10 pr10 pt2 pb2">震撼上新，预售抢购，比正价立省￥60！</span></p>
-                    <p class="c6 fs16 lh26">2019将照片和视频转换为令人惊叹的电影，帮助您讲述精彩的故事<br />数以百计的创意效果, 同时显示多个视频，更多功能期待您的探索。 <br /> <a target="_blank" href="bbdb.html">功能对比 &gt;</a></p>
-                    <h3 class="fs16 c9 pt40 pb10">购买包含以下服务</h3>
-                    <ul class="fs16 c9 lh26">
-                        <li class="dib w65p"> <img class="mr5" src="picture/testgou.png" />4月2号，注册码发送至您的预留邮箱！ </li>
-                        <li class="dib w34p"> <img class="mr5" src="picture/testgou.png" />在线远程客服支持 </li>
-                        <li class="dib w65p"> <img class="mr5" src="picture/testgou.png" />支持Win10/8/7操作系统 </li>
-                        <li class="dib w34p"> <img class="mr5" src="picture/testgou.png" />电话客服支持 </li>
-                    </ul>
-                    <p class="fs16 pa l50 b20 red">今日下单，立送<a target="_blank" href="zhuanxiang.html">￥199 精美模板素材</a> + <a target="_blank" href="jiaocheng/videostudio-2019-ch.pdf">￥99 会声会影2019入门使用手册</a> <!-- ，仅剩<span basegoods="101818710211111111" topnum="3" basenum="3265" class="saleNum" style="width: 60px; text-align: center; color: #ff3333; font-size: 26px; display: inline-block;"></span> <span class="countdown" endtime="2019-03-25 10:00:00" type="hour" style="color: #fa0505; font-size: 22px; display: inline-block; padding-left:6px; " mce_style="color: #fa0505; font-size: 22px; display: inline-block; padding-left:6px; "></span> --></p>
-                    <a target="_blank" class="a-7 fs20 w180 h46 lh46 dib mt40 testGA2018" href="purchase.html?oid=1553480184">火速预定</a></div>
-            </div>
-            <div class="layui-col-xs6">
-                <div class="bg-5 h600 pl50 pr50 pt30 pr"><img src="picture/testgm_1.png" />
-                    <h2 class="fs24 pt20 pb20">会声会影 2018 电子版 <span class="fs18">| 终身授权</span></h2>
-                    <p class="fs46"><span class="26">¥</span>498<span class="fs14 bg-2 c0 fwb ml10 pr t-20 dib pl10 pr10 pt2 pb2">暖春特惠，半价抢购</span></p>
-                    <p class="c6 fs16 lh26">2018最新版简化了工作区域和用户界面，让你操作更便洁； <br />新增分割画面效果和镜头较正工具，满足您的多样创作需求。 <br /> <a target="_blank" href="bbdb.html">功能对比 &gt;</a></p>
-                    <h3 class="fs16 c9 pt40 pb10">购买包含以下服务</h3>
-                    <ul class="fs16 c9 lh26">
-                        <li class="dib w65p"> <img class="mr5" src="picture/testgou.png" />5分钟内，注册码发送至您的预留邮箱！</li>
-                        <li class="dib w34p"> <img class="mr5" src="picture/testgou.png" />在线远程客服支持 </li>
-                        <li class="dib w65p"> <img class="mr5" src="picture/testgou.png" />支持Win10/8/7操作系统 </li>
-                        <li class="dib w34p"> <img class="mr5" src="picture/testgou.png" />电话客服支持 </li>
-                    </ul>
-                    <p class="fs16 pa l50 b20 red">今日下单，立送<a target="_blank" href="zhuanxiang.html">￥199 精美模板素材</a> + <a target="_blank" href="jiaocheng/videostudio-2018-ch.pdf">￥99 会声会影2018入门使用手册</a> <!-- ，仅剩<span basegoods="101818710211111111" topnum="3" basenum="3265" class="saleNum" style="width: 60px; text-align: center; color: #ff3333; font-size: 26px; display: inline-block;"></span> <span class="countdown" endtime="2019-03-25 10:00:00" type="hour" style="color: #fa0505; font-size: 22px; display: inline-block; padding-left:6px; " mce_style="color: #fa0505; font-size: 22px; display: inline-block; padding-left:6px; "></span> --></p>
-                    <a target="_blank" class="a-7 fs20 w180 h46 lh46 dib mt40 testGAX8" href="purchase.html?oid=1521018265">立即抢购</a></div>
-            </div>
-        </div>
-        <h1 class="fs26 tac pt110 pb40">其他选择满足您的需求</h1>
-        <div class="layui-row layui-col-space20">
-            <div class="layui-col-xs6">
-                <div class="h220 bg-7 pr">
-                    <div class="fl pr"><img src="picture/testgm_3.jpg" /> <span class="fs14 bg-2 c0 fwb ml10 pr t-20 dib pl10 pr10 pt2 pb2 pa t0 r0"></span></div>
-                    <div class="fl pl30 pt30">
-                        <h3 class="fs24">会声会影2018 简体中文版</h3>
-                        <p class="c6 pt10 pb10">盒装版+序列号终身授权</p>
-                        <p class="fs36 pb10"><span class="26">¥</span>650</p>
-                        <a target="_blank" class="a-6 fs20 w140 h40 lh40 dib testGA2018SJ" href="purchase.html?oid=1528255452">立即购买</a></div>
-                </div>
-            </div>
-            <div class="layui-col-xs6">
-                <div class="h220 bg-7 pr">
-                    <div class="fl pr"><img src="picture/testgm_4.jpg" /> <span class="fs14 bg-2 c0 fwb ml10 pr t-20 dib pl10 pr10 pt2 pb2 pa t0 r0">低至3折</span></div>
-                    <div class="fl pl30 pt30">
-                        <h3 class="fs24">老用户专享优惠升级</h3>
-                        <p class="c6 pt10 pb10">老用户可享受低至3折升级到最新版本</p>
-                        <p class="fs36 pb10"><span class="26">¥</span>399</p>
-                        <a target="_blank" class="a-6 fs20 w140 h40 lh40 dib testGA2018SJ" href="shengji.html">立即升级</a></div>
-                </div>
-            </div>
-           
-            <div class="layui-col-xs6">
-                <div class="h220 bg-7 pr">
-                    <div class="fl pr"><img src="picture/testgm_5.jpg" /> <span class="fs14 bg-2 c0 fwb ml10 pr t-20 dib pl10 pr10 pt2 pb2 pa t0 r0">视频教程</span></div>
-                    <div class="fl pl30 pt30">
-                        <h3 class="fs24">会声会影2018基础视频课程</h3>
-                        <p class="c6 pt10 pb10">名师量身定制课程，让您7天变身视频编辑达人</p>
-                        <p class="fs36 pb10"><span class="26">¥</span>159</p>
-                        <a target="_blank" class="a-6 fs20 w140 h40 lh40 dib" href="http://peixun.huishenghuiying.com.cn/zhongjizixuan.html">了解详情</a></div>
-                </div>
-            </div>
-            <div class="layui-col-xs6">
-                <div class="h220 bg-7 pr">
-                    <div class="fl pr"><img src="picture/testgm_6.jpg" /> <span class="fs14 bg-2 c0 fwb ml10 pr t-20 dib pl10 pr10 pt2 pb2 pa t0 r0">教程+模板</span></div>
-                    <div class="fl pl30 pt30">
-                        <h3 class="fs24">会声会影高级案例课程</h3>
-                        <p class="c6 pt10 pb10">精选案例作品视频讲解，让您制作水平突飞猛进</p>
-                        <p class="fs36 pb10"><span class="26">¥</span>299</p>
-                        <a target="_blank" class="a-6 fs20 w140 h40 lh40 dib" href="http://peixun.huishenghuiying.com.cn/gaojianli.html">了解详情</a></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
+<section class="banner banner-buy">
+    <ul class="wrapper current">
+        <li class="banner-cxt"></li>
+    </ul>
+</section>
+<section class="buy-wrapper">
+    <form  class="formfmt">
+        <div class="wrapper buy">
+            <div class="buy-step"><span class="step-num"><em>1</em><i class="icon-step-diamond"></i></span>您要购买的软件</div>
+            <dl class="goods">
+                <dd class="goods-pics">
+                    <div class="goods-pic goods-pic-1"></div>
+                    <div class="goods-pic goods-pic-2"></div>
+                    <div class="goods-pic goods-pic-5"></div>
+                    <div class="goods-pic goods-pic-3"></div>
+                    <div class="goods-pic goods-pic-4 current"></div>
+                </dd>
+                <dd class="goods-infor">
+                    <div class="plan-titles">
+                        <h1 class="plan-title">迅捷PDF转换器 48元套餐</h1>
+                        <h1 class="plan-title">迅捷PDF转换器 68元套餐</h1>
+                        <h1 class="plan-title">迅捷PDF转换器 88元套餐</h1>
+                        <h1 class="plan-title">迅捷PDF转换器 超值套餐</h1>
+                        <h1 class="plan-title current">迅捷PDF转换器 黄金套餐</h1>
+                    </div>
+                    <div class="plan-title-tips">
+                        <p class="slogan">48元半年授权</p>
+                        <p class="slogan">68元一年授权</p>
+                        <p class="slogan">88元终身授权</p>
+                        <p class="slogan">118元终身授权 + 迅捷PDF在线转换三年授权</p>
+                        <p class="slogan current">128元终身授权 + 迅捷PDF编辑器终身授权 + 迅捷PDF在线转换三年授权(推荐)</p>
+                    </div>
+                    <h2 class="price-wrap">￥<span class="price"><span class="thePlanPrice">128.00</span></span></h2>
+                    <div class="plans">
+                        <div class="plans-title">套餐：</div>
+                        <div class="plan xjpdf-plans">
+                            <a value="vip48m6" data-type="1"  data-price="48">
+                                <span>48元/1台电脑半年授权 </span>
+                                <em class="active-icon"></em>
+                            </a>
+                            <a value="vip68m12" data-type="2"  data-price="68">
+                                <span>68元/1台电脑1年授权 </span>
+                                <em class="active-icon"></em>
+                            </a>
+                            <a value="vip88m12" data-type="3"  data-price="88">
+                                <span>88元/1台电脑终身授权</span>
+                                <em class="active-icon"></em>
+                            </a>
+                            <a value="vip118m120m36" data-type="4"  data-price="118">
+                                <span>118元超值套餐组合</span>
+                                <em class="active-icon"></em>
+                            </a>
+                            <a class="current" value="vip128m120m120m36" data-type="5"  data-price="128">
+                                <span>128元黄金套餐组合</span>
+                                <em class="active-icon"></em>
+                                <em class="hot-icon"></em>
+                            </a>
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+            <ul class="payment-wrapper">
+                <div class="buy-step"><span class="step-num"><em>2</em><i class="icon-step-diamond"></i></span>请选择付款方式</div>
+                <div class="payment">
+                    <a value="alipay" id="aliPay" class="pay-ali current" ><span class="icon icon-tag"></span><img src="{{ asset('picture/pay-ali.png') }}"></a>
+                    <a value="wechat" id="wechatPay" class="pay-wechat"><span class="icon icon-tag"></span><img src="{{ asset('picture/pay-wechat.png') }}"></a>
+                </div>
+                <div class="pay-now" id="payNow">
+                    立即购买
+                </div>
+            </ul>
+        </div>
+    </form>
+</section>
+<!-- 微信扫码支付弹出框开始 -->
+<div class="wechat-pay-dialog-bg"></div>
+<div class="wechat-pay-dialog" id="show">
+    <a class="close"></a>
+    <ul>
+        <li class="li-01">
+            <h3>支付过程中，</h3>
+            <h4>遇到问题，请联系客服。</h4>
+            <p>客服热线：400-888-2560</p>
+            <p>Q Q：400 668 5572</p>
+        </li>
+        <li class="li-02">
+            <h3>微信扫码支付</h3>
+            <h1 class="price-wechat">￥<span class="thePlanPrice">128.00</span></h1>
+            <div class="qr-code-wrapper" id="qrcode">
+
+            </div>
+            <div class="tips">
+                <img src="{{ asset('picture/icon-scan.png') }}">
+                <p>请使用微信扫一扫</p>
+                <p>扫描二维码支付</p>
+            </div>
+        </li>
+        <li class="li-03">
+            <img src="{{ asset('picture/code-tips.png') }}">
+        </li>
+    </ul>
+</div>
+<!-- 微信扫码支付弹出框结束 -->
+<section class="wrapper">
+    <h3 class="plan-introduction-title">套餐介绍</h3>
+    <ul class="plan-introduction">
+
+        <li class="item item-1">
+            <div class="item-title">
+                <div>
+                    <i class="icon icon-plan-device"></i>
+                    <p>套餐类型</p>
+                </div>
+            </div>
+            <div class="item-time">
+                <div>
+                    <i class="icon icon-plan-time"></i>
+                    <p>授权时间</p>
+                </div>
+            </div>
+            <div class="item-price">
+                <div>
+                    <i class="icon icon-plan-price"></i>
+                    <p>套餐价格</p>
+                </div>
+            </div>
+            <div class="item-limit">
+                <div>
+                    <i class="icon icon-plan-limit"></i>
+                    <p>文档限制</p>
+                </div>
+            </div>
+            <div class="item-sevice">
+                <div>
+                    <div>
+                        <i class="icon icon-plan-sevice"></i>
+                        <p>人工服务</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item-package">
+                <div>
+                    <div>
+                        <i class="icon icon-plan-package"></i>
+                        <p>套餐内容</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        <li class="item item-2">
+            <div class="item-title">
+                <div>
+                    <i class="icon icon-48"></i>
+                    <p>48VIP</p>
+                </div>
+            </div>
+            <div class="item-time">
+                <div>
+                    <p>半年</p>
+                </div>
+            </div>
+            <div class="item-price">
+                <div>
+                    <p><span>￥</span>48</p>
+                </div>
+            </div>
+            <div class="item-limit">
+                <div>
+                    <p>无限制</p>
+                </div>
+            </div>
+            <div class="item-sevice">
+                <div>
+                    <div>
+                        <p>3次</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item-package">
+                <div>
+                    <div class="logo-pdf-zhuan">
+                        <h4>迅捷PDF转换器</h4>
+                        <p>【半年授权】</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="item item-2">
+            <div class="item-title">
+                <div>
+                    <i class="icon icon-68"></i>
+                    <p>68VIP</p>
+                </div>
+            </div>
+            <div class="item-time">
+                <div>
+                    <p>一年</p>
+                </div>
+            </div>
+            <div class="item-price">
+                <div>
+                    <p><span>￥</span>68</p>
+                </div>
+            </div>
+            <div class="item-limit">
+                <div>
+                    <p>无限制</p>
+                </div>
+            </div>
+            <div class="item-sevice">
+                <div>
+                    <div>
+                        <p>20次</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item-package">
+                <div>
+                    <div class="logo-pdf-zhuan">
+                        <h4>迅捷PDF转换器</h4>
+                        <p>【一年授权】</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="item item-3">
+            <div class="item-title">
+                <div>
+                    <i class="icon icon-88"></i>
+                    <p>88VIP</p>
+                </div>
+            </div>
+            <div class="item-time">
+                <div>
+                    <p>终身</p>
+                </div>
+            </div>
+            <div class="item-price">
+                <div>
+                    <p><span>￥</span>88</p>
+                </div>
+            </div>
+            <div class="item-limit">
+                <div>
+                    <p>无限制</p>
+                </div>
+            </div>
+            <div class="item-sevice">
+                <div>
+                    <div>
+                        <p>30次</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item-package">
+                <div>
+                    <div class="logo-pdf-zhuan">
+                        <h4>迅捷PDF转换器</h4>
+                        <p>【终身授权】</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        <li class="item item-4">
+            <div class="item-title">
+                <div>
+                    <i class="icon icon-118"></i>
+                    <p>118VIP</p>
+                </div>
+            </div>
+            <div class="item-time">
+                <div>
+                    <p>终身</p>
+                </div>
+            </div>
+            <div class="item-price">
+                <div>
+                    <p><span>￥</span>118</p>
+                </div>
+            </div>
+            <div class="item-limit">
+                <div>
+                    <p>无限制</p>
+                </div>
+            </div>
+            <div class="item-sevice">
+                <div>
+                    <div>
+                        <p>50次</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item-package">
+                <div>
+                    <div class="logo-pdf-zhuan">
+                        <h4>迅捷PDF转换器</h4>
+                        <p>【终身授权】</p>
+                    </div>
+                    <div class="logo-pdf-online">
+                        <h4>迅捷PDF在线转换</h4>
+                        <p>【三年授权】</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="item item-5">
+            <div class="item-title">
+                <div>
+                    <i class="icon icon-128"></i>
+                    <p>128VIP</p>
+                </div>
+                <img src="{{ asset('picture/hot-rec-1.png') }}" class="hot-rec"/>
+            </div>
+            <div class="item-time">
+                <div>
+                    <p>终身</p>
+                </div>
+            </div>
+            <div class="item-price">
+                <div>
+                    <p><span>￥</span>128</p>
+                </div>
+            </div>
+            <div class="item-limit">
+                <div>
+                    <p>无限制</p>
+                </div>
+            </div>
+            <div class="item-note">
+                <div>
+                    <p>无限制</p>
+                </div>
+            </div>
+            <div class="item-package">
+                <div>
+                    <div class="logo-pdf-zhuan">
+                        <h4>迅捷PDF转换器</h4>
+                        <p>【终身授权】</p>
+                    </div>
+                    <div class="logo-pdf-editor">
+                        <h4>迅捷PDF编辑器</h4>
+                        <p>【终身授权】</p>
+                    </div>
+                    <div class="logo-pdf-online">
+                        <h4>迅捷PDF在线转换</h4>
+                        <p>【三年授权】</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</section>
+<section class="introduce buy-introduce-01">
+    <div class="wrapper">
+        <h2>产品介绍</h2>
+        <p>迅捷PDF转换器是一款功能强大、界面简洁、操作简单的PDF转WORD软件，你只需把PDF文件拖拽到软件界面中，然后单击"转换"即可完成转换，经过不断地优化与升级，目前迅捷PDF转换器已经成功地实现了基于超线程技术的PDF文件批量转换技术，多个PDF文件实现批量一键转换，轻松快捷。</p>
+    </div>
+</section>
+<section class="wrapper">
+    <ul class="features-page-buy">
+        <li>
+            <div><em class="icon icon-buy-feature-1"></em>支持多种格式转换</div>
+        </li>
+        <li>
+            <div><em class="icon icon-buy-feature-2"></em>转换快速质量保证</div>
+        </li>
+        <li>
+            <div><em class="icon icon-buy-feature-3"></em>操作界面体验良好</div>
+        </li>
+    </ul>
+</section>
+
+<p class="themeUrl" style="display:none;">{{ route('pay') }}</p>
+<p class="token" style="display:none;">{{ csrf_token() }}</p>
 {{--底部--}}
 @extends('layouts.footer')
 
-{{--优惠券--}}
-<div class="fullFix choujiang layui-hide">
-    <div class="choujiangBox pr">
-        <span class="choujiangClose" onclick="$(this).parents('.choujiang').addClass('layui-hide')"></span>
-        <span class="choujiangBtn"></span>
-    </div>
-    <div class="choujiangRes pr layui-hide">
-        <span class="choujiangClose" onclick="$(this).parents('.choujiang').addClass('layui-hide')"></span>
-        <p class="choujiangMoney tac fs40 fwb"></p>
-        <p class="choujiangCode tac fs24 fwb"></p>
-        <p class="choujiangEnd tac fs18 c-7 fwb">截止日期：2018年11月9日</p>
-        <a class="choujiangGoPay" href="purchase.html?oid=1521018265" target="_blank"></a>
-    </div>
-</div>
 {{--侧边栏--}}
 @include('layouts.side')
 {{--js--}}
 @include('layouts.script')
+
+
 </body>
 </html>
