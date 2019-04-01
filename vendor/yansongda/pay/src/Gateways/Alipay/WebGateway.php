@@ -21,7 +21,7 @@ class WebGateway implements GatewayInterface
      *
      * @return Response
      */
-    public function pay($endpoint, array $payload): Response
+    public function pay($endpoint, array $payload)//: Response
     {
         $biz_array = json_decode($payload['biz_content'], true);
         $biz_array['product_code'] = $this->getProductCode();
@@ -35,7 +35,9 @@ class WebGateway implements GatewayInterface
         $payload['sign'] = Support::generateSign($payload);
 
         Events::dispatch(Events::PAY_STARTED, new Events\PayStarted('Alipay', 'Web/Wap', $endpoint, $payload));
-
+        if (strtoupper($method) === 'URL') {
+            return $endpoint.'?'.http_build_query($payload);
+        }
         return $this->buildPayHtml($endpoint, $payload, $method);
     }
 
