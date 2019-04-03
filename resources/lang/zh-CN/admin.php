@@ -114,5 +114,10 @@ return [
     'content' => '内容',
     'hits' => '浏览量',
     'class' => '分类',
+    'pay_order' => '支付订单',
+    'goods' => '商品',
+    'price' => '价格',
+    'img' => '图片',
+    'slogan' => '标语',
 
 ];

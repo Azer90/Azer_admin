@@ -18,4 +18,6 @@ Route::group([
     $router->resource('link', 'LinkController');
     $router->resource('article', 'ArticleController');
     $router->resource('classify', 'ClassifyController');
+    $router->resource('payorder', 'PayOrderController',['except' => ['create']]);
+    $router->resource('goods', 'GoodsController');
 });

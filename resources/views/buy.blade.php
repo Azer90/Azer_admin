@@ -15,52 +15,46 @@
             <div class="buy-step"><span class="step-num"><em>1</em><i class="icon-step-diamond"></i></span>您要购买的软件</div>
             <dl class="goods">
                 <dd class="goods-pics">
-                    <div class="goods-pic goods-pic-1"></div>
-                    <div class="goods-pic goods-pic-2"></div>
-                    <div class="goods-pic goods-pic-5"></div>
-                    <div class="goods-pic goods-pic-3"></div>
-                    <div class="goods-pic goods-pic-4 current"></div>
+                    @foreach ($goods as $value)
+                        <div class="goods-pic goods-pic-{{ $loop->iteration }}"></div>
+                        @if($loop->last)
+                            <div class="goods-pic goods-pic-{{ $loop->iteration }} current"></div>
+                        @endif
+                    @endforeach
                 </dd>
                 <dd class="goods-infor">
+
                     <div class="plan-titles">
-                        <h1 class="plan-title">迅捷PDF转换器 48元套餐</h1>
-                        <h1 class="plan-title">迅捷PDF转换器 68元套餐</h1>
-                        <h1 class="plan-title">迅捷PDF转换器 88元套餐</h1>
-                        <h1 class="plan-title">迅捷PDF转换器 超值套餐</h1>
-                        <h1 class="plan-title current">迅捷PDF转换器 黄金套餐</h1>
+                        @foreach ($goods as $value)
+                            <h1 class="plan-title">{{ $value['title'] }}</h1>
+                            @if($loop->last)
+                                <h1 class="plan-title current">{{ $value['title'] }}</h1>
+                            @endif
+                        @endforeach
                     </div>
                     <div class="plan-title-tips">
-                        <p class="slogan">48元半年授权</p>
-                        <p class="slogan">68元一年授权</p>
-                        <p class="slogan">88元终身授权</p>
-                        <p class="slogan">118元终身授权 + 迅捷PDF在线转换三年授权</p>
-                        <p class="slogan current">128元终身授权 + 迅捷PDF编辑器终身授权 + 迅捷PDF在线转换三年授权(推荐)</p>
+                        @foreach ($goods as $value)
+                            <p class="slogan">{{ $value['slogan'] }}</p>
+                            @if($loop->last)
+                                <p class="slogan current">{{ $value['slogan'] }}</p>
+                            @endif
+                        @endforeach
+
+
                     </div>
-                    <h2 class="price-wrap">￥<span class="price"><span class="thePlanPrice">128.00</span></span></h2>
+                    <h2 class="price-wrap">￥<span class="price"><span class="thePlanPrice">{{ $endgoods['price'] }}.00</span></span></h2>
                     <div class="plans">
                         <div class="plans-title">套餐：</div>
                         <div class="plan xjpdf-plans">
-                            <a value="vip48m6" data-type="1"  data-price="48">
-                                <span>48元/1台电脑半年授权 </span>
-                                <em class="active-icon"></em>
-                            </a>
-                            <a value="vip68m12" data-type="2"  data-price="68">
-                                <span>68元/1台电脑1年授权 </span>
-                                <em class="active-icon"></em>
-                            </a>
-                            <a value="vip88m12" data-type="3"  data-price="88">
-                                <span>88元/1台电脑终身授权</span>
-                                <em class="active-icon"></em>
-                            </a>
-                            <a value="vip118m120m36" data-type="4"  data-price="118">
-                                <span>118元超值套餐组合</span>
-                                <em class="active-icon"></em>
-                            </a>
-                            <a class="current" value="vip128m120m120m36" data-type="5"  data-price="128">
-                                <span>128元黄金套餐组合</span>
-                                <em class="active-icon"></em>
-                                <em class="hot-icon"></em>
-                            </a>
+                            @foreach ($goods as $value)
+                                <a value="{{ $value['id'] }}" data-type="{{ $loop->iteration }}"  data-price="{{ $value['price'] }}" class=" @if($loop->last) current @endif">
+                                    <span>{{ $value['name'] }} </span>
+                                    <em class="active-icon"></em>
+                                    @if($loop->last)
+                                    <em class="hot-icon"></em>
+                                    @endif
+                                </a>
+                            @endforeach
                         </div>
                     </div>
                 </dd>
@@ -91,7 +85,7 @@
         </li>
         <li class="li-02">
             <h3>微信扫码支付</h3>
-            <h1 class="price-wechat">￥<span class="thePlanPrice">128.00</span></h1>
+            <h1 class="price-wechat">￥<span class="thePlanPrice">{{ $endgoods['price'] }}.00</span></h1>
             <div class="qr-code-wrapper" id="qrcode">
 
             </div>
