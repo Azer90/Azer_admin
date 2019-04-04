@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use App\Goods;
 use App\PayOrder;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Pay;
 use test\Mockery\Fixtures\EmptyTestCaseV5;
 
@@ -130,7 +131,7 @@ class BuyController extends Controller
 
             Log::debug('Alipay notify', $data->all());
         } catch (\Exception $e) {
-            // $e->getMessage();
+             $e->getMessage();
         }
 
         return $alipay->success();
