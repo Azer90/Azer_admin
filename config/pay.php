@@ -9,7 +9,7 @@ return [
         'notify_url' => 'http://www.ipdftoword.net/alipay_notify',
 
         // 支付成功后同步通知地址
-        'return_url' => '',
+        'return_url' => 'http://www.ipdftoword.net/buy',
 
         // 阿里公共密钥，验证签名时使用
         'ali_public_key' => env('ALI_PUBLIC_KEY', 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt/XsB/iEouFXzRAhT2YbJ9r4cZl/D2N3ErC6+tdq4zjA4fjfuA+w9v21/XduQej9odn2t7qfsVZaIeOGrXQPWzp0aFNnFRn1YlozHiFVEeCEAybyzyWmGB2eSuvbfbTz3Qwe/cxpf+OkOjuzOSajMQvejx1ZdkbP1yfjqLqqmCJqFfSXMFnbFGwhuCzV1Wn5Ku02/ILXONVvSZsCvLdZYlnRKBnwgUjWBUhco5MkOpDBd5sEVeIVc0nmZgNRmKJFoO02NjSr88y52QW8jxTFU/GMnByMcPhSm8ylztTo2p/PjwnzuGGCIsTIsxVSj53nXQ98WJhpZ3DyVQnV/SOSpQIDAQAB'),
