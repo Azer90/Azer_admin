@@ -84,9 +84,11 @@ class LinkController extends Controller
         $grid->id('ID')->sortable();
         $grid->column('name', trans('admin.name'));
         $grid->url('链接地址');
-        $grid->show(trans('admin.show'))->display(function ($released) {
-            return $released ? '是' : '否';
-        });
+        $states = [
+            'on'  => ['value' => 1, 'text' => '打开', 'color' => 'primary'],
+            'off' => ['value' => 2, 'text' => '关闭', 'color' => 'default'],
+        ];
+        $grid->show(trans('admin.show'))->switch($states);
         $grid->created_at(trans('admin.created_at'));
         $grid->updated_at(trans('admin.updated_at'));
         $grid->disableExport();

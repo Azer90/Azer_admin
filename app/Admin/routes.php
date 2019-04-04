@@ -20,4 +20,5 @@ Route::group([
     $router->resource('classify', 'ClassifyController');
     $router->resource('payorder', 'PayOrderController',['except' => ['create']]);
     $router->resource('goods', 'GoodsController');
+    $router->resource('tag', 'TagController');
 });

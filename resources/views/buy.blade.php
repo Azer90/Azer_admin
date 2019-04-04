@@ -4,12 +4,12 @@
 @include('layouts.nav')
 
 
-<section class="banner banner-buy">
+<section class="banner banner-buy full">
     <ul class="wrapper current">
         <li class="banner-cxt"></li>
     </ul>
 </section>
-<section class="buy-wrapper">
+<section class="buy-wrapper full">
     <form  class="formfmt">
         <div class="wrapper buy">
             <div class="buy-step"><span class="step-num"><em>1</em><i class="icon-step-diamond"></i></span>您要购买的软件</div>
@@ -73,15 +73,15 @@
     </form>
 </section>
 <!-- 微信扫码支付弹出框开始 -->
-<div class="wechat-pay-dialog-bg"></div>
+<div class="wechat-pay-dialog-bg full"></div>
 <div class="wechat-pay-dialog" id="show">
     <a class="close"></a>
     <ul>
         <li class="li-01">
             <h3>支付过程中，</h3>
             <h4>遇到问题，请联系客服。</h4>
-            <p>客服热线：400-888-2560</p>
-            <p>Q Q：400 668 5572</p>
+            <p>客服热线：{{ $config['phone'] }}</p>
+            <p>Q Q：{{ $config['qq'] }}</p>
         </li>
         <li class="li-02">
             <h3>微信扫码支付</h3>
@@ -101,7 +101,7 @@
     </ul>
 </div>
 <!-- 微信扫码支付弹出框结束 -->
-<section class="wrapper">
+<section class="wrapper full">
     <h3 class="plan-introduction-title">套餐介绍</h3>
     <ul class="plan-introduction">
 
@@ -352,13 +352,13 @@
         </li>
     </ul>
 </section>
-<section class="introduce buy-introduce-01">
+<section class="introduce buy-introduce-01 full">
     <div class="wrapper">
         <h2>产品介绍</h2>
         <p>迅捷PDF转换器是一款功能强大、界面简洁、操作简单的PDF转WORD软件，你只需把PDF文件拖拽到软件界面中，然后单击"转换"即可完成转换，经过不断地优化与升级，目前迅捷PDF转换器已经成功地实现了基于超线程技术的PDF文件批量转换技术，多个PDF文件实现批量一键转换，轻松快捷。</p>
     </div>
 </section>
-<section class="wrapper">
+<section class="wrapper full">
     <ul class="features-page-buy">
         <li>
             <div><em class="icon icon-buy-feature-1"></em>支持多种格式转换</div>

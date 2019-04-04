@@ -119,5 +119,11 @@ return [
     'price' => '价格',
     'img' => '图片',
     'slogan' => '标语',
+    'order_no' => '订单号',
+    'amount' => '金额',
+    'payway' => '支付类型',
+    'status' => '状态',
+    'type' => '类型',
+    'tag' => '标签',
 
 ];

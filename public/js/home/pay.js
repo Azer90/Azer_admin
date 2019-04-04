@@ -111,7 +111,7 @@ function payWay() {
             '_token':$('.token').text(),
         },
         success: function (data) {
-            console.log(data);
+           /* console.log(data);*/
             if (data.code == 1000) {
                 if (paymethod == 'alipay') {
                     newTab.location = data.message;

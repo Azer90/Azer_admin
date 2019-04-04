@@ -38,3 +38,5 @@ Route::get('about', 'AboutController@index')->name('about');
 
 Route::get('loading', 'BuyController@load')->name('loading'); //加载页
 Route::post('pay', 'BuyController@pay')->name('pay'); //支付
+
+Route::get('tag/{id}', 'TagController@index')->where('id', '[0-9]+')->name('tag'); //标签页
