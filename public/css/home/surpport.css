@@ -909,7 +909,11 @@ table{
 .goods-pic.page-discount > div{
     margin: 0;
 }
-
+.goods-pics .goods-pic{
+    display:none;
+    height: 100%;
+    /*background: url(../../images/goods-pic-xjpdfConvertor48.png) center no-repeat;*/
+}
 .goods-pics .goods-pic.current{
     display: block;
 }

@@ -15,12 +15,9 @@
             <div class="buy-step"><span class="step-num"><em>1</em><i class="icon-step-diamond"></i></span>您要购买的软件</div>
             <dl class="goods">
                 <dd class="goods-pics">
-                    @foreach ($goods as $value)
-                        <div class="goods-pic goods-pic-{{ $loop->iteration }}"></div>
-                        @if($loop->last)
-                            <div class="goods-pic goods-pic-{{ $loop->iteration }} current"></div>
-                        @endif
-                    @endforeach
+                        <div class="goods-pic goods-pic-1"></div>
+                        <div class="goods-pic goods-pic-2"></div>
+                        <div class="goods-pic goods-pic-3 current"></div>
                 </dd>
                 <dd class="goods-infor">
 
