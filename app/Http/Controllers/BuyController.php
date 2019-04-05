@@ -19,6 +19,7 @@ class BuyController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View|\think\response\View
      */
     public function index(){
+
         $nav=$this->nav;
         $name=$this->name;
         $seo=$this->seo;
@@ -130,6 +131,15 @@ class BuyController extends Controller
             // 5、其它业务逻辑情况
 
             Log::debug('Alipay notify', $data->all());
+            // 支付宝交易号：$data->trade_no
+           //还需要验证appid 和 写入 支付宝交易号 到数据库
+            if($data->trade_status=='TRADE_SUCCESS'){
+                $amount=PayOrder::where(['order_no'=>$data->out_trade_no])->value('amount');
+                if($amount==$data->total_amount){
+                    PayOrder::where(['order_no'=>$data->out_trade_no])->update(['status' => 1]);
+                }
+
+            }
         } catch (\Exception $e) {
              $e->getMessage();
         }
