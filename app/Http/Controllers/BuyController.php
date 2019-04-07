@@ -61,8 +61,8 @@ class BuyController extends Controller
 
             $order = [
                 'out_trade_no' => $order_no,
-                //'total_amount' => $goods['price'],
-                'total_amount' => 0.01,
+                'total_amount' => $goods['price'],
+                //'total_amount' => 0.01,
                 'subject'      => $goods['name'],
                 'http_method'  => 'URL'
             ];
@@ -134,15 +134,13 @@ class BuyController extends Controller
             Log::debug('Alipay notify', $data->all());
             // 支付宝交易号：$data->trade_no
            //还需要验证appid 和 写入 支付宝交易号 到数据库
-            //if($data->trade_status=='TRADE_SUCCESS'){
+            if($data->trade_status=='TRADE_SUCCESS'){
                 $amount=PayOrder::where(['order_no'=>$data->out_trade_no])->value('amount');
-            Log::debug('Alipay amount', ['aa'=>$amount]);
-            Log::debug('Alipay amount1',['aa'=>$data->total_amount] );
                 if($amount==$data->total_amount){
                     PayOrder::where(['order_no'=>$data->out_trade_no])->update(['status' => 1]);
                 }
 
-           // }
+            }
         } catch (\Exception $e) {
              //$e->getMessage();
         }
