@@ -60,8 +60,8 @@ class BuyController extends Controller
 
             $order = [
                 'out_trade_no' => $order_no,
-                'total_amount' => $goods['price'],
-                //'total_amount' => 0.01,
+                //'total_amount' => $goods['price'],
+                'total_amount' => 0.01,
                 'subject'      => $goods['name'],
                 'http_method'  => 'URL'
             ];
