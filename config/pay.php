@@ -43,7 +43,7 @@ return [
         'mch_id' => env('WECHAT_MCH_ID', '1502952071'),
 
         // 微信支付异步通知地址
-        'notify_url' => 'buy',
+        'notify_url' => 'http://www.ipdftoword.net/wechat_notify',
 
         // 微信支付签名秘钥
         'key' => env('WECHAT_KEY', 'loi83ujdmwejau8Jfie9kaJuejJDjkef'),

@@ -151,7 +151,17 @@ class BuyController extends Controller
     * 微信回调
     */
     public function wechat_notify(){
+        $pay = Pay::wechat();
 
+        try{
+            $data = $pay->verify(); // 是的，验签就这么简单！
+
+            Log::debug('Wechat notify', $data->all());
+        } catch (\Exception $e) {
+            // $e->getMessage();
+        }
+
+        return $pay->success();
     }
 
 }
