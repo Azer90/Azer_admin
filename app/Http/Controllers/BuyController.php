@@ -134,13 +134,15 @@ class BuyController extends Controller
             Log::debug('Alipay notify', $data->all());
             // 支付宝交易号：$data->trade_no
            //还需要验证appid 和 写入 支付宝交易号 到数据库
-            if($data->trade_status=='TRADE_SUCCESS'){
+            //if($data->trade_status=='TRADE_SUCCESS'){
                 $amount=PayOrder::where(['order_no'=>$data->out_trade_no])->value('amount');
+            Log::debug('Alipay amount', $amount);
+            Log::debug('Alipay amount1', $data->total_amount);
                 if($amount==$data->total_amount){
                     PayOrder::where(['order_no'=>$data->out_trade_no])->update(['status' => 1]);
                 }
 
-            }
+           // }
         } catch (\Exception $e) {
              //$e->getMessage();
         }
