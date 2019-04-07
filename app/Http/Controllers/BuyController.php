@@ -8,7 +8,6 @@ use App\PayOrder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Pay;
-use test\Mockery\Fixtures\EmptyTestCaseV5;
 
 class BuyController extends Controller
 {
@@ -136,7 +135,7 @@ class BuyController extends Controller
            //还需要验证appid 和 写入 支付宝交易号 到数据库
             if($data->trade_status=='TRADE_SUCCESS'){
                 $amount=PayOrder::where(['order_no'=>$data->out_trade_no])->value('amount');
-                if($amount==$data->total_amount){
+                if((int)$amount==(int)($data->total_amount)){
                     PayOrder::where(['order_no'=>$data->out_trade_no])->update(['status' => 1]);
                 }
 
