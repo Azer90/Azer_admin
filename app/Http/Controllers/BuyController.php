@@ -74,7 +74,8 @@ class BuyController extends Controller
             $order = [
                 'out_trade_no' => $order_no,
                 'body' =>  $goods['name'],
-                'total_fee'      => $goods['price']*100,
+                //'total_fee'      => $goods['price']*100,
+                'total_fee'      =>1,
             ];
             $result = Pay::wechat()->scan($order);
             $msg['message'] = $result["code_url"];
