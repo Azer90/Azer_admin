@@ -23,7 +23,7 @@ Route::get('/', 'IndexController@index')->name('/');
 Route::get('software', 'SoftwareController@index')->name('software');
 Route::get('download', 'DownloadController@index')->name('download');
 Route::get('buy', 'BuyController@index')->name('buy');
-Route::post('alipay_notify', 'BuyController@alipay_notify')->name('alipay_notify');
+Route::any('alipay_notify', 'BuyController@alipay_notify')->name('alipay_notify');
 Route::post('wechat_notify', 'BuyController@wechat_notify')->name('wechat_notify');
 
 Route::group(['prefix' => 'surpport'], function () {
