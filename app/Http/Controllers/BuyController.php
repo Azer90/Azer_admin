@@ -142,7 +142,7 @@ class BuyController extends Controller
 
             }
         } catch (\Exception $e) {
-             $e->getMessage();
+             //$e->getMessage();
         }
 
         return $alipay->success();
@@ -158,6 +158,16 @@ class BuyController extends Controller
             $data = $pay->verify(); // 是的，验签就这么简单！
 
             Log::debug('Wechat notify', $data->all());
+            //$data->appid;
+            //$data->openid;
+            if($data->result_code=='SUCCESS'){
+                $amount=PayOrder::where(['order_no'=>$data->out_trade_no])->value('amount');
+                if((int)$amount==($data->total_fee/100)){
+                    PayOrder::where(['order_no'=>$data->out_trade_no])->update(['status' => 1]);
+                }
+            }
+
+
         } catch (\Exception $e) {
             // $e->getMessage();
         }
