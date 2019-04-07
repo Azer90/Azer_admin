@@ -134,7 +134,8 @@ class BuyController extends Controller
             // 支付宝交易号：$data->trade_no
            //还需要验证appid 和 写入 支付宝交易号 到数据库
             if($data->trade_status=='TRADE_SUCCESS'){
-                PayOrder::where(['order_no'=>$data->out_trade_no])->update(['status'=>1]);
+                $out_trade_no=$data->out_trade_no;
+                PayOrder::where(['order_no'=>$out_trade_no])->update(['status'=>1]);
                 //$amount=PayOrder::where(['order_no'=>$data->out_trade_no])->value('amount');
                // if((int)$amount==(int)($data->total_amount)){
 
