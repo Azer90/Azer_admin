@@ -65,7 +65,7 @@
     </ul>
     <h2 class="tac fs30 pt100 hborder">试用相关知识</h2>
     <ul class="layui-row mt50 mb50">
-        <li class="layui-col-xs6 oh pr15"><img height="120" width="190" title="判断电脑是32位还是64位" alt="判断电脑是32位还是64位" src="picture/图片6.jpg" />
+        <li class="layui-col-xs6 oh pr15"><img height="120" width="190" title="判断电脑是32位还是64位" alt="判断电脑是32位还是64位" src="picture/judge.jpg" />
             <div class="w61p fr">
                 <h2 class="fs22 fwn overSL"><a style="color:#666" href="ruhepanduandnsjiwei-2.html" target="_blank">如何判断电脑是32位还是64位</a></h2>
                 <p class="c6 pt10 pb2">“32 位”和“64 位”是指计算机的处理器（也称为“CPU”）处理信息的方式。64 位版本的 Windows 可处理大量的随机存取内存 (RAM)，其效率远远高于 32 位的系统。</p>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use App\Goods;
 use App\PayOrder;
+use dir\Dir;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Pay;
@@ -22,7 +23,7 @@ class BuyController extends Controller
         $nav=$this->nav;
         $name=$this->name;
         $seo=$this->seo;
-        $config=$this->config;
+        $config=$this->system;
         $goods=Goods::all()->toArray();
         $endgoods=end($goods);
         return view('buy')->with(compact('nav','name','seo','config','goods','endgoods'));
@@ -66,7 +67,7 @@ class BuyController extends Controller
                 'http_method'  => 'URL'
             ];
 
-            $result = Pay::alipay()->web($order);
+            $result = Pay::alipay($this->ali_config)->web($order);
             $msg['message'] = $result;
 
         }else if($data['paymethod']=='wechat'){
@@ -76,7 +77,7 @@ class BuyController extends Controller
                 'total_fee'      => $goods['price']*100,
                 //'total_fee'      =>1,
             ];
-            $result = Pay::wechat()->scan($order);
+            $result = Pay::wechat($this->wechat_config)->scan($order);
             $msg['message'] = $result["code_url"];
         }
 
@@ -119,7 +120,7 @@ class BuyController extends Controller
      */
     public function alipay_notify(){
 
-        $alipay = Pay::alipay();
+        $alipay = Pay::alipay($this->ali_config);
         try{
             $data = $alipay->verify(); // 是的，验签就这么简单！
 
@@ -136,13 +137,14 @@ class BuyController extends Controller
             Log::debug('Alipay notify', $data->all());
             if($data->trade_status=='TRADE_SUCCESS'){
 
-                $amount=PayOrder::where(['order_no'=>$data->out_trade_no])->value('amount');
+                if($this->ali_config['app_id']==$data->app_id){
+                    $amount=PayOrder::where(['order_no'=>$data->out_trade_no])->value('amount');
 
-                if((int)$amount==(int)($data->total_amount)){
+                    if((int)$amount==(int)($data->total_amount)){
 
-                    PayOrder::where(['order_no'=>$data->out_trade_no])->update(['status'=>1]);
+                        PayOrder::where(['order_no'=>$data->out_trade_no])->update(['status'=>1,'trade_no'=>$data->trade_no,'openid'=>$data->buyer_id]);
+                    }
                 }
-
             }
         } catch (\Exception $e) {
              //$e->getMessage();
@@ -155,7 +157,7 @@ class BuyController extends Controller
     * 微信回调
     */
     public function wechat_notify(){
-        $pay = Pay::wechat();
+        $pay = Pay::wechat($this->wechat_config);
 
         try{
             $data = $pay->verify(); // 是的，验签就这么简单！
@@ -164,13 +166,15 @@ class BuyController extends Controller
             //$data->appid;
             //$data->openid;
             if($data->result_code=='SUCCESS'){
-                $amount=PayOrder::where(['order_no'=>$data->out_trade_no])->value('amount');
-                if((int)$amount==($data->total_fee/100)){
-                    PayOrder::where(['order_no'=>$data->out_trade_no])->update(['status' => 1]);
+
+                if($this->wechat_config['app_id']==$data->appid){
+
+                    $amount=PayOrder::where(['order_no'=>$data->out_trade_no])->value('amount');
+                    if((int)$amount==($data->total_fee/100)){
+                        PayOrder::where(['order_no'=>$data->out_trade_no])->update(['status' => 1,'trade_no'=>$data->transaction_id,'openid'=>$data->openid]);
+                    }
                 }
             }
-
-
         } catch (\Exception $e) {
             // $e->getMessage();
         }

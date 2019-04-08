@@ -14,7 +14,8 @@ class IndexController extends Controller
         $nav=$this->nav;
         $name=$this->name;
         $seo=$this->seo;
-        $config=$this->config;
+        $config=$this->system;
+
         return view('index')->with(compact('nav','name','seo','config'));
     }
 }

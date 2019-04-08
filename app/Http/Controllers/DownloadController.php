@@ -16,7 +16,7 @@ class DownloadController extends Controller
         $nav=$this->nav;
         $name=$this->name;
         $seo=$this->seo;
-        $config=$this->config;
+        $config=$this->system;
         return view('download')->with(compact('nav','name','seo','config'));
     }
 }

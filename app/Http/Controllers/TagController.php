@@ -14,7 +14,7 @@ class TagController extends Controller
         $nav=$this->nav;
         $name=$this->name;
         $seo=$this->seo;
-        $config=$this->config;
+        $config=$this->system;
         $data= Tag::select('tags.name','tags.id as tag_id','ar.title','ar.description','ar.id')->join('article_tag as at', 'at.tag_id', '=', 'tags.id')->join('article as ar', 'at.article_id', '=', 'ar.id')->where(['tags.id'=>$id])->paginate(1);
         $tag=Tag::select('id','name')->take(15)->get();
     /*   $ids = array_column($tag['data'], 'id');

@@ -82,18 +82,24 @@ class ConfigController extends Controller
         $grid = new Grid(new Config);
 
         $grid->id('ID')->sortable();
-        $grid->columns([
-            'title'=>trans('admin.website'),
-            'qq'=>'QQ',
-            'phone'=>trans('admin.phone'),
-            'email'=>trans('admin.email'),
-            'copyright'=>trans('admin.copyright'),
-            'icp'=>trans('admin.icp'),
-            'bln'=>trans('admin.bln'),
-        ]);
+        $grid->name(trans('admin.name'))->display(function ($name) {
+            return "<a tabindex=\"0\" class=\"btn btn-xs btn-twitter\" role=\"button\" data-toggle=\"popover\" data-html=true title=\"Usage\" data-content=\"<code>config('$name');</code>\">$name</a>";
+        });
+        $grid->value(trans('admin.value'))->display(function ($text) {
+            return  str_limit($text, 20, '...');
+        });
 
+
+        $grid->description(trans('admin.description'));
+        $grid->type(trans('admin.type'));
         $grid->created_at(trans('admin.created_at'));
         $grid->updated_at(trans('admin.updated_at'));
+
+        $grid->filter(function ($filter) {
+            $filter->disableIdFilter();
+            $filter->like('name');
+            $filter->like('value');
+        });
         $grid->disableExport();
 
         return $grid;
@@ -122,18 +128,16 @@ class ConfigController extends Controller
     protected function form()
     {
         $form = new Form(new Config);
+
         $form->display('id', 'ID');
+        $form->text('name', trans('admin.name'))->rules('required');
+        $form->textarea('value', trans('admin.value'))->rules('required');
+        $form->text('type', trans('admin.type'))->rules('required');
+        $form->textarea('description', trans('admin.description'));
 
-        $form->text('title', trans('admin.website'))->rules('required');
-        $form->text('qq', 'QQ')->rules('required');
-        $form->mobile('phone', trans('admin.phone'))->rules('required');
-        $form->email('email', trans('admin.email'))->rules('required');
-
-        $form->text('copyright', trans('admin.copyright'))->rules('required');
-        $form->text('icp', trans('admin.icp'))->rules('required');
-        $form->text('bln', trans('admin.bln'));
         $form->display('created_at', trans('admin.created_at'));
         $form->display('updated_at', trans('admin.updated_at'));
+
         $form->footer(function ($footer) {
 
             // 去掉`查看`checkbox

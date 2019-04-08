@@ -21,7 +21,7 @@ class SurpportController extends Controller
         $nav=$this->nav;
         $name=$this->name;
         $seo=$this->seo;
-        $config=$this->config;
+        $config=$this->system;
         return view('surpport')->with(compact('nav','name','seo','config','help','problems'));
     }
 
@@ -33,7 +33,7 @@ class SurpportController extends Controller
         $nav=$this->nav;
         $name=$this->name;
         $seo=$this->seo;
-        $config=$this->config;
+        $config=$this->system;
         return view('help')->with(compact('nav','name','seo','config','help'));
     }
     /**
@@ -44,7 +44,7 @@ class SurpportController extends Controller
         $nav=$this->nav;
         $name=$this->name;
         $seo=$this->seo;
-        $config=$this->config;
+        $config=$this->system;
         return view('problems')->with(compact('nav','name','seo','config','problems'));
     }
     /**
@@ -55,7 +55,7 @@ class SurpportController extends Controller
         $nav=$this->nav;
         $name=$this->name;
         $seo=$this->seo;
-        $config=$this->config;
+        $config=$this->system;
         return view('library')->with(compact('nav','name','seo','config','library'));
     }
 
@@ -91,7 +91,7 @@ class SurpportController extends Controller
             $nav=$this->nav;
             $name=$this->name;
             $seo=['keywords'=>$article['keywords'],'description'=>$article['description']];
-            $config=$this->config;
+            $config=$this->system;
             $config['title']= $config['title'].'-'.$article['title'];
         return view('detail')->with(compact('nav','name','seo','config','article','hot','new','up','down','tag'));
     }
