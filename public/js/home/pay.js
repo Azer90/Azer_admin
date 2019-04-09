@@ -108,7 +108,7 @@ function payWay() {
 
 
     if ( $('#aliPay').hasClass('current')) {
-        var newTab = window.open('/loading', '_blank');
+        var newTab = window.open('/loading', '_self');
     }
     $.ajax({
         url: $('.themeUrl').text(),
