@@ -85,7 +85,7 @@ class GoodsController extends Controller
         $grid->title(trans('admin.title'));
         $grid->slogan(trans('admin.slogan'));
         $grid->name(trans('admin.name'));
-        $grid->price(trans('admin.price'));
+        $grid->price(trans('admin.price'))->editable();
         $grid->img(trans('admin.img'))->image('',100,100);
         $grid->created_at(trans('admin.created_at'));
         $grid->updated_at(trans('admin.updated_at'));
