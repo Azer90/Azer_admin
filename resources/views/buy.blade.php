@@ -402,6 +402,7 @@
 <p class="token" style="display:none;">{{ csrf_token() }}</p>
 <p class="order_no" style="display:none;">{{ request()->out_trade_no }}</p>
 <p class="sendUrl" style="display:none;">{{ route('sendData') }}</p>
+<p class="buyUrl" style="display:none;">{{ route('buy') }}</p>
 {{--底部--}}
 @extends('layouts.footer')
 

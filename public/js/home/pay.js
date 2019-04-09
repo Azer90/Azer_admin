@@ -232,6 +232,7 @@ function codeTJ() {
     var pcode = $("input[name='pcode']").val();
     var order_no = $('.order_no').text();
     var url =$('.sendUrl').text();
+    var buyUrl =$('.buyUrl').text();
 
     if (email != '' && pcode != ''&&order_no!='') {
        var code = generate();
@@ -244,6 +245,8 @@ function codeTJ() {
                  $(".pay-success").css("display", "none");
                  if(data['payway']=='wechat'){
                      location.reload()
+                 }else if(data['payway']=='alipay'){
+                     window.location.href=buyUrl;
                  }
              }
 
