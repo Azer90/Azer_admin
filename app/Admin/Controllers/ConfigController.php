@@ -101,7 +101,9 @@ class ConfigController extends Controller
             $filter->like('value');
         });
         $grid->disableExport();
-
+        $grid->actions(function ($actions) {
+            $actions->disableView();
+        });
         return $grid;
     }
 

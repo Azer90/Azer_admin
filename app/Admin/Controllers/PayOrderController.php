@@ -83,20 +83,23 @@ class PayOrderController extends Controller
 
         $grid->id('ID')->sortable();
         $grid->column('order_no', trans('admin.order_no'));
+        $grid->payway(trans('admin.payway'));
         $grid->goods_name(trans('admin.goods'));
         $grid->amount(trans('admin.amount'));
-        $grid->email(trans('admin.email'));
         $grid->ip('IP');
-        $grid->payway(trans('admin.payway'));
         $grid->trade_no('交易订单号');
-        $grid->openid('用户标识');
+        $grid->email(trans('admin.email'));
         $grid->m_code('机器码');
+        $grid->created_at(trans('admin.created_at'));
+        $grid->updated_at(trans('admin.updated_at'));
+        $grid->openid('用户标识');
         $grid->status(trans('admin.status'))->display(function ($released) {
             return $released ? '<span style="color: #5452ff">已支付</span>' : '<span style="color: red">未支付</span>';
         });
 
-        $grid->created_at(trans('admin.created_at'));
-        $grid->updated_at(trans('admin.updated_at'));
+        $grid->actions(function ($actions) {
+            $actions->disableView();
+        });
         $grid->disableCreateButton();
 
 

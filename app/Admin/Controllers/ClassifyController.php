@@ -89,6 +89,9 @@ class ClassifyController extends Controller
 
         $grid->created_at(trans('admin.created_at'));
         $grid->updated_at(trans('admin.updated_at'));
+        $grid->actions(function ($actions) {
+            $actions->disableView();
+        });
         $grid->disableExport();
 
         return $grid;
