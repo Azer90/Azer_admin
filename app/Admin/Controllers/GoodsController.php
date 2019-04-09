@@ -130,7 +130,6 @@ class GoodsController extends Controller
         $form->text('slogan', trans('admin.slogan'))->required()->rules('required');
         $form->text('name', trans('admin.name'))->required()->rules('required');
         $form->decimal('price',  trans('admin.price'))->required()->rules('required');
-        $form->image('img', trans('admin.img'));
         $form->display('created_at', trans('admin.created_at'));
         $form->display('updated_at', trans('admin.updated_at'));
         return $form;
