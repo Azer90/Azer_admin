@@ -220,7 +220,7 @@ class BuyController extends Controller
         $msg['message']='支付不成功';
         $msg['code'] = 1001;
         if(!empty($orderData['status'])){
-            PayOrder::where(['order_no'=>$data['order_no']])->update(['email' => $data['email']]);
+            PayOrder::where(['order_no'=>$data['order_no']])->update(['email' => $data['email'],'m_code'=>$data['code']]);
             $this->sendEmail($data['email'],$data['code']);
             $msg['message']='成功';
             $msg['payway'] = $orderData['payway'];
