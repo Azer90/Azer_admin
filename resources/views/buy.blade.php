@@ -120,6 +120,7 @@
         </dl>
         <div class="form-error form-error-buy" style="color:#ff0030"></div>
         <div><input type="button" id="tj" value="提交"/></div>
+        <span style="text-align: center;display: block;color: red">Tips:点击软件界面的右上角(注册),查看软件(机器码),点击机器码尾部的复制图标即可复制。</span>
     </ul>
 </div>
 <!-- 验证码弹出框结束 -->
@@ -399,7 +400,7 @@
 <p class="wechatUrl" style="display:none;">{{ route('wechat_find') }}</p>
 <p class="aliUrl" style="display:none;">{{ route('ali_find') }}</p>
 <p class="token" style="display:none;">{{ csrf_token() }}</p>
-<p class="order_no" style="display:none;"></p>
+<p class="order_no" style="display:none;">{{ request()->out_trade_no }}</p>
 <p class="sendUrl" style="display:none;">{{ route('sendData') }}</p>
 {{--底部--}}
 @extends('layouts.footer')
