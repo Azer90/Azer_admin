@@ -25,6 +25,9 @@ Route::get('download', 'DownloadController@index')->name('download');
 Route::get('buy', 'BuyController@index')->name('buy');
 Route::post('alipay_notify', 'BuyController@alipay_notify')->name('alipay_notify');
 Route::post('wechat_notify', 'BuyController@wechat_notify')->name('wechat_notify');
+Route::post('wechat_find', 'BuyController@wechat_find')->name('wechat_find');
+Route::post('ali_find', 'BuyController@ali_find')->name('ali_find');
+Route::post('sendData', 'BuyController@sendData')->name('sendData');
 
 Route::group(['prefix' => 'surpport'], function () {
 

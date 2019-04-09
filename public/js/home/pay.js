@@ -55,7 +55,16 @@ $(function () {
         $(".wechat-pay-dialog-bg").css("display", "none");
         $(".wechat-pay-dialog").css("display", "none");
     });
+    $(".success_close").click(function (event) {
+        $(".pay-success-bg").css("display", "none");
+        $(".pay-success").css("display", "none");
+    });
 });
+
+function paySuccess(){
+    $(".pay-success-bg").css({ display: "block", height: $(document).height() });
+    $(".pay-success").css("display", "block");
+};
 /**
  * 错误信息提示
  */
@@ -111,8 +120,9 @@ function payWay() {
             '_token':$('.token').text(),
         },
         success: function (data) {
-           /* console.log(data);*/
+            /*console.log(data.order_no);*/
             if (data.code == 1000) {
+                $('.order_no').html(data.order_no);
                 if (paymethod == 'alipay') {
                     newTab.location = data.message;
                 } else if (paymethod == 'wechat') {
@@ -143,4 +153,113 @@ $(function () {
          //   errorMsgShow();
        // };
     });
-})
+});
+
+var checkedcode = false;
+function checkEmail(id) {
+    var email = document.getElementById(id).value;
+    if (!(/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/.test(email))) {
+        errorMsgShow_();
+        checkedcode = false;
+        return false;
+    } else {
+        checkedcode = true;
+    }
+}
+
+function errorMsgShow_() {
+    $(".form-error-buy").text('请正确填写邮箱格式');
+    $(".form-error-buy").css({ display: 'block' });
+    errorMsgHide(".form-error-buy");
+}
+$(function () {
+    chaxun = setInterval(function () {
+        check()
+    }, 3000);
+
+
+    $('#email').blur(function (event) {
+        checkEmail('email');
+    });
+
+    $('#tj').click(function () {
+         if (checkedcode) {
+             codeTJ();
+         } else {
+             errorMsgShow_();
+         };
+    })
+});
+
+function check() {
+    var paymethod = $('.payment a.current').attr('value');
+    if (paymethod == 'alipay') {
+        var url =$('.aliUrl').text();
+    }
+    if (paymethod == 'wechat') {
+        var url =$('.wechatUrl').text();
+    }
+    var order_no = $('.order_no').text();
+    var param = {'order_no': order_no, '_token':$('.token').text()};
+    if(order_no !=''){
+        $.post(url, param, function (data) {
+
+            if(paymethod == 'alipay'){
+               // console.log(data['trade_status']);
+                if (data['trade_status'] == 'TRADE_SUCCESS') {
+                    paySuccess();
+                    clearInterval(chaxun);
+                }
+            }else if(paymethod == 'wechat'){
+                //console.log(data['trade_state']);
+                if (data['trade_state'] == 'SUCCESS') {
+                    $(".wechat-pay-dialog-bg").css("display", "none");
+                    $(".wechat-pay-dialog").css("display", "none");
+                    paySuccess();
+                    clearInterval(chaxun);
+                }
+            }
+
+        });
+    }
+
+}
+
+
+function codeTJ() {
+    var email = $("input[name='email']").val();
+    var pcode = $("input[name='pcode']").val();
+    var order_no = $('.order_no').text();
+    var url =$('.sendUrl').text();
+
+    if (email != '' && pcode != ''&&order_no!='') {
+       var code = generate();
+       /* console.log(activecode);*/
+        var param = {'email': email, 'code': code, 'order_no': order_no,'_token':$('.token').text()};
+        $.post(url, param, function (data) {
+             console.log(data);
+             if(data['code']==1000){
+                 $(".pay-success-bg").css("display", "none");
+                 $(".pay-success").css("display", "none");
+             }
+
+        });
+    } else {
+        alert('请填写完整！');
+    }
+}
+
+function generate() {
+    let m_code = document.getElementById('pcode').value;
+    let num = parseInt(m_code);
+    let text = undefined;
+    for (let i = 0; i < 100; i++) {
+        text = '' + (num * 3);
+        if (text.length <= 12) {
+            num = parseInt(text);
+        } else {
+            num = parseInt(text.slice(0, 12));
+        }
+    }
+    return num;
+}

@@ -8,6 +8,7 @@ use App\PayOrder;
 use dir\Dir;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 use Pay;
 
 class BuyController extends Controller
@@ -82,6 +83,7 @@ class BuyController extends Controller
         }
 
         $msg['code'] = 1000;
+        $msg['order_no'] = $order_no;
         return response()->json($msg);
 
 
@@ -115,6 +117,33 @@ class BuyController extends Controller
 
     }
 
+    /**
+     * 微信支付订单查詢
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function wechat_find(Request $request){
+        $data=$request->all();
+        $order = [
+            'out_trade_no' => $data['order_no'],
+        ];
+
+        $result = Pay::wechat($this->wechat_config)->find($order);
+
+        return response()->json($result);
+    }
+
+    /**
+     * 支付宝支付订单查詢
+     */
+    public function ali_find(Request $request){
+        $data=$request->all();
+        $order = [
+            'out_trade_no' => $data['order_no'],
+        ];
+
+        $result =Pay::alipay($this->ali_config)->find($order);
+        return response()->json($result);
+    }
     /*
      * 支付宝回调
      */
@@ -182,4 +211,31 @@ class BuyController extends Controller
         return $pay->success();
     }
 
+    /**
+     * 发送数据
+     */
+    public function sendData(Request $request){
+        $data=$request->all();
+        $status =  PayOrder::where(['order_no'=>$data['order_no']])->value('status');
+        $msg['message']='支付不成功';
+        $msg['code'] = 1001;
+        if(!empty($status)){
+            PayOrder::where(['order_no'=>$data['order_no']])->update(['email' => $data['email']]);
+            $this->sendEmail($data['email'],$data['code']);
+            $msg['message']='成功';
+            $msg['code'] = 1000;
+        }
+
+        return response()->json($msg);
+    }
+
+    protected function sendEmail($to,$code){
+        $subject = '北斗pdfer转换器激活码';
+        $data=['code' => $code];
+        Mail::send('email.send', $data, function ($message) use($to, $subject) {
+                $message->to($to)->subject($subject);
+            }
+        );
+
+    }
 }

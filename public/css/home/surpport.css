@@ -929,7 +929,8 @@ table{
 
 
 .form-error{
-    padding-left: 375px;
+   /* padding-left: 375px;*/
+    text-align: center;
 }
 @media (min-width: 1024px) {
     .goods-infor {
@@ -1201,6 +1202,65 @@ table{
     background: -moz-linear-gradient( left, #299ff7 15%, #60c4fe 100%);
     background: linear-gradient( left, #299ff7 15%, #60c4fe 100%);
 }
+.pay-success {
+    position: fixed;
+    z-index: 1002;
+    top: 20%;
+    left: 50%;
+    display: none;
+    width: 700px;
+    margin-left: -350px;
+    padding: 20px 0;
+    border: solid 1px #ccc;
+    background: #fff;
+    box-shadow: 0 0 24px rgba(0,0,0,.2);
+}
+.pay-success-bg {
+    position: absolute;
+    z-index: 1001;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    opacity: .70;
+    background-color: black;
+    -moz-opacity: .7;
+    filter: alpha(opacity=70);
+}
+.pay-success .success_close {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    top: -15px;
+    right: -15px;
+    z-index: 2;
+    cursor: pointer;
+    display: block;
+    background: url(../../images/icon-close.png) center no-repeat;
+}
+
+.pay-success .user-infor >div:last-of-type{
+
+    text-align: center;
+    margin: 20px 0px;
+
+}
+.pay-success .user-infor >div >input{
+    color: #fff;
+    width: 200px;
+    line-height: 50px;
+    border-radius: 5px;
+    background: #0a70ff;
+    text-align: center;
+    border:none;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+
 
 .wechat-pay-dialog-bg {
     position: absolute;

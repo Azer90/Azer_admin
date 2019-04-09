@@ -62,6 +62,7 @@
                     <a value="alipay" id="aliPay" class="pay-ali current" ><span class="icon icon-tag"></span><img src="{{ asset('picture/pay-ali.png') }}"></a>
                     <a value="wechat" id="wechatPay" class="pay-wechat"><span class="icon icon-tag"></span><img src="{{ asset('picture/pay-wechat.png') }}"></a>
                 </div>
+                <div style="text-align: center; color:#FF0000;margin-top: 10px">Tips:支付成功后填写邮箱和软件机器码进行授权*请勿关闭当前页</div>
                 <div class="pay-now" id="payNow">
                     立即购买
                 </div>
@@ -98,6 +99,30 @@
     </ul>
 </div>
 <!-- 微信扫码支付弹出框结束 -->
+<!-- 验证码弹出框开始 -->
+<div class="pay-success-bg  full"></div>
+<div class="pay-success">
+    <a class="success_close"></a>
+    <ul class="user-infor">
+        <div class="buy-step" style="text-align: center"><span class="step-num">  <p>支付成功,请填写邮箱和机器码</p></span>发送注册码</div>
+
+        <dl class="buy-input">
+            <dd class="dd-01">邮&emsp;箱：</dd>
+            <dd class="dd-02"><input name="email" type="text" value="" placeholder="请输入邮箱" class="email" id="email"></dd>
+            <div class="clearfix"></div>
+        </dl>
+        <dl class="buy-input">
+            <dd class="dd-01 buy-input-cxt">机器码：</dd>
+            <dd class="dd-02 contact-phones" id="mtel">
+                <input name="pcode" type="text" value="" placeholder="请输入机器码" size="25" maxlength="15" id="pcode">
+            </dd>
+            <div class="clearfix"></div>
+        </dl>
+        <div class="form-error form-error-buy" style="color:#ff0030"></div>
+        <div><input type="button" id="tj" value="提交"/></div>
+    </ul>
+</div>
+<!-- 验证码弹出框结束 -->
 <section class="wrapper full">
     <h3 class="plan-introduction-title">套餐介绍</h3>
     <ul class="plan-introduction">
@@ -369,8 +394,13 @@
     </ul>
 </section>
 
+
 <p class="themeUrl" style="display:none;">{{ route('pay') }}</p>
+<p class="wechatUrl" style="display:none;">{{ route('wechat_find') }}</p>
+<p class="aliUrl" style="display:none;">{{ route('ali_find') }}</p>
 <p class="token" style="display:none;">{{ csrf_token() }}</p>
+<p class="order_no" style="display:none;"></p>
+<p class="sendUrl" style="display:none;">{{ route('sendData') }}</p>
 {{--底部--}}
 @extends('layouts.footer')
 
