@@ -90,6 +90,7 @@ class PayOrderController extends Controller
         $grid->payway(trans('admin.payway'));
         $grid->trade_no('交易订单号');
         $grid->openid('用户标识');
+        $grid->m_code('机器码');
         $grid->status(trans('admin.status'))->display(function ($released) {
             return $released ? '<span style="color: #5452ff">已支付</span>' : '<span style="color: red">未支付</span>';
         });
