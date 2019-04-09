@@ -216,13 +216,14 @@ class BuyController extends Controller
      */
     public function sendData(Request $request){
         $data=$request->all();
-        $status =  PayOrder::where(['order_no'=>$data['order_no']])->value('status');
+        $orderData =  PayOrder::select('status','payway')->where(['order_no'=>$data['order_no']])->first();
         $msg['message']='支付不成功';
         $msg['code'] = 1001;
-        if(!empty($status)){
+        if(!empty($orderData['status'])){
             PayOrder::where(['order_no'=>$data['order_no']])->update(['email' => $data['email']]);
             $this->sendEmail($data['email'],$data['code']);
             $msg['message']='成功';
+            $msg['payway'] = $orderData['payway'];
             $msg['code'] = 1000;
         }
 

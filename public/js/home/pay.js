@@ -242,7 +242,9 @@ function codeTJ() {
              if(data['code']==1000){
                  $(".pay-success-bg").css("display", "none");
                  $(".pay-success").css("display", "none");
-                 location.reload()
+                 if(data['payway']=='wechat'){
+                     location.reload()
+                 }
              }
 
         });
