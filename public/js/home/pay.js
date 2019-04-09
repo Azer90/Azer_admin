@@ -107,9 +107,9 @@ function payWay() {
     var package = $('.xjpdf-plans a.current').attr('value');
 
 
-    if ( $('#aliPay').hasClass('current')) {
-        var newTab = window.open('/loading', '_self');
-    }
+  /*  if ( $('#aliPay').hasClass('current')) {
+        var newTab = window.open('/loading','_blank');
+    }*/
     $.ajax({
         url: $('.themeUrl').text(),
         type: 'post',
@@ -124,7 +124,8 @@ function payWay() {
             if (data.code == 1000) {
                 $('.order_no').html(data.order_no);
                 if (paymethod == 'alipay') {
-                    newTab.location = data.message;
+                   // newTab.location = data.message;
+                    window.open(data.message,'_self');
                 } else if (paymethod == 'wechat') {
                     var render;
                     if (isIE()) {
