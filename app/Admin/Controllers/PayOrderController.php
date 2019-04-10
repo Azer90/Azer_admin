@@ -86,7 +86,7 @@ class PayOrderController extends Controller
         $grid->payway(trans('admin.payway'));
         $grid->goods_name(trans('admin.goods'));
         $grid->amount(trans('admin.amount'));
-        $grid->ip('IP');
+        $grid->address('地区');
         $grid->trade_no('交易订单号');
         $grid->email(trans('admin.email'));
         $grid->m_code('机器码');
