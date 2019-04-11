@@ -169,7 +169,7 @@ class BuyController extends Controller
                 if($this->ali_config['app_id']==$data->app_id){
                     $amount=PayOrder::where(['order_no'=>$data->out_trade_no])->value('amount');
 
-                    if((int)$amount==(int)($data->total_amount)){
+                    if((float)$amount==(float)($data->total_amount)){
 
                         PayOrder::where(['order_no'=>$data->out_trade_no])->update(['status'=>1,'trade_no'=>$data->trade_no,'openid'=>$data->buyer_id]);
                     }
@@ -199,7 +199,7 @@ class BuyController extends Controller
                 if($this->wechat_config['app_id']==$data->appid){
 
                     $amount=PayOrder::where(['order_no'=>$data->out_trade_no])->value('amount');
-                    if((int)$amount==($data->total_fee/100)){
+                    if((float)$amount==(float)($data->total_fee/100)){
                         PayOrder::where(['order_no'=>$data->out_trade_no])->update(['status' => 1,'trade_no'=>$data->transaction_id,'openid'=>$data->openid]);
                     }
                 }
