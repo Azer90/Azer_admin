@@ -12,7 +12,7 @@ class PayOrder extends Model
 
     public function paginate()
     {
-        $perPage = Request::get('per_page', 10);
+        $perPage = Request::get('per_page', 20);
 
         $page = Request::get('page', 1);
 
