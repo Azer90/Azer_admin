@@ -34,7 +34,7 @@ $('.grid-refund').on('click', function () {
         input: "text",
         inputPlaceholder: "填写退款金额",
         preConfirm: function(inputValue) {
-        console.log(inputValue);
+       
         if(inputValue==''){
           swal.showValidationError("金额不能为空");	   
         }else{
@@ -49,6 +49,7 @@ $('.grid-refund').on('click', function () {
         }
     }).then(function(result) {
         var data = result.value;
+         console.log(data);
         if (typeof data === 'object') {
             if (data.code===1000) {
                 swal(data.message, '', 'success');

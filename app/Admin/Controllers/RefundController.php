@@ -49,9 +49,7 @@ class RefundController extends Controller
             }
         }
 
-        dd($result);
-
-        return response()->json($msg);
+        return response()->json($result);
     }
 
 
