@@ -56,8 +56,10 @@ $(function () {
         $(".wechat-pay-dialog").css("display", "none");
     });
     $(".success_close").click(function (event) {
+        var buyUrl =$('.buyUrl').text();
         $(".pay-success-bg").css("display", "none");
         $(".pay-success").css("display", "none");
+        window.location.href=buyUrl;
     });
 });
 
