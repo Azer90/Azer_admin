@@ -18,7 +18,8 @@ Route::group([
     $router->resource('link', 'LinkController');
     $router->resource('article', 'ArticleController');
     $router->resource('classify', 'ClassifyController');
-    $router->resource('payorder', 'PayOrderController',['except' => ['create']]);
+    $router->resource('payorder', 'PayOrderController',['only' => ['index']]);
     $router->resource('goods', 'GoodsController');
     $router->resource('tag', 'TagController');
+    $router->post('refund', 'RefundController@init')->name('refund');
 });

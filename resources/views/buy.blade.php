@@ -39,7 +39,7 @@
 
 
                     </div>
-                    <h2 class="price-wrap">￥<span class="price"><span class="thePlanPrice">{{ $endgoods['price'] }}.00</span></span></h2>
+                    <h2 class="price-wrap">￥<span class="price"><span class="thePlanPrice">{{ $endgoods['price'] }}</span></span></h2>
                     <div class="plans">
                         <div class="plans-title">套餐：</div>
                         <div class="plan xjpdf-plans">
@@ -83,7 +83,7 @@
         </li>
         <li class="li-02">
             <h3>微信扫码支付</h3>
-            <h1 class="price-wechat">￥<span class="thePlanPrice">{{ $endgoods['price'] }}.00</span></h1>
+            <h1 class="price-wechat">￥<span class="thePlanPrice">{{ $endgoods['price'] }}</span></h1>
             <div class="qr-code-wrapper" id="qrcode">
 
             </div>

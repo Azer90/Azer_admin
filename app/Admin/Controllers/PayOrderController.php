@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers;
 
+use App\Admin\Extensions\Refund;
 use App\PayOrder;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\HasResourceActions;
@@ -98,7 +99,10 @@ class PayOrderController extends Controller
         });
 
         $grid->actions(function ($actions) {
+            $actions->disableDelete();
+            $actions->disableEdit();
             $actions->disableView();
+            $actions->prepend(new Refund($actions->getKey()));
         });
         $grid->disableCreateButton();
 

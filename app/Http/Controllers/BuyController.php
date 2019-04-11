@@ -9,7 +9,7 @@ use dir\Dir;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
-use Pay;
+use Yansongda\Pay\Pay;
 
 class BuyController extends Controller
 {

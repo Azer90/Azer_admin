@@ -93,8 +93,8 @@ $(function () {
         $('.plan-titles .plan-title').eq(_index).addClass('current').siblings().removeClass('current');
         $('.goods-pics .goods-pic').eq(_index).addClass('current').siblings().removeClass('current'); 
         $('.plan-title-tips .slogan').eq(_index).addClass('current').siblings().removeClass('current'); 
-        $('.thePlanPrice').text(price+'.00');
-        $('.price-wechat').text(price+'.00');
+        $('.thePlanPrice').text(price);
+        $('.price-wechat').text(price);
     })
 })
 

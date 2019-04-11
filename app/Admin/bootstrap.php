@@ -20,3 +20,5 @@
 use App\Admin\Extensions\Form\UEditor;
 Encore\Admin\Form::forget(['map', 'editor']);
 Encore\Admin\Form::extend('UEditor', UEditor::class);
+
+Admin::js(asset('js/home/layer.js'));
