@@ -81,6 +81,7 @@ class RefundOrderController extends Controller
     {
         $grid = new Grid(new RefundOrder);
 
+        $grid->id('ID')->sortable();
         $grid->out_refund_no('退款订单');
         $grid->refund_fee('退款金额');
         $grid->total_fee('订单总金额');
