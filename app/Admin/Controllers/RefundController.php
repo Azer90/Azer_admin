@@ -11,7 +11,7 @@ use Yansongda\Pay\Pay;
 class RefundController extends Controller
 {
     use BaseController;
-    private $result;
+
     public function init(Request $request){
 
         $data=$request->all();
@@ -34,23 +34,27 @@ class RefundController extends Controller
                         'refund_reason' => $refund_desc,
                     ];
 
-                    $this->result = Pay::alipay($this->ali_config)->refund($order);
+                    $result = Pay::alipay($this->ali_config)->refund($order);
                     break;
                 case 'wechat':
                     $order = [
                         'out_trade_no' => $order['order_no'],
                         'out_refund_no' => $out_refund_no,
                         'total_fee' => (int)$order['amount']*100,
-                        'refund_fee' => $refund_fee,
+                        'refund_fee' => (int)$refund_fee*100,
                         'refund_desc' => $refund_desc,
                     ];
 
-                    $this->result =Pay::wechat($this->wechat_config)->refund($order);
+                    $result =Pay::wechat($this->wechat_config)->refund($order);
+                    if($result['result_code']==='SUCCESS'){
+                        $msg['code'] = 1000;
+                        $msg['message'] = '退款成功';
+                    }
                     break;
             }
         }
 
-        return response()->json($this->result);
+        return response()->json($msg);
     }
 
 
