@@ -21,5 +21,6 @@ Route::group([
     $router->resource('payorder', 'PayOrderController',['only' => ['index']]);
     $router->resource('goods', 'GoodsController');
     $router->resource('tag', 'TagController');
+    $router->resource('refundOrder', 'RefundOrderController',['only' => ['index']]);
     $router->post('refund', 'RefundController@init')->name('refund');
 });
