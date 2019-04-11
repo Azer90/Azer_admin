@@ -11,6 +11,7 @@ use Yansongda\Pay\Pay;
 class RefundController extends Controller
 {
     use BaseController;
+    private $result;
     public function init(Request $request){
 
         $data=$request->all();
@@ -33,7 +34,7 @@ class RefundController extends Controller
                         'refund_reason' => $refund_desc,
                     ];
 
-                    $result = Pay::alipay($this->ali_config)->refund($order);
+                    $this->result = Pay::alipay($this->ali_config)->refund($order);
                     break;
                 case 'wechat':
                     $order = [
@@ -44,12 +45,12 @@ class RefundController extends Controller
                         'refund_desc' => $refund_desc,
                     ];
 
-                    $result =Pay::wechat($this->wechat_config)->refund($order);
+                    $this->result =Pay::wechat($this->wechat_config)->refund($order);
                     break;
             }
         }
 
-        return response()->json($result);
+        return response()->json($this->result);
     }
 
 
