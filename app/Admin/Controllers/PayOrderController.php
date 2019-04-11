@@ -95,14 +95,25 @@ class PayOrderController extends Controller
         $grid->updated_at(trans('admin.updated_at'));
         $grid->openid('用户标识');
         $grid->status(trans('admin.status'))->display(function ($released) {
-            return $released ? '<span style="color: #5452ff">已支付</span>' : '<span style="color: red">未支付</span>';
+            switch ($released){
+                case 0:
+                    $str='<span style="color: red">未支付</span>';
+                    break;
+                case 1:
+                    $str='<span style="color: #5452ff">已支付</span>';
+                    break;
+                case 2:
+                    $str= '<span style="color: #ff299f">已退款</span>';
+                    break;
+            }
+            return $str;
         });
 
         $grid->actions(function ($actions) {
             $actions->disableDelete();
             $actions->disableEdit();
             $actions->disableView();
-            $actions->prepend(new Refund($actions->getKey()));
+            $actions->prepend(new Refund($actions->row));
         });
         $grid->disableCreateButton();
 
