@@ -90,7 +90,7 @@ class PayOrderController extends Controller
         $grid->address('地区');
         $grid->trade_no('交易订单号');
         $grid->email(trans('admin.email'));
-        $grid->m_code('机器码');
+        $grid->m_code('注冊码');
         $grid->created_at(trans('admin.created_at'));
         $grid->updated_at(trans('admin.updated_at'));
         $grid->openid('用户标识');
