@@ -114,7 +114,7 @@
         <dl class="buy-input">
             <dd class="dd-01 buy-input-cxt">机器码：</dd>
             <dd class="dd-02 contact-phones" id="mtel">
-                <input name="pcode" type="text" value="" placeholder="请输入机器码" size="25" maxlength="15" id="pcode">
+                <input name="pcode" type="text" value="" placeholder="请输入机器码,机器码为纯数字" size="25" maxlength="15" id="pcode" oninput="value=value.replace(/[^\d]/g,'')">
             </dd>
             <div class="clearfix"></div>
         </dl>
