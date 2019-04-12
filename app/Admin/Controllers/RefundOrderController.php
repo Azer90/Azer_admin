@@ -81,7 +81,23 @@ class RefundOrderController extends Controller
     protected function grid()
     {
         $grid = new Grid(new RefundOrder);
+        $grid->filter(function($filter){
 
+            // 去掉默认的id过滤器
+            $filter->disableIdFilter();
+
+            // 在这里添加字段过滤器
+            $filter->equal('order_no', '原支付订单号');
+            $filter->like('out_refund_no', '退款订单');
+            $filter->between('created_at', '日期')->datetime();
+
+            $filter->equal('status','退款状态')->radio([
+                ''   => 'All',
+                0    => '成功',
+                1    => '失败',
+            ]);
+
+        });
         $grid->id('ID')->sortable();
         $grid->out_refund_no('退款订单');
         $grid->refund_fee('退款金额');

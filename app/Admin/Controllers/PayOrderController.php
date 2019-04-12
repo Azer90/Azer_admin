@@ -82,7 +82,29 @@ class PayOrderController extends Controller
     protected function grid()
     {
         $grid = new Grid(new PayOrder);
+        $grid->filter(function($filter){
 
+            // 去掉默认的id过滤器
+            $filter->disableIdFilter();
+
+            // 在这里添加字段过滤器
+            $filter->equal('order_no', '订单号');
+            $filter->like('goods_name', '商品名');
+            $filter->equal('email', '邮箱')->email();
+            $filter->between('created_at', '日期')->datetime();
+            $filter->equal('payway','支付类型')->radio([
+                '' => 'All',
+                'wechat' => '微信',
+                'alipay' => '支付宝',
+            ]);
+            $filter->equal('status','支付状态')->radio([
+                ''   => 'All',
+                0    => '未付款',
+                1    => '已付款',
+                2    => '已退款',
+            ]);
+
+        });
         $grid->id('ID')->sortable();
         $grid->column('order_no', trans('admin.order_no'));
         $grid->payway(trans('admin.payway'));
