@@ -10,13 +10,16 @@ class ExcelExpoter extends AbstractExporter
 
     public function export()
     {
-
-        $ips=array_column($this->getData(),'ip');
-        $ips=array_unique($ips);
-        foreach ($ips as $value){
-            $ipdata= IPController::find($value);
-            $address[$value]=$ipdata[1].$ipdata[2].$ipdata[3];
+        $address=[];
+        if(!empty($this->getData())){
+            $ips=array_column($this->getData(),'ip');
+            $ips=array_unique($ips);
+            foreach ($ips as $value){
+                $ipdata= IPController::find($value);
+                $address[$value]=$ipdata[1].$ipdata[2].$ipdata[3];
+            }
         }
+
         Excel::create('订单报表'.date('Ymd',time()), function($excel) use ($address){
 
             $excel->sheet('订单报表', function($sheet)use ($address) {
