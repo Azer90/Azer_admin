@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers;
 
+use App\Admin\Extensions\ExcelExpoter;
 use App\Admin\Extensions\Refund;
 use App\PayOrder;
 use App\Http\Controllers\Controller;
@@ -108,7 +109,7 @@ class PayOrderController extends Controller
             }
             return $str;
         });
-
+        $grid->exporter(new ExcelExpoter());
         $grid->actions(function ($actions) {
             $actions->disableDelete();
             $actions->disableEdit();

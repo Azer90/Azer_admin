@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers;
 
+use App\Admin\Extensions\RefundOrderExpoter;
 use App\RefundOrder;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\HasResourceActions;
@@ -93,11 +94,8 @@ class RefundOrderController extends Controller
 
             return $released ? '<span style="color: #5452ff">成功</span>' : $str='<span style="color: red">失败</span>' ;
         });
-        $grid->actions(function ($actions) {
-            $actions->disableDelete();
-            $actions->disableEdit();
-            $actions->disableView();
-        });
+        $grid->exporter(new RefundOrderExpoter());
+        $grid->disableActions();
         $grid->disableCreateButton();
         return $grid;
     }
