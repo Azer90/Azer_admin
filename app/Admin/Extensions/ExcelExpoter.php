@@ -33,7 +33,7 @@ class ExcelExpoter extends AbstractExporter
                     $data['payway']=$item['payway'];
                     $data['goods_name']=$item['goods_name'];
                     $data['amount']=$item['amount'];
-                    $data['address']=$address[$item['ip']];
+                   // $data['address']=$address[$item['ip']];
                     $data['email']=$item['email'];
                     $data['m_code']=$item['m_code'];
                     $data['created_at']=$item['created_at'];
