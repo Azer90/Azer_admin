@@ -899,7 +899,7 @@ function searchUrl() {
 
 
 
-    window.location.href = 'http://' + location.hostname + '/biaoqian/' + res;
+    window.location.href = 'http://' + location.hostname + '/search/' + res;
 
 }
 

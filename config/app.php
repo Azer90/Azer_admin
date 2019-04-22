@@ -179,7 +179,8 @@ return [
         Stevenyangecho\UEditor\UEditorServiceProvider::class,
         Yansongda\LaravelPay\PayServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
-
+        Laravel\Scout\ScoutServiceProvider::class,
+        Vanry\Scout\TNTSearchScoutServiceProvider::class,
     ],
 
     /*

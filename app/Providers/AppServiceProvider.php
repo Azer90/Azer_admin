@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
-
+use Vanry\Scout\Highlighter;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -40,6 +40,10 @@ class AppServiceProvider extends ServiceProvider
                 fclose($logFile);
             }
         );*/
+        view()->composer('search', function ($view) {
+            $tokenizer = app('tntsearch.tokenizer')->driver();
+            $view->with('highlighter', new Highlighter($tokenizer));
+        });
     }
 
     /**
