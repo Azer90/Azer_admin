@@ -14,6 +14,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        ini_set('memory_limit', "256M");
        /* DB::listen(
             function ($sql) {
                 foreach ($sql->bindings as $i => $binding) {
