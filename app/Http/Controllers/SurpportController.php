@@ -22,6 +22,7 @@ class SurpportController extends Controller
         $name=$this->name;
         $seo=$this->seo;
         $config=$this->system;
+        $config['title_tag']='支持';
         return view('surpport')->with(compact('nav','name','seo','config','help','problems'));
     }
 
@@ -34,6 +35,7 @@ class SurpportController extends Controller
         $name=$this->name;
         $seo=$this->seo;
         $config=$this->system;
+        $config['title_tag']='教程';
         return view('help')->with(compact('nav','name','seo','config','help'));
     }
     /**
@@ -45,6 +47,7 @@ class SurpportController extends Controller
         $name=$this->name;
         $seo=$this->seo;
         $config=$this->system;
+        $config['title_tag']='常见问题';
         return view('problems')->with(compact('nav','name','seo','config','problems'));
     }
     /**
@@ -56,6 +59,7 @@ class SurpportController extends Controller
         $name=$this->name;
         $seo=$this->seo;
         $config=$this->system;
+        $config['title_tag']='知识库';
         return view('library')->with(compact('nav','name','seo','config','library'));
     }
 
@@ -92,7 +96,7 @@ class SurpportController extends Controller
             $name=$this->name;
             $seo=['keywords'=>$article['keywords'],'description'=>$article['description']];
             $config=$this->system;
-            $config['title']= $config['title'].'-'.$article['title'];
+            $config['title_tag']= $article['title'];
         return view('detail')->with(compact('nav','name','seo','config','article','hot','new','up','down','tag'));
     }
 

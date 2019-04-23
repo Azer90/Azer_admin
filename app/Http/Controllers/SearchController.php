@@ -13,6 +13,7 @@ class SearchController extends Controller
         $name=$this->name;
         $seo=$this->seo;
         $config=$this->system;
+        $config['title_tag']=$tag;
         $hot=Article::select('id','title')->where(['type'=>'hot','show'=>1])->take(5)->get();//热门
         $article_index= Article::search($tag)->get();
 

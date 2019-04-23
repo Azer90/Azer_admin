@@ -6,7 +6,7 @@
 
         <div class="layui-row pt50 pb30 bd-b-2 m_n_pt5 m_n_pb5 m_n_bn">
             <div class="layui-col-xs2 col-12 pr">
-                <p class="fs20 pb20 m_n_pb10r m_n_fs32r">会声会影</p>
+                <p class="fs20 pb20 m_n_pb10r m_n_fs32r">{{ $config['title'] }}</p>
                 <ul class="lh32 hide-n-xs m_n_lh40r m_n_fs24r">
                     <li><a target="_blank" href="jiaocheng.html">功能特性</a></li>
                     <li><a rel="nofollow" target="_blank" href="http://center.cjmakeding.com/orderinfo.php">正版下载地址</a></li>
@@ -26,9 +26,8 @@
             <div class="layui-col-xs2 col-12 pr">
                 <p class="fs20 pb20  m_n_pb10r m_n_fs32r">关于</p>
                 <ul class="lh32 hide-n-xs m_n_lh40r m_n_fs24r">
-                    <li><a target="_blank" href="aboutus.html">关于我们</a></li>
-                    <li><a target="_blank" href="mianze.html">隐私条款</a></li>
-                    <li><a target="_blank" href="sitemap.html">网站地图</a></li>
+                    <li><a target="_blank" href="{{ route('agreement') }}">关于我们</a></li>
+                    <li><a target="_blank" href="{{ route('disclaimer') }}">免责声明</a></li>
                     <li><a target="_blank" href="shouhou-tiaokuan.html">售后服务</a></li>
 
                 </ul>

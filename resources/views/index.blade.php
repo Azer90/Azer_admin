@@ -1,182 +1,416 @@
 @include('layouts.header')
+<style>
+    .banner {
+        position: relative;
+        width: 100%;
+        color: #fff;
+        background: no-repeat 50% 50% #008c8c;
+    }
+
+    .banner ul.current {
+         display: block;
+    }
+    .banner-download .banner-pic {
+        line-height: 490px;
+        height: 490px;
+        text-align: left;
+    }
+
+    .banner-download .banner-pic img {
+        margin: 0 0 0 -5%;
+    }
+
+    .banner ul.current {
+        display: block;
+    }
+
+    .banner-cxt {
+        width: 47%;
+    }
+
+    .banner-cxt h1 i {
+        font-size: 32px;
+        line-height: 1;
+    }
+
+    .banner-cxt p {
+        font-size: 16px;
+        line-height: 1.8;
+        width: 94%;
+        margin: 30px 0;
+    }
+
+    .banner-cxt p span {
+        display: block;
+        padding: 10px 10px 0;
+    }
+
+    .banner-cxt p span i {
+        display: block;
+        padding: 3px 0;
+        font-style: normal;
+    }
+
+    .banner-cxt p span s {
+        font-size: 18px;
+        margin-right: 10px;
+        text-decoration: none;
+    }
+
+    .banner-cxt p span s img {
+        margin-top: -4px;
+    }
+
+    .banner-cxt .btn-wrapper a {
+        margin-right: 20px;
+    }
+
+    .banner dl {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        display: inline;
+    }
+
+    .banner dl dd {
+        display: block;
+        float: left;
+        width: 72px;
+        height: 14px;
+        margin-right: 22px;
+        cursor: pointer;
+        background: #fff;
+    }
+
+    .banner dl dd.current {
+        background: #0380ff;
+    }
+
+
+    .banner-index .banner-pic {
+        line-height: 510px;
+        width: 53%;
+        height: 510px;
+    }
+
+    .banner-index .banner-pic img {
+        margin-top: 16%;
+        margin-left: -10%;
+    }
+
+    .right {
+        float: right;
+    }
+    .left {
+        float: left;
+    }
+    .wrapper {
+        width: 1170px;
+        margin: 0 auto;
+    }
+    .btn {
+        font-size: 24px;
+        line-height: 50px;
+        display: block;
+        width: 184px;
+        height: 50px;
+        text-align: center;
+        color: #fff;
+        background: #ff2121d4;
+    }
+    .btn-yellow:hover {
+         color: #f5f5f5;
+         text-decoration: none;
+         cursor: pointer;
+    }
+
+    .dd-00 {
+        position: relative;
+        width: 33.3%;
+        margin-left: 70px;
+    }
+
+
+    .dd-00 i {
+        position: absolute;
+        top: 0;
+        right: -180%;
+        display: block;
+        width: 90px;
+        height: 90px;
+        background: url({{asset('images/icon-arrow.png')}}) no-repeat 50% 50%;
+    }
+
+    .dd-00 a {
+        font-size: 50px;
+        line-height: 80px;
+        display: block;
+        width: 80px;
+        height: 80px;
+        text-align: center;
+        color: #fff;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        background: #aaa;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+    .dd-00 p {
+        font-size: 16px;
+        line-height: 1.6;
+        padding: 30px 0;
+    }
+    @media (min-width: 1024px) {
+       .jiaochen{
+           width: 1000px;
+           margin-left: 38%;
+           display: inline-block;
+       }
+    }
+    @media (max-width: 1024px) {
+        .jiaochen{
+            text-align: center;
+        }
+    }
+    @media (min-width: 1024px) {
+        .hero-index-step {
+            width: 1200px;
+            margin-left: 23%;
+        }
+    }
+    @media (max-width: 1024px) {
+        .hero-index-step {
+            text-align: center;
+        }
+    }
+
+    .hero-index-step > div {
+        position: relative;
+        display: inline-block;
+        width: 19%;
+        vertical-align: top;
+    }
+    .hero-index-step > div:after {
+        font-size: 30px;
+        position: absolute;
+        top: 25%;
+        right: 0;
+        display: block;
+        width: 30px;
+        height: 30px;
+        content: '>';
+    }
+    .hero-index-step > div:last-child:after {
+        display: none;
+    }
+
+    @media (min-width: 1024px) {
+        .cj_list{
+            margin-left: 25%;
+        }
+    }
+
+    .cj_list ul li {
+        margin-bottom: 40px;
+    }
+    .cj_list ul li i {
+        display: block;
+        float: left;
+        margin-right: 15px;
+        margin-top: 1px;
+    }
+    .cj_list ul li h3 {
+        font-size: 18px;
+        color: #333;
+        font-weight: 700;
+        margin-bottom: 14px;
+    }
+    .icon-u4 {
+        background-image: url({{asset('images/sprite.png')}});
+        background-position: -56px -101px;
+        width: 24px;
+        height: 24px;
+    }
+</style>
 <body>
 @include('layouts.nav')
 
-<div class="GA2018-b full m0a" style="height: 680px; background: url(images/banner-min.jpg) no-repeat top center;">
-    <div class="all m0a pr h100p">
-        <a class="GA2018 db h100p" href="purchase.html?oid=1521018265" target="_blank"></a>
-        <span class="saleNum" basenum="3082" topNum="500" basegoods="101818710211111111" style="position: absolute; color: #ff3845
-; top: 508px; left:625px; font-size: 24px; display: block; width: 60px; text-align: center; "></span>
-    </div>
+<div class="GA2018-b full m0a bd">
+    <ul>
+        <li>
+            <section class="banner banner-index">
+                <ul class="wrapper current">
+                    <li class="left banner-pic">
+                        <img src="{{asset('images/banner-pic-01.png')}}">
+                    </li>
+                    <li class="right banner-cxt">
+                        <h1><i>{{ $config['title'] }}</i></h1>
+                        <p>一款功能强大、操作简单的PDF转换成word转换器，支持PDF文档和doc、ppt、图片以及txt文档等多种格式之间的转换，转换率高，转换质量好的新一代文件格式转换器。
+                            <span>
+                                    <i>轻松拖拽批量转换</i>
+                                    <i>多种文件格式转换</i>
+                                    <i>高速转换质量保证</i>
+                                    <i>智能识别轻松转换</i>
+                                </span>
+                        </p>
+                        <div class="btn-wrapper">
+                            <a class="btn btn-yellow" href="http://download.xunjiepdf.com/download/pdf_setup_6_0_s.exe" target="_blank">立即下载<img
+                                        src="{{asset('images/icon-download.png')}}"></a>
+                        </div>
+                    </li>
+                    <div class="clearfix"></div>
+                </ul>
+            </section>
+        </li>
+    </ul>
 </div>
 
 <div class="all m0a">
-    <h2 class="fs36 pt90 tac hborder">功能强大的视频编辑软件</h2>
-    <p class="fs18 c9 tac pt18 pb40">剪辑&amp;合并视频 制作视频 屏幕录制 光盘制作 无需专业的视频编辑知识，任何人都能快速上手</p>
+    <h2 class="fs36 pt90 tac hborder">功能强大的PDF转换软件</h2>
+    <p class="fs18 c9 tac pt18 pb40">快速转换、批量转换，高质量识别等功能。无需专业的PDF转换知识，任何人都能快速上手</p>
     <ul class="layui-row tac indexGongnen">
-        <li class="layui-col-xs3 pt10 pb30 bd-r-1" hovershow="true" nohoverhide="true"> <img alt="视频剪辑" src="picture/index1-4.png" />
-            <h3 class="fs18 pt20"><a target="_blank" href="xiazai.html">免费试用简单易上手</a></h3>
+        <li class="layui-col-xs3 pt10 pb30 bd-r-1" >
+            <img alt="一键转换" src="{{asset('picture/index1-4.png')}}" />
+            <h3 class="fs18 pt20"><a>简单易用一键转换</a></h3>
         </li>
-        <li class="layui-col-xs3 pt10 pb30 bd-r-1" hovershow="true" nohoverhide="true"> <img alt="音乐" src="picture/index1-1.png" />
-            <h3 class="fs18 pt20"><a target="_blank" href="bu-zhou-mian-ban-jian-jie.html">专业的视频剪辑体验</a></h3>
+        <li class="layui-col-xs3 pt10 pb30 bd-r-1" >
+            <img alt="PDF转Word" src="{{asset('picture/index1-1.png')}}" />
+            <h3 class="fs18 pt20"><a>只专注做PDF转Word</a></h3>
         </li>
-        <li class="layui-col-xs3 pt10 pb30 bd-r-1" hovershow="true" nohoverhide="true"> <img alt="素材" src="picture/index1-3.png" />
-            <h3 class="fs18 pt20"><a href="mubanjiaocheng/" target="_blank">丰富多样的模版素材</a></h3>
+        <li class="layui-col-xs3 pt10 pb30 bd-r-1" >
+            <img alt="转换快速" src="{{asset('picture/index1-3.png')}}" />
+            <h3 class="fs18 pt20"><a>转换快速质量保障</a></h3>
         </li>
-        <li class="layui-col-xs3 pt10 pb30 bd-r-1" hovershow="true" nohoverhide="true"> <img alt="操作" src="picture/index1-2.png" />
-            <h3 class="fs18 pt20"><a target="_blank" href="zhuanxiang.html">精美的滤镜转场</a></h3>
+        <li class="layui-col-xs3 pt10 pb30 bd-r-1" >
+            <img alt="格式转换" src="{{asset('picture/index1-2.png')}}" />
+            <h3 class="fs18 pt20"><a>支持多种格式转换</a></h3>
         </li>
     </ul>
 </div>
 <div class="full m0a">
-    <h2 class="fs36 pt90 tac hborder mb30">为各类应用场景而设计</h2>
-    <ul class="layui-row white">
-        <a href="javascript:modalVideo('http://xiazai.huishenghuiying.com.cn/bofang/2019qrj.mp4','800px','450px')" style="color: #fff;">
-            <li hovershow="true" nohoverhide="true" class="fl w20p pr"><img class="maxw100" src="picture/2019qrj.jpg" alt="情人节片头" />
-                <h3 class="indexMubanTitle fs24">情人节片头</h3>
-                <div class="pa t0 l0 w100p h100p opBG zi1 indexopBG"></div>
-            </li>
-        </a> <a href="javascript:modalVideo('http://xiazai.huishenghuiying.com.cn/bofang/gyxz.mp4','800px','450px')" style="color:#fff;">
-            <li hovershow="true" nohoverhide="true" class="fl w20p pr"> <img class="maxw100" src="picture/gyxc.jpg" alt="甜蜜爱情" />
-                <h3 class="indexMubanTitle fs24">甜蜜爱情</h3>
-                <div class="pa t0 l0 w100p h100p opBG zi1 indexopBG"></div>
-            </li>
-        </a> <a href="javascript:modalVideo('http://xiazai.huishenghuiying.com.cn/bofang/hunli.mp4','800px','450px')" style="color:#fff;">
-            <li hovershow="true" nohoverhide="true" class="fl w20p pr"> <img class="maxw100" src="picture/index2-1.jpg" alt="婚礼" />
-                <h3 class="indexMubanTitle fs24">婚礼婚庆</h3>
-                <div class="pa t0 l0 w100p h100p opBG zi1 indexopBG"></div>
-            </li>
-        </a> <a href="javascript:modalVideo('http://xiazai.huishenghuiying.com.cn/bofang/xiangce.mp4','800px','450px') " style="color:#fff;">
-            <li hovershow="true" nohoverhide="true" class="fl w20p pr"> <img alt="相册" class="maxw100" src="picture/index2-13.jpg" />
-                <h3 class="indexMubanTitle fs24">电子相册</h3>
-                <div class="pa t0 l0 w100p h100p opBG zi1 indexopBG"></div>
-            </li>
-        </a> <a href="javascript:modalVideo('http://xiazai.huishenghuiying.com.cn/bofang/hunjian.mp4','810px','460px')" style="color:#fff;">
-            <li hovershow="true" nohoverhide="true" class="fl w20p pr"> <img alt="影视混剪" class="maxw100" src="picture/index2-12.jpg" />
-                <h3 class="indexMubanTitle fs24">影视混剪</h3>
-                <div class="pa t0 l0 w100p h100p opBG zi1 indexopBG"></div>
-            </li>
-        </a> <a href="javascript:modalVideo('http://xiazai.huishenghuiying.com.cn/bofang/guangchangwu.mp4','800px','450px')" style="color:#fff;">
-            <li hovershow="true" nohoverhide="true" class="fl w20p pr"> <img alt="舞蹈" class="maxw100" src="picture/index2-20.jpg" />
-                <h3 class="indexMubanTitle fs24">舞蹈演义</h3>
-                <div class="pa t0 l0 w100p h100p opBG zi1 indexopBG"></div>
-            </li>
-        </a> <a href="javascript:modalVideo('http://xiazai.huishenghuiying.com.cn/bofang/xiezhen.mp4','800px','450px')" style="color:#fff;">
-            <li hovershow="true" nohoverhide="true" class="fl w20p pr"> <img alt="时尚写真" class="maxw100" src="picture/index2-18.jpg" />
-                <h3 class="indexMubanTitle fs24">时尚写真</h3>
-                <div class="pa t0 l0 w100p h100p opBG zi1 indexopBG"></div>
-            </li>
-        </a> <a href="javascript:modalVideo('http://xiazai.huishenghuiying.com.cn/bofang/qiye.mp4','800px','450px')" style="color:#fff;">
-            <li hovershow="true" nohoverhide="true" class="fl w20p pr"> <img alt="企业宣传" class="maxw100" src="picture/index2-17.jpg" />
-                <h3 class="indexMubanTitle fs24">企业宣传</h3>
-                <div class="pa t0 l0 w100p h100p opBG zi1 indexopBG"></div>
-            </li>
-        </a><a href="javascript:modalVideo('http://xiazai.huishenghuiying.com.cn/bofang/lvxing.mp4','800px','450px')" style="color:#fff;">
-            <li hovershow="true" nohoverhide="true" class="fl w20p pr"> <img alt="旅行街拍" class="maxw100" src="picture/index2-16.jpg" />
-                <h3 class="indexMubanTitle fs24">旅行街拍</h3>
-                <div class="pa t0 l0 w100p h100p opBG zi1 indexopBG"></div>
-            </li>
-        </a> <a href="javascript:modalVideo('http://xiazai.huishenghuiying.com.cn/bofang/dongman.mp4','800px','450px')" style="color:#fff;">
-            <li hovershow="true" nohoverhide="true" class="fl w20p pr"> <img alt="动漫游戏" class="maxw100" src="picture/index2-19.jpg" />
-                <h3 class="indexMubanTitle fs24">动漫游戏</h3>
-                <div class="pa t0 l0 w100p h100p opBG zi1 indexopBG"></div>
-            </li>
-        </a>
-    </ul>
+    <h2 class="fs36 pt90 tac hborder mb30">快速开始</h2>
+    <div class="start-img tac">
+        <img src="{{asset('picture/kuaisu.png')}}" alt="快速开始">
+    </div>
+
 </div>
-<div class="full m0a">
-    <h2 class="fs36 pt90 tac hborder">资源分享</h2>
-    <p class="fs18 c9 tac pt18 pb20">海量的模版素材下载 满足你天马行空的各种需求 <a target="_blank" href="zhuanxiang.html">了解更多&gt;</a></p>
-    <ul class="indexGongxiangTab all c-1 tac fs24 m40a pb40" tabshow="true" tabshowbind="ziyuan">
-        <li class="active indexGongxiangTab1">视频教程</li>
-        <li class="indexGongxiangTab2">模板素材</li>
-        <li class="indexGongxiangTab3 showQRcodeBtn">作品分享</li>
+<div class="full m0a tutorial-cxt">
+    <h2 class="fs36 pt90 tac hborder">使用教程</h2>
+    <div class="fs18 c9   pt18 pb20">
+        <span class="jiaochen">
+        <p>1、下载安装{{ $config['title'] }}到电脑中。</p>
+        <p>2、运行软件，然后选择要转换的方式，比如选择PDF转word。</p>
+        <p>3、添加要转换的文件即可开始转换。 <a target="_blank" href="{{ route('help') }}">了解更多&gt;</a></p>
+        </span>
+
+    </div>
+
+    <ul style="width:800px" class="indexGongxiangTab  c-1 tac fs24 m40a pb40 " tabshow="true" tabshowbind="ziyuan">
+        <li>
+            <dd class="dd-00 current">
+                <i></i>
+                <a>1</a>
+                <p>选择功能</p>
+            </dd>
+        </li>
+        <li>
+            <dd class="dd-00">
+                <i></i>
+                <a>2</a>
+                <p>添加文件</p>
+            </dd>
+        </li>
+        <li>
+            <dd class="dd-00">
+                <a>3</a>
+                <p>开始转换</p>
+            </dd>
+        </li>
     </ul>
-    <div tabshowbindfilter="ziyuan" class="oh">
-        <div class="layui-row layui-col-space20 white">
-            <div class="layui-col-xs4 hand" onclick="modalVideo('//player.youku.com/player.php/sid/XMzYzNDUxNTQ5Ng==/v.swf');">
-                <div nohoverhide="true" hovershow="true" class="pr"><img class="maxw100" src="picture/index3b-01.jpg" alt="三步制作影片" />
-                    <div class="pa w100p l0 b0 pl20 zi2">
-                        <h3 class="fs30">如何制作视频影片</h3>
-                        <p class="fs18 pt8 pb15">影片制作过程仅需三大步骤</p>
-                    </div>
-                    <img src="picture/play.png" class="w39 pa zi2 r30 b25" />
-                    <div class="indexShipinTitleBG"></div>
+    <div>
+        <h2 class="fs36  tac hborder">必备转换技巧</h2>
+        <p class="fs18 c9 tac pt18 pb20">PDF转换成word文件方法教程</p>
+        <div>
+            <div class="text-center hero-index-step">
+                <div>
+                    <img src="{{asset('picture/item-001.png')}}" alt="">
+                    <p>下载软件“双击打开”</p>
                 </div>
-            </div>
-            <div class="layui-col-xs4 hand" onclick="modalVideo('//player.youku.com/embed/XMTMzNTQ4Njc1Ng');">
-                <div nohoverhide="true" hovershow="true" class="pr"><img class="maxw100" src="picture/index4-12.jpg" alt="模板替换" />
-                    <div class="pa w100p l0 b0 pl20 zi2">
-                        <h3 class="fs30">模板替换</h3>
-                        <p class="fs18 pt8 pb15">3分钟搞定会声会影模板替换</p>
-                    </div>
-                    <img src="picture/play.png" class="w39 pa zi2 r30 b25" />
-                    <div class="indexShipinTitleBG"></div>
+                <div>
+                    <img src="{{asset('picture/item-002.png')}}" alt="">
+                    <p>点击左侧“文件转Word”</p>
                 </div>
-            </div>
-            <div class="layui-col-xs4 hand" onclick="modalVideo('//player.youku.com/embed/XMjYwODUwMjMyNA');">
-                <div nohoverhide="true" hovershow="true" class="pr"><img class="maxw100" src="picture/index4-13.jpg" alt="字幕" />
-                    <div class="pa w100p l0 b0 pl20 zi2">
-                        <h3 class="fs30">KTV字幕制作</h3>
-                        <p class="fs18 pt8 pb15">轻松制作KTV字幕</p>
-                    </div>
-                    <img src="picture/play.png" class="w39 pa zi2 r30 b25" />
-                    <div class="indexShipinTitleBG"></div>
+                <div>
+                    <img src="{{asset('picture/item-003.png')}}" alt="">
+                    <p>点击“添加文件”，选择转换的pdf文档。</p>
                 </div>
-            </div>
-            <div class="layui-col-xs4 hand" onclick="modalVideo('//player.youku.com/player.php/sid/XMzU5MTY1MTQ0MA==/v.swf');">
-                <div nohoverhide="true" hovershow="true" class="pr"><img class="maxw100" src="picture/index4-14.jpg" alt="双重曝光" />
-                    <div class="pa w100p l0 b0 pl20 zi2">
-                        <h3 class="fs30">双重曝光</h3>
-                        <p class="fs18 pt8 pb15">不一样的视觉盛宴</p>
-                    </div>
-                    <img src="picture/play.png" class="w39 pa zi2 r30 b25" />
-                    <div class="indexShipinTitleBG"></div>
+                <div>
+                    <img src="{{asset('picture/item-004.png')}}" alt="">
+                    <p>点击“浏览”按钮，为文档选择一个存储路径。</p>
                 </div>
-            </div>
-            <div class="layui-col-xs4 hand" onclick="modalVideo('//player.youku.com/embed/XMTgyNDI2NzU0OA');">
-                <div nohoverhide="true" hovershow="true" class="pr"><img class="maxw100" src="picture/index4-15.jpg" alt="相册" />
-                    <div class="pa w100p l0 b0 pl20 zi2">
-                        <h3 class="fs30">翻页相册教程</h3>
-                        <p class="fs18 pt8 pb15">相册与视频完美结合</p>
-                    </div>
-                    <img src="picture/play.png" class="w39 pa zi2 r30 b25" />
-                    <div class="indexShipinTitleBG"></div>
-                </div>
-            </div>
-            <div class="layui-col-xs4 hand" onclick="modalVideo('//player.youku.com/embed/XMTczMDcwODM1Ng');">
-                <div nohoverhide="true" hovershow="true" class="pr"><img class="maxw100" src="picture/index4-16.jpg" alt="影音快手" />
-                    <div class="pa w100p l0 b0 pl20 zi2">
-                        <h3 class="fs30">影音快手教程</h3>
-                        <p class="fs18 pt8 pb15">快速制作电子相册的软件</p>
-                    </div>
-                    <img src="picture/play.png" class="w39 pa zi2 r30 b25" />
-                    <div class="indexShipinTitleBG"></div>
+                <div>
+                    <img src="{{asset('picture/item-005.png')}}" alt="">
+                    <p>点击“开始转换”， 进入格式转换状态。</p>
                 </div>
             </div>
         </div>
-
-
     </div>
 </div>
-<h2 class="fs36 pt70 tac hborder">我们的客户</h2>
-<div class="full m50a cb pr pb50" id="my-als-list"><i class="layui-icon fs34 c9 als-prev index-als-prev"></i>
-    <div class="all m0a oh als-viewport h55">
-        <ul class="als-wrapper pr">
-            <li class="als-item fl ml30 mr30 db pr"><img src="picture/indexkh-1.png" alt="腾讯视频" /></li>
-            <li class="als-item fl ml30 mr30 db pr"><img src="picture/indexkh-2.png" alt="阿里巴巴" /></li>
-            <li class="als-item fl ml30 mr30 db pr"><img src="picture/indexkh-3.png" alt="华为" /></li>
-            <li class="als-item fl ml30 mr30 db pr"><img src="picture/indexkh-4.png" alt="中国电信" /></li>
-            <li class="als-item fl ml30 mr30 db pr"><img src="picture/indexkh-5.png" alt="中国邮政" /></li>
-            <li class="als-item fl ml30 mr30 db pr"><img src="picture/indexkh-6.png" alt="中国平安" /></li>
-            <li class="als-item fl ml30 mr30 db pr"><img src="picture/indexkh-7.png" alt="招商银行" /></li>
-            <li class="als-item fl ml30 mr30 db pr"><img src="picture/indexkh-8.png" alt="中国工商银行" /></li>
-            <li class="als-item fl ml30 mr30 db pr"><img src="picture/indexkh-9.png" alt="客户9" /></li>
-            <li class="als-item fl ml30 mr30 db pr"><img src="picture/indexkh-10.png" alt="客户10" /></li>
-            <li class="als-item fl ml30 mr30 db pr"><img src="picture/indexkh-11.png" alt="客户11" /></li>
+<div class="full m0a">
+    <h2 class="fs36 pt90 tac hborder mb30">常见问题</h2>
+    <div class="cj_list">
+        <ul>
+            <li>
+                <i class="icon-u4"></i>
+                <h3>PDF文档资料会遭到泄露吗？</h3>
+                <p>{{ $config['title'] }}是一种本地PDF转换器，没有将PDF文档发送至网络，因此不会泄露PDF文件内容，请您放心使用。</p>
+            </li>
+            <li>
+                <i class="icon-u4"></i>
+                <h3>PDF转Word文档如何收费？</h3>
+                <p>5页以内的PDF转换免费，大于5页的PDF可以购买年费会员。年费会员可无限次PDF转换，适合有长期使用需求的用户。</p>
+            </li>
+            <li>
+                <i class="icon-u4"></i>
+                <h3>如何使用{{ $config['title'] }}?</h3>
+                <p>您可以到{{ $config['title'] }}官网下载，下载后安装即可免费使用。</p>
+            </li>
+            <li>
+                <i class="icon-u4"></i>
+                <h3>PDF转Word偶尔会有乱码？</h3>
+                <p>复杂的表达式、不常见的语言、特殊字符等都是导致PDF转换器无法正确识别的原因，这种情况下转换多少次的结果都是一样的。</p>
+            </li>
+            <li>
+                <i class="icon-u4"></i>
+                <h3>如何选择PDF转换成Word转换器？</h3>
+                <p>如果你对转换的质量要求比较高，例如不要出现错别字、尽可能不出现乱码等，那么建议选择更为专业的PDF转换工具；如果您对文件保密性要求比较高，</p>
+                <p>那么建议选择大品牌有保障的PDF转换工具。例如{{ $config['title'] }}</p>
+            </li>
+            <li>
+                <i class="icon-u4"></i>
+                <h3>图片格式的PDF能转换成Word吗？</h3>
+                <p>不能，图片格式的PDF转换成Word，依旧是图片格式，无法进行编辑。</p>
+            </li>
+            <li>
+                <i class="icon-u4"></i>
+                <h3>如果要转换的文件太大有影响吗？</h3>
+                <p>转换效果没有影响，当然转换时间可能会长一些。目前{{ $config['title'] }}采用了全新研发的转换技术，提供飞一般的转换效率。</p>
+            </li>
+            <li>
+                <i class="icon-u4"></i>
+                <h3>如果转换出来的Word无法打开怎么办？</h3>
+                <p>首先确保转换的时候PDF文件不要处于打开的状态。如果不存在上述情况，那么可以尝试重新转换即可解决。</p>
+            </li>
+            <li>
+                <i class="icon-u4"></i>
+                <h3>{{ $config['title'] }}可以批量PDF转换成Word吗？</h3>
+                <p>可以的，{{ $config['title'] }}支持批量PDF转换。</p>
+            </li>
         </ul>
+
     </div>
-    <i class="layui-icon fs34 c9 als-next index-als-next"></i>
+
 </div>
 {{--底部--}}
 @extends('layouts.footer')

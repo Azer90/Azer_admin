@@ -68,22 +68,10 @@
         </li>
     </ul>
 </article>
-<section class="banner-surpport-02 full">
-    <ul class="wrapper">
-        <li class="left cxt">
-            <h2>迅捷PDF转换器</h2>
-            <h1>为您创建轻应用</h1>
-            <p>软件具备快速转换、批量转换,高质量识别等功能。迅捷PDF转换器提供免费版本，可终身使用。</p>
-        </li>
-        <li class="right pic">
-            <img src="picture/banner-pic-04.png">
-        </li>
-        <div class="clearfix"></div>
-    </ul>
-</section>
+
 <section class="wrapper support-tips surpport-reg-guide full">
     <h1 class="title"><i class="i-01"></i>注册购买<i class="i-02"></i></h1>
-    <div class="title-02">如何购买迅捷PDF转换器注册码?</div>
+    <div class="title-02">如何购买{{ $config['title'] }}注册码?</div>
     <ul class="wrapper">
         <div class="left cxt">
             <a class="a-01">
@@ -104,7 +92,7 @@
         </div>
         <div class="clearfix"></div>
     </ul>
-    <div class="title-02">迅捷PDF转换器注册激活教程</div>
+    <div class="title-02">{{ $config['title'] }}注册激活教程</div>
     <ul class="wrapper ul-02">
         <div class="right cxt">
             <a class="a-01">

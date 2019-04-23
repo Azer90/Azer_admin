@@ -11,7 +11,7 @@
 .indexAnimate1{height: 200px;}
 .indexAnimate1-left{position: absolute; left: 0; top: 50%; margin-top: -18px; cursor: pointer;}
 .indexAnimate1-right{position: absolute; right: 0; top: 50%; margin-top: -18px; cursor: pointer;}
-.indexGongxiangTab li{display: inline-block; width: 26%; height: 150px; cursor: pointer; padding-top: 100px;}
+.indexGongxiangTab li{display: inline-block; width: 26%; /*height: 150px; cursor: pointer; padding-top: 100px;*/}
 .indexGongxiangTab .indexGongxiangTab1{background: url(../../images/index_zy1.png) no-repeat top;}
 .indexGongxiangTab .indexGongxiangTab1:hover,
 .indexGongxiangTab .active.indexGongxiangTab1{background: url(../../images/index_zy1_a.png) no-repeat top;}
@@ -107,7 +107,7 @@
 .x2018BannerMenu2 .active{background: #d51403;}
 .x2018BannerMenu2 li:last-child:hover{background: none;}
 /*xiazai.html*/
-.xiazaiBanner{height:750px; background: url(../../images/xiazaibanner.jpg) no-repeat top;}
+.xiazaiBanner{height:500px; background: url(../../images/xiazaibanner.png) no-repeat top;}
 .lishiXiazai{position: absolute; width: 100%; height: 220px; left: 0; bottom: 0; background: url(../../images/x2018banner3bg.png);}
 .yingdaoList hr{display:block; width: 90px; margin:31% 10px 0 10px; background: none; border-bottom: 1px dashed #207dda;}
 /*shengji*/

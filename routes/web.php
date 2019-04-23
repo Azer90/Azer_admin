@@ -16,6 +16,8 @@
 });*/
 
 Route::get('/', 'IndexController@index')->name('/');
+Route::get('agreement', 'IndexController@agreement')->name('agreement');
+Route::get('disclaimer', 'IndexController@disclaimer')->name('disclaimer');
 
 
 

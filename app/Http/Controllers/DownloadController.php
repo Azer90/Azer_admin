@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Article;
 use Illuminate\Http\Request;
 
 class DownloadController extends Controller
@@ -17,6 +18,8 @@ class DownloadController extends Controller
         $name=$this->name;
         $seo=$this->seo;
         $config=$this->system;
-        return view('download')->with(compact('nav','name','seo','config'));
+        $config['title_tag']='下载';
+        $help=Article::select('id','title','description')->where(['classify_id'=>1,'show'=>1])->take(4)->get();//教程
+        return view('download')->with(compact('nav','name','seo','config','help'));
     }
 }

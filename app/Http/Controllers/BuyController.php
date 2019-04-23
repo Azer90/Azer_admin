@@ -25,6 +25,7 @@ class BuyController extends Controller
         $name=$this->name;
         $seo=$this->seo;
         $config=$this->system;
+        $config['title_tag']='购买';
         $goods=Goods::all()->toArray();
         $endgoods=end($goods);
         return view('buy')->with(compact('nav','name','seo','config','goods','endgoods'));

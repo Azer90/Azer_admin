@@ -15,6 +15,7 @@ class SoftwareController extends Controller
         $name=$this->name;
         $seo=$this->seo;
         $config=$this->system;
+        $config['title_tag']='产品';
         return view('software')->with(compact('nav','name','seo','config'));
     }
 }

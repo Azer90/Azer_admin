@@ -15,6 +15,7 @@ class AboutController extends Controller
         $name=$this->name;
         $seo=$this->seo;
         $config=$this->system;
+        $config['title_tag']='关于';
         return view('about')->with(compact('nav','name','seo','config'));
     }
 }

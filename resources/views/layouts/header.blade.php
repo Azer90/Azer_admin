@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 <head>
-    <title>{{ $config['title'] }}</title>
+    @if ($name === '/')
+        <title>{{ $config['title_tag'] }}-{{ $config['title'] }}</title>
+    @else
+        <title>{{ $config['title_tag'] }}|{{ $config['title'] }}</title>
+    @endif
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width">
     {{--google-analytics 看是否需要--}}
