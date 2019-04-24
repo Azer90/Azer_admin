@@ -5671,6 +5671,51 @@
         "description": "包含中文分词的 Laravel Scout TNTSearch 驱动，支持 scws, phpanalysis 和 jieba 分词。"
     },
     {
+        "name": "vanry/scws",
+        "version": "1.0.1",
+        "version_normalized": "1.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/vanry/SCWS.git",
+            "reference": "19db1881600d780cb607d328807076038a094cf3"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/vanry/SCWS/zipball/19db1881600d780cb607d328807076038a094cf3",
+            "reference": "19db1881600d780cb607d328807076038a094cf3",
+            "shasum": ""
+        },
+        "require": {
+            "ext-scws": ">=0.2.1",
+            "illuminate/support": "~5.1",
+            "php": ">=5.5.9"
+        },
+        "time": "2017-09-23T09:18:16+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Latrell\\Scws\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Latrell Chan",
+                "email": "i@latrell.me"
+            }
+        ],
+        "description": "简易中文分词系统在Laravel的封装包。",
+        "homepage": "https://github.com/Latrell/SCWS",
+        "keywords": [
+            "SCWS",
+            "laravel"
+        ]
+    },
+    {
         "name": "vlucas/phpdotenv",
         "version": "v2.6.1",
         "version_normalized": "2.6.1.0",

@@ -465,6 +465,13 @@ class ComposerStaticInitf320fc9439f3b09e4a6fbeed5cdc65e3
                 0 => __DIR__ . '/..' . '/maatwebsite/excel/src',
             ),
         ),
+        'L' => 
+        array (
+            'Latrell\\Scws\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/vanry/scws/src',
+            ),
+        ),
         'D' => 
         array (
             'Doctrine\\Common\\Lexer\\' => 
@@ -2510,6 +2517,9 @@ class ComposerStaticInitf320fc9439f3b09e4a6fbeed5cdc65e3
         'Laravel\\Tinker\\Console\\TinkerCommand' => __DIR__ . '/..' . '/laravel/tinker/src/Console/TinkerCommand.php',
         'Laravel\\Tinker\\TinkerCaster' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerCaster.php',
         'Laravel\\Tinker\\TinkerServiceProvider' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerServiceProvider.php',
+        'Latrell\\Scws\\Facades\\Scws' => __DIR__ . '/..' . '/vanry/scws/src/Latrell/Scws/Facades/Scws.php',
+        'Latrell\\Scws\\Scws' => __DIR__ . '/..' . '/vanry/scws/src/Latrell/Scws/Scws.php',
+        'Latrell\\Scws\\ScwsServiceProvider' => __DIR__ . '/..' . '/vanry/scws/src/Latrell/Scws/ScwsServiceProvider.php',
         'League\\Flysystem\\AdapterInterface' => __DIR__ . '/..' . '/league/flysystem/src/AdapterInterface.php',
         'League\\Flysystem\\Adapter\\AbstractAdapter' => __DIR__ . '/..' . '/league/flysystem/src/Adapter/AbstractAdapter.php',
         'League\\Flysystem\\Adapter\\AbstractFtpAdapter' => __DIR__ . '/..' . '/league/flysystem/src/Adapter/AbstractFtpAdapter.php',
