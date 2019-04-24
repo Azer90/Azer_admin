@@ -31,8 +31,10 @@
         autoConnect: true,//自动连接
         visitor: {userNickname:location.host},
     };
+    function kefu() {
+        window.open('http://wpa.qq.com/msgrd?v=3&uin=2638897163&site=qq&menu=yes','_blank');
+    }
 </script>
-<script src="{{asset('js/home/easemob.js')}}"></script>
 
 <!--[if lt IE 9]>
 <script src="{{asset('js/home/html5shiv.min.js')}}"></script>

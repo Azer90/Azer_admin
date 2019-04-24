@@ -8,9 +8,9 @@ body{font-size:14px; color:#333; font-family: sans-serif, Arial;}
 
 /*超链全局接样式*/
 
-a{color:#2575e8; text-decoration:none; hide-focus:expression( this.hideFocus=true ); outline:none; background: none;}
+a{color:#008c8c; text-decoration:none; hide-focus:expression( this.hideFocus=true ); outline:none; background: none;}
 
-a:hover {color:#2575e8; text-decoration: none; cursor:pointer;}
+a:hover {color:#008c8c; text-decoration: none; cursor:pointer;}
 
 
 
@@ -38,7 +38,7 @@ a:hover {color:#2575e8; text-decoration: none; cursor:pointer;}
 
 .topMenuNaviList li a:hover {text-decoration:none; }
 
-.topMenuNaviList li .indexCurrent, .topMenuNaviList li a:hover {color:#0054ff; font-weight: bold;}
+.topMenuNaviList li .indexCurrent, .topMenuNaviList li a:hover {color:#008c8c; font-weight: bold;}
 
 
 
@@ -111,13 +111,13 @@ a:hover {color:#2575e8; text-decoration: none; cursor:pointer;}
 
 
 
-.c-1{color: #2575e8;}
+.c-1{color: #008c8c;}
 
 .c-2{color: #E94518;}
 
 .c-3, .ch-3:hover{color: yellow;}
 
-.c-4{color: #1F7DD9;}
+.c-4{color: #008c8c;}
 
 .c-5{color: #5d4a1d;}
 
@@ -132,7 +132,7 @@ a:hover {color:#2575e8; text-decoration: none; cursor:pointer;}
 
 .bg-3{background: #f4f4f4;}
 
-.bg-4{background: #207dda;}
+.bg-4{background: #008c8c;}
 
 .bg-5{background: #fff;}
 
@@ -150,9 +150,9 @@ a:hover {color:#2575e8; text-decoration: none; cursor:pointer;}
 
 .a-1:hover{background: #d90000; color: #fff; text-decoration: none;}
 
-.a-2{background: #3c81fb; color: #fff; display: inline-block; text-align: center;}
+.a-2{background: #008c8c; color: #fff; display: inline-block; text-align: center;}
 
-.a-2:hover{background: #3c81fb; color: #fff; text-decoration: none;}
+.a-2:hover{background: #008c8c; color: #fff; text-decoration: none;}
 
 .a-3{border: 1px solid #fff; color: #fff; display: inline-block; text-align: center;}
 
@@ -162,9 +162,9 @@ a:hover {color:#2575e8; text-decoration: none; cursor:pointer;}
 
 .a-4:hover{background: #ff2626; color: #fff; text-decoration: none;}
 
-.a-5{border: 1px solid #3c81fb; color: #3c81fb; display: inline-block; text-align: center;}
+.a-5{border: 1px solid #008c8c; color: #008c8c; display: inline-block; text-align: center;}
 
-.a-5:hover{color: #3c81fb; text-decoration: none;}
+.a-5:hover{color:#008c8c; text-decoration: none;}
 
 .a-6{border: 1px solid #E94518; color: #E94518; display: inline-block; text-align: center;}
 
@@ -180,17 +180,17 @@ a:hover {color:#2575e8; text-decoration: none; cursor:pointer;}
 
 .hborder{position: relative; padding-bottom: 20px;}
 
-.hborder:after{content: ''; border-bottom: 4px solid #2575e8; position: absolute; width:100px; left:50%; margin-left: -50px; bottom:0px;}
+.hborder:after{content: ''; border-bottom: 4px solid #008c8c; position: absolute; width:100px; left:50%; margin-left: -50px; bottom:0px;}
 
 
 
 .hborder-1{position: relative;}
 
-.hborder-1:before{content: ''; background:  #2575e8; position: absolute; width:3px; height: 100%; left:0; top:0px;}
+.hborder-1:before{content: ''; background: #008c8c; position: absolute; width:3px; height: 100%; left:0; top:0px;}
 
 .hborder-2{position: relative;}
 
-.hborder-2:before{content: ''; background:  #2575e8; position: absolute; width:6px; height: 100%; left:0; top:0px;}
+.hborder-2:before{content: ''; background:  #008c8c; position: absolute; width:6px; height: 100%; left:0; top:0px;}
 
 
 

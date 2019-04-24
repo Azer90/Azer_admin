@@ -13,7 +13,7 @@
 
     <meta name="description" content="{{ !empty($seo['description']) ? $seo['description'] : 'pdf'  }}" />
     <meta name="keywords" content="{{ !empty($seo['keywords']) ? $seo['keywords'] : 'pdf' }}" />
-
+     <link rel="icon" href="{{asset('images/icon-logo.ico')}}" />
      @include('layouts.css')
 
     <script type="text/javascript" src="{{asset('js/home/jquery.js')}}"></script>

@@ -17,7 +17,7 @@
             3. 界面进行简洁优化<br/>
             4. 系统兼容主流windowsXp、7、8、10。<br/>
            </p>
-        <p><a class="a-2 w170 h50 lh50 fs20 tac" href="http://xiazai.huishenghuiying.com.cn/full/huishenghuiying2018new_64bit.zip">立即下载</a> </p>
+        <p><a class="a-2 w170 h50 lh50 fs20 tac" href="http://218.98.24.73/softdl.360tpcdn.com/auto/20190408/1900060976_110552f78b8161acafdda17e9e0f001c.exe">立即下载</a> </p>
 
     </div>
 
@@ -52,7 +52,7 @@
         @foreach ($help as $value)
             <li class="layui-col-xs6 oh pr15">
                 <div class="fr">
-                    <h2 class="fs22 fwn overSL"><a style="color:#666" href="ruhepanduandnsjiwei-2.html" target="_blank">{{ $value['title'] }}</a></h2>
+                    <h2 class="fs22 fwn overSL"><a style="color:#666" href="{{ route('detail',['id'=>$value['id']]) }}" target="_blank">{{ $value['title'] }}</a></h2>
                     <p class="c6 pt10 pb2">{{ $value['description'] }}</p>
                     <a href="{{ route('detail',['id'=>$value['id']]) }}" target="_blank">查看详情</a></div>
             </li>

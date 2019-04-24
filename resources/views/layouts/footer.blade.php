@@ -5,22 +5,12 @@
 
 
         <div class="layui-row pt50 pb30 bd-b-2 m_n_pt5 m_n_pb5 m_n_bn">
-            <div class="layui-col-xs2 col-12 pr">
-                <p class="fs20 pb20 m_n_pb10r m_n_fs32r">{{ $config['title'] }}</p>
-                <ul class="lh32 hide-n-xs m_n_lh40r m_n_fs24r">
-                    <li><a target="_blank" href="jiaocheng.html">功能特性</a></li>
-                    <li><a rel="nofollow" target="_blank" href="http://center.cjmakeding.com/orderinfo.php">正版下载地址</a></li>
-                    <li><a target="_blank" href="goumai.html">软件激活码</a></li>
-                    <li><a target="_blank" href="videostudio_sq.pdf">正版授权</a></li>
-                </ul>
-            </div>
+
             <div class="layui-col-xs2 col-12 pr">
                 <p class="fs20 pb20  m_n_pb10r m_n_fs32r">支持</p>
                 <ul class="lh32 hide-n-xs m_n_lh40r m_n_fs24r">
-                    <li><a target="_blank" href="rumen/">新手入门</a></li>
-                    <li><a target="_blank" href="faq/">常见问题</a></li>
-                    <li><a target="_blank" href="video/">视频案例</a></li>
-                    <li><a rel="nofollow" target="_blank" href="zhuanxiang.html">模板素材</a></li>
+                    <li><a target="_blank" href="{{ route('help') }}">新手入门</a></li>
+                    <li><a target="_blank" href="{{ route('problems') }}">常见问题</a></li>
                 </ul>
             </div>
             <div class="layui-col-xs2 col-12 pr">
@@ -28,15 +18,13 @@
                 <ul class="lh32 hide-n-xs m_n_lh40r m_n_fs24r">
                     <li><a target="_blank" href="{{ route('agreement') }}">关于我们</a></li>
                     <li><a target="_blank" href="{{ route('disclaimer') }}">免责声明</a></li>
-                    <li><a target="_blank" href="shouhou-tiaokuan.html">售后服务</a></li>
-
                 </ul>
             </div>
             <div class="layui-col-xs2 col-12">
                 <h3 class="fs20 pb20 m_n_pb10r m_n_fs32r"><a target="_blank" href="lianxiwomen.html">联系我们</a></h3>
                 <ul class="lh32 hide-n-xs m_n_lh40r m_n_fs24r">
-                    @if (isset($config['phone']))
-                        <li><img src="{{asset('picture/footertel.png')}}" class="mr15">{{ $config['phone'] }}</li>
+                    @if (isset($config['qq']))
+                        <li><img width="30" height="30" src="{{asset('picture/qq.png')}}" class="mr15">{{ $config['qq'] }}</li>
                     @endif
 
                     @if (isset($config['email']))
@@ -46,20 +34,14 @@
 
                 </ul>
             </div>
-            <div class="layui-col-xs4 col-12 pl100">
-                <img src="{{asset('picture/logo.png')}}">
-                <div class="oh pt20">
-                    <p class="fl fs16 c6 pt30">扫一扫<br>关注微课堂</p>
-                    <img class="fl ml10" src="{{asset('picture/erweima.jpg')}}" alt="会声会影官方微信">
-                </div>
-            </div>
+
         </div>
         <p class="pt10 pb5" align="center">
             <img src="{{asset('picture/szwj.png')}}" alt="苏州网警">
             <script id="jsgovicon" src="{{asset('js/home/govicon.js')}}" type="text/javascript" charset="utf-8"></script>
         </p>
         @if (isset($config['qq']))
-            <center class="pt10">【友链交换要求：百度权重≥6，友链QQ：{{ $config['qq'] }}】</center>
+            <center class="pt10">【友链交换要求：百度权重≥2，友链QQ：{{ $config['qq'] }}】</center>
         @endif
 
 

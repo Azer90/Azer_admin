@@ -70,11 +70,12 @@
                         @endforeach
                     </div>
                 </div>
-                <a href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzkzODAyMDY2NV80NDQwMzhfNDAwNjY4NTU3Ml8yXw" target="_blank" class="aside-qq"><img src="{{asset('picture/qq.png')}}" alt="">联系客服...</a>
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=2638897163&site=qq&menu=yes" target="_blank" class="aside-qq"><img src="{{asset('picture/qq.png')}}" alt="">联系客服...</a>
+
                 <div class="hero-aside-content">
                     <a><img src="{{asset('picture/logo.png')}}" alt="功能强大、界面简洁、操作简单的PDF转换成Word或者Word转换成PDF的软件"></a>
                     <p>功能强大、界面简洁、操作简单的PDF转换成Word或者Word转换成PDF的软件</p>
-                    <a href="http://download.xunjiepdf.com/download/pdf_setup_6_0_s.exe" class="hero-download"><img src="{{asset('picture/icon-hero-download.png')}}" alt="">立即下载</a>
+                    <a href="http://218.98.24.73/softdl.360tpcdn.com/auto/20190408/1900060976_110552f78b8161acafdda17e9e0f001c.exe" class="hero-download"><img src="{{asset('picture/icon-hero-download.png')}}" alt="">立即下载</a>
                 </div>
             </div>
         </aside>

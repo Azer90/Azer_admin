@@ -1,6 +1,6 @@
 <div class="toolbar hide-n-xs">
     <div class="toolbarbox">
-        <div class="mobel" imgname="zx"  onclick='easemobim.bind({configId: "c3732d6b-edcf-4c32-9832-22a01cdb7c60"})'>
+        <div class="mobel" imgname="zx"  onclick='kefu()'>
             <img id="msg" class="animated tada10" src="{{asset('images/zx_h.png')}}">
             <div class="mobelBox">
                 <div class="shan"> </div>
@@ -9,7 +9,7 @@
             </div>
         </div>
 
-        <div class="mobel" imgname="sh" onclick='easemobim.bind({configId: "9aece96c-fa20-474d-a12e-b0079444d362"})'>
+        <div class="mobel" imgname="sh" onclick='kefu()'>
             <div class="tool-line"></div>
             <img class="imghover" src="{{asset('images/sh.png')}}">
             <div class="hidemobelBox" style="width:100px;">
@@ -31,21 +31,12 @@
             <div class="tool-line"></div>
             <a href="mailto:kefu@makeding.com"><img class="imghover" src="{{asset('images/mail.png')}}"></a>
             <div class="hidemobelBox">
-                <p><a rel="nofollow" href="mailto:kefu@makeding.com">kefu@makeding.com</a></p>
+                <p><a rel="nofollow" href="mailto:kefu@makeding.com">{{ $config['email'] }}</a></p>
                 <div class="triangle"> </div>
 
             </div>
         </div>
 
-        <div class="mobel tomairuan" imgname="mairuan">
-            <div class="tool-line"></div>
-            <a rel="nofollow" href="http://www.mairuan.com/" target="_blank"><img class="imghover" src="{{asset('images/mairuan.png')}}"></a>
-            <div class="tool-line"></div>
-            <div class="hidemobelBox zi2" style="background: transparent; right: 93px;">
-                <a href="#" target="_blank"><img src="{{asset('images/mairuan_h.png')}}" width="256" height="126"></a>
-                <div class="triangle"></div>
-            </div>
-        </div>
 
         <div class="Rtop dn" imgname="top">
             <div class="tool-line"></div>
