@@ -1,5 +1,37 @@
 @include('layouts.header')
+<style>
+    @media (min-width: 1024px) {
+        .hero-index-step {
+            width: 1000px;
+            margin: 0 auto;
+        }
+    }
+    @media (max-width: 1024px) {
+        .hero-index-step {
+            text-align: center;
+        }
+    }
 
+    .hero-index-step > div {
+        position: relative;
+        display: inline-block;
+        width: 19.5%;
+        vertical-align: top;
+    }
+    .hero-index-step > div:after {
+        font-size: 30px;
+        position: absolute;
+        top: 25%;
+        right: 0;
+        display: block;
+        width: 30px;
+        height: 30px;
+        content: '>';
+    }
+    .hero-index-step > div:last-child:after {
+        display: none;
+    }
+</style>
 <body>
 @include('layouts.nav')
 
@@ -47,6 +79,34 @@
             <p class="fs16 pt20">输入注册码激活软件</p>
         </li>
     </ul>
+    <div>
+        <h2 class="fs30 tac hborder">必备转换技巧</h2>
+        <p class="fs18 c9 tac pt18 pb20">PDF转换成word文件方法教程</p>
+        <div>
+            <div class="text-center hero-index-step">
+                <div>
+                    <img src="{{asset('picture/item-001.png')}}" alt="">
+                    <p>下载软件“双击打开”</p>
+                </div>
+                <div>
+                    <img src="{{asset('picture/item-002.png')}}" alt="">
+                    <p>点击左侧“文件转Word”</p>
+                </div>
+                <div>
+                    <img src="{{asset('picture/item-003.png')}}" alt="">
+                    <p>点击“添加文件”，选择转换的pdf文档。</p>
+                </div>
+                <div>
+                    <img src="{{asset('picture/item-004.png')}}" alt="">
+                    <p>点击“浏览”按钮，为文档选择一个存储路径。</p>
+                </div>
+                <div>
+                    <img src="{{asset('picture/item-005.png')}}" alt="">
+                    <p>点击“开始转换”， 进入格式转换状态。</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <h2 class="tac fs30 pt100 hborder">相关知识</h2>
     <ul class="layui-row mt50 mb50">
         @foreach ($help as $value)

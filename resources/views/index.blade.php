@@ -172,37 +172,7 @@
             text-align: center;
         }
     }
-    @media (min-width: 1024px) {
-        .hero-index-step {
-            width: 1000px;
-            margin: 0 auto;
-        }
-    }
-    @media (max-width: 1024px) {
-        .hero-index-step {
-            text-align: center;
-        }
-    }
 
-    .hero-index-step > div {
-        position: relative;
-        display: inline-block;
-        width: 19.5%;
-        vertical-align: top;
-    }
-    .hero-index-step > div:after {
-        font-size: 30px;
-        position: absolute;
-        top: 25%;
-        right: 0;
-        display: block;
-        width: 30px;
-        height: 30px;
-        content: '>';
-    }
-    .hero-index-step > div:last-child:after {
-        display: none;
-    }
 
     @media (min-width: 1024px) {
         .cj_list{
@@ -246,13 +216,8 @@
                     </li>
                     <li class="right banner-cxt">
                         <h1><i>{{ $config['title'] }}</i></h1>
-                        <p>一款功能强大、操作简单的PDF转换成word转换器，支持PDF文档和doc、ppt、图片以及txt文档等多种格式之间的转换，转换率高，转换质量好的新一代文件格式转换器。
-                            <span>
-                                    <i>轻松拖拽批量转换</i>
-                                    <i>多种文件格式转换</i>
-                                    <i>高速转换质量保证</i>
-                                    <i>智能识别轻松转换</i>
-                                </span>
+                        <p>一款功能强大、操作简单的PDF处理转换器，支持PDF电子格式和word, ppt，图片及txt等多种格式之间的转换恢复，转换恢复率高，转换质量好。同时兼顾PDF合并分割解密提取等多种功能于一体的的新一代文件格式处理工具。
+
                         </p>
                         <div class="btn-wrapper">
                             <a class="btn btn-yellow" href="http://218.98.24.73/softdl.360tpcdn.com/auto/20190408/1900060976_110552f78b8161acafdda17e9e0f001c.exe" target="_blank">立即下载<img
@@ -267,24 +232,24 @@
 </div>
 
 <div class="all m0a">
-    <h2 class="fs36 pt90 tac hborder">功能强大的PDF转换软件</h2>
-    <p class="fs18 c9 tac pt18 pb40">快速转换、批量转换，高质量识别等功能。无需专业的PDF转换知识，任何人都能快速上手</p>
+    <h2 class="fs36 pt90 tac hborder">功能强大的PDF处理软件</h2>
+    <p class="fs18 c9 tac pt18 pb40">极速处理PDF文件和源文件互转，批量实现PDF合并分割等功能。无需专业的PDF转换知识，任何人都能快速上手</p>
     <ul class="layui-row tac indexGongnen">
         <li class="layui-col-xs3 pt10 pb30 bd-r-1" >
-            <img alt="一键转换" src="{{asset('picture/index1-4.png')}}" />
-            <h3 class="fs18 pt20"><a>简单易用一键转换</a></h3>
+            <img alt="一键转换" src="{{asset('picture/ico_gn1.png')}}" />
+            <h3 class="fs18 pt20"><a>PDF合并</a></h3>
         </li>
         <li class="layui-col-xs3 pt10 pb30 bd-r-1" >
-            <img alt="PDF转Word" src="{{asset('picture/index1-1.png')}}" />
-            <h3 class="fs18 pt20"><a>只专注做PDF转Word</a></h3>
+            <img alt="PDF转Word" src="{{asset('picture/ico_gn2.png')}}" />
+            <h3 class="fs18 pt20"><a>PDF互转</a></h3>
         </li>
         <li class="layui-col-xs3 pt10 pb30 bd-r-1" >
-            <img alt="转换快速" src="{{asset('picture/index1-3.png')}}" />
-            <h3 class="fs18 pt20"><a>转换快速质量保障</a></h3>
+            <img alt="转换快速" src="{{asset('picture/ico_gn3.png')}}" />
+            <h3 class="fs18 pt20"><a>PDF分割</a></h3>
         </li>
         <li class="layui-col-xs3 pt10 pb30 bd-r-1" >
-            <img alt="格式转换" src="{{asset('picture/index1-2.png')}}" />
-            <h3 class="fs18 pt20"><a>支持多种格式转换</a></h3>
+            <img alt="格式转换" src="{{asset('picture/ico_gn4.png')}}" />
+            <h3 class="fs18 pt20"><a>PDF压缩</a></h3>
         </li>
     </ul>
 </div>
@@ -328,36 +293,19 @@
             </dd>
         </li>
     </ul>
-    <div>
-        <h2 class="fs36  tac hborder">必备转换技巧</h2>
-        <p class="fs18 c9 tac pt18 pb20">PDF转换成word文件方法教程</p>
-        <div>
-            <div class="text-center hero-index-step">
-                <div>
-                    <img src="{{asset('picture/item-001.png')}}" alt="">
-                    <p>下载软件“双击打开”</p>
-                </div>
-                <div>
-                    <img src="{{asset('picture/item-002.png')}}" alt="">
-                    <p>点击左侧“文件转Word”</p>
-                </div>
-                <div>
-                    <img src="{{asset('picture/item-003.png')}}" alt="">
-                    <p>点击“添加文件”，选择转换的pdf文档。</p>
-                </div>
-                <div>
-                    <img src="{{asset('picture/item-004.png')}}" alt="">
-                    <p>点击“浏览”按钮，为文档选择一个存储路径。</p>
-                </div>
-                <div>
-                    <img src="{{asset('picture/item-005.png')}}" alt="">
-                    <p>点击“开始转换”， 进入格式转换状态。</p>
-                </div>
-            </div>
-        </div>
-    </div>
+
 </div>
-<div class="full m0a">
+<ul class="layui-row mt50 mb50" style="width: 1200px;margin: 0 auto">
+    @foreach ($help as $value)
+        <li class="layui-col-xs3 oh pr15">
+            <div class="fr w61p">
+                <h2 class="fs22 fwn overSL"><a style="color:#666" href="{{ route('detail',['id'=>$value['id']]) }}" target="_blank">{{ $value['title'] }}</a></h2>
+                <p class="c6 pt10 pb2">{{ $value['description'] }}</p>
+                <a href="{{ route('detail',['id'=>$value['id']]) }}" target="_blank">查看详情</a></div>
+        </li>
+    @endforeach
+</ul>
+<div class="full m0a" style="display: none">
     <h2 class="fs36 pt90 tac hborder mb30">常见问题</h2>
     <div class="cj_list">
         <ul>

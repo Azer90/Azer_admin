@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Article;
 use Illuminate\Support\Facades\Request;
 
 class IndexController extends Controller
@@ -18,7 +19,8 @@ class IndexController extends Controller
         $seo=$this->seo;
         $config=$this->system;
         $config['title_tag']='晨光PDF官网';
-        return view('index')->with(compact('nav','name','seo','config'));
+        $help=Article::select('id','title','description')->where(['classify_id'=>1,'show'=>1])->take(6)->get();//教程
+        return view('index')->with(compact('nav','name','seo','config','help'));
     }
 
     public function agreement(){

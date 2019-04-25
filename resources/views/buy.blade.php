@@ -57,7 +57,7 @@
                     <a value="alipay" id="aliPay" class="pay-ali current" ><span class="icon icon-tag"></span><img src="{{ asset('picture/pay-ali.png') }}"></a>
                     <a value="wechat" id="wechatPay" class="pay-wechat"><span class="icon icon-tag"></span><img src="{{ asset('picture/pay-wechat.png') }}"></a>
                 </div>
-                <div style="text-align: center; color:#FF0000;margin-top: 10px">Tips:支付成功后填写邮箱和软件机器码进行授权*请勿关闭当前页</div>
+                <div style="text-align: center; color:#FF0000;margin-top: 10px"><p>Tips:1.支付成功后填写邮箱和软件机器码进行授权*请勿关闭当前页</p><p>2.请在软件界面右上角点击【注册】，查看软件【机器码】</p></div>
                 <div class="pay-now" id="payNow">
                     立即购买
                 </div>
@@ -122,8 +122,8 @@
 
 <section class="introduce buy-introduce-01 full">
     <div class="wrapper">
-        <h2>产品介绍</h2>
-        <p>{{ $config['title'] }}是一款功能强大、界面简洁、操作简单的PDF转WORD软件，你只需把PDF文件拖拽到软件界面中，然后单击"转换"即可完成转换，经过不断地优化与升级，目前{{ $config['title'] }}已经成功地实现了基于超线程技术的PDF文件批量转换技术，多个PDF文件实现批量一键转换，轻松快捷。</p>
+        <h2>支付相关</h2>
+        <p>点击软件界面的右上角【注册】，可以查看到软件指定【机器码】，点击机器码尾部的复制图标即可复制。 低版本的IE浏览器不支持微信/支付宝扫码授权，请更换谷歌/QQ/谷歌/搜狗浏览器等进行购买授权。</p>
     </div>
 </section>
 <section class="wrapper full">
@@ -132,7 +132,7 @@
             <div><em class="icon icon-buy-feature-1"></em>支持多种格式转换</div>
         </li>
         <li>
-            <div><em class="icon icon-buy-feature-2"></em>转换快速质量保证</div>
+            <div><em class="icon icon-buy-feature-2"></em>本地操作文件安全</div>
         </li>
         <li>
             <div><em class="icon icon-buy-feature-3"></em>操作界面体验良好</div>

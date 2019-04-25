@@ -16,7 +16,7 @@
             <div class="layui-col-xs2 col-12 pr">
                 <p class="fs20 pb20  m_n_pb10r m_n_fs32r">关于</p>
                 <ul class="lh32 hide-n-xs m_n_lh40r m_n_fs24r">
-                    <li><a target="_blank" href="{{ route('agreement') }}">关于我们</a></li>
+                    <li><a target="_blank" href="{{ route('agreement') }}">使用协议</a></li>
                     <li><a target="_blank" href="{{ route('disclaimer') }}">免责声明</a></li>
                 </ul>
             </div>

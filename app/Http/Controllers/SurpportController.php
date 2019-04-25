@@ -15,7 +15,7 @@ class SurpportController extends Controller
      * 支持页
      */
     public function index(){
-        $help=Article::select('id','title','description')->where(['classify_id'=>1,'show'=>1])->take(4)->get();//教程
+        $help=Article::select('id','title','description')->where(['classify_id'=>1,'show'=>1])->take(3)->get();//教程
         $problems=Article::select('id','title','description')->where(['classify_id'=>2,'show'=>1])->take(4)->get();//常见问题
 
         $nav=$this->nav;
