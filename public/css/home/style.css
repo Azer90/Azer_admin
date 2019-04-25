@@ -60,7 +60,7 @@
 .x2018BannerMenu .active,
 .x2018BannerMenu li:hover{background: #d51403;}
 .x2018Banner3BG{background: url(../../images/x2018banner3bg.png); height: 350px;}
-.numBG{background: #1b9efc; display: inline-block; width: 25px; height: 25px; border-radius: 50%; color: #fff; line-height: 25px; text-align: center; margin-right: 10px;}
+.numBG{background: #1eaeb9; display: inline-block; width: 25px; height: 25px; border-radius: 50%; color: #fff; line-height: 25px; text-align: center; margin-right: 10px;}
 .xinTitle{background: url(../../images/x2018_10.png) no-repeat 0 25px ; padding-left:40px;}
 .xinTitle2{background: url(../../images/x2018_10.png) no-repeat 0 6px ; padding-left:40px;}
 .x2018YPGJ{height: 511px; background: url(../../images/x2018_2_4.jpg) no-repeat top;}

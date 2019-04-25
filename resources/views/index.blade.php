@@ -94,7 +94,6 @@
     }
 
     .banner-index .banner-pic img {
-        margin-top: 16%;
         margin-left: -10%;
     }
 
@@ -163,9 +162,9 @@
     }
     @media (min-width: 1024px) {
        .jiaochen{
-           width: 1000px;
-           margin-left: 38%;
-           display: inline-block;
+           width: 530px;
+           margin: 0 auto;
+           display: block;
        }
     }
     @media (max-width: 1024px) {
@@ -175,8 +174,8 @@
     }
     @media (min-width: 1024px) {
         .hero-index-step {
-            width: 1200px;
-            margin-left: 23%;
+            width: 1000px;
+            margin: 0 auto;
         }
     }
     @media (max-width: 1024px) {
@@ -188,7 +187,7 @@
     .hero-index-step > div {
         position: relative;
         display: inline-block;
-        width: 19%;
+        width: 19.5%;
         vertical-align: top;
     }
     .hero-index-step > div:after {
@@ -207,7 +206,8 @@
 
     @media (min-width: 1024px) {
         .cj_list{
-            margin-left: 25%;
+            width: 900px;
+            margin: 0 auto;
         }
     }
 
@@ -242,7 +242,7 @@
             <section class="banner banner-index">
                 <ul class="wrapper current">
                     <li class="left banner-pic">
-                        <img src="{{asset('images/banner-pic-01.png')}}">
+                        <img src="{{asset('images/banner-pic.png')}}">
                     </li>
                     <li class="right banner-cxt">
                         <h1><i>{{ $config['title'] }}</i></h1>
@@ -384,8 +384,7 @@
             <li>
                 <i class="icon-u4"></i>
                 <h3>如何选择PDF转换成Word转换器？</h3>
-                <p>如果你对转换的质量要求比较高，例如不要出现错别字、尽可能不出现乱码等，那么建议选择更为专业的PDF转换工具；如果您对文件保密性要求比较高，</p>
-                <p>那么建议选择大品牌有保障的PDF转换工具。例如{{ $config['title'] }}</p>
+                <p>如果你对转换的质量要求比较高，例如不要出现错别字、尽可能不出现乱码等，那么建议选择更为专业的PDF转换工具；如果您对文件保密性要求比较高，那么建议选择大品牌有保障的PDF转换工具。例如{{ $config['title'] }}</p>
             </li>
             <li>
                 <i class="icon-u4"></i>

@@ -4,7 +4,7 @@
         <img class="m_menu layui-hide m_w30r" src="{{asset('picture/m_menu.png')}}">
         <div class="logo">
             <h1 class="fs16 c4 m_fs16r">
-                <img class="mr10 " src="{{asset('picture/logo.png')}}" alt="会声会影中文版官网" />
+                <img style="margin-bottom: 5px" src="{{asset('picture/logo.png')}}" alt=""><span style="padding-left:10px;font-size: 20px;color: #0a4b3e;height: 40px;line-height: 40px;display: inline-block">{{ $config['title'] }}</span>
             </h1>
         </div>
 
@@ -35,7 +35,7 @@
             <li class="pr" hoverShow="true" noHoverHide="true">
                 <a href="{{ route('software') }}">产品<i class="layui-icon fs14 ml5">&#xe61a;</i></a>
                 <div class="subNav layui-hide">
-                    <a class="bd-b-1" href="{{ route('software') }}">会声会影2018</a>
+                    <a class="bd-b-1" href="{{ route('software') }}"></a>
                 </div>
             </li>
             <li><a href="xiazai.html">下载</a></li>

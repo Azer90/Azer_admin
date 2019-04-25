@@ -4,7 +4,7 @@
 
 @include('layouts.nav')
 
-<section class="banner banner-surpport banner-problems full">
+<section class="banner  banner-problems full">
     <ul class="wrapper current">
         <li class="left banner-pic banner-pic"></li>
         <li class="right banner-cxt">

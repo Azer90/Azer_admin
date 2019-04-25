@@ -673,7 +673,7 @@ table{
     position: relative;
     width: 100%;
     color: #fff;
-    background: no-repeat 50% 50% #008c8c;
+    background: no-repeat 50% 50% #1eaeb9;
 }
 
 
@@ -918,13 +918,13 @@ table{
     display: block;
 }
 .goods-pics .goods-pic-1{
-    background: url(../../images/goods-pic-1.png) center no-repeat;
+    background: url(../../images/goods-pic.png) center no-repeat;
 }
 .goods-pics .goods-pic-2{
-    background: url(../../images/goods-pic-2.png) center no-repeat;
+    background: url(../../images/goods-pic.png) center no-repeat;
 }
 .goods-pics .goods-pic-3{
-    background: url(../../images/goods-pic-3.png) center no-repeat;
+    background: url(../../images/goods-pic.png) center no-repeat;
 }
 
 
@@ -1904,7 +1904,6 @@ h1.title {
 }
 
 .banner-surpport {
-    background-color: #278ff0;
     background-image: url(../../images/bg-help-top-01.jpg);
 }
 
@@ -1912,9 +1911,6 @@ h1.title {
     height: 240px;
 }
 
-.banner-problems {
-    background: url(../../images/bg-010.jpg) no-repeat 50% 50%;
-}
 
 .banner-problems .banner-pic {
     width: 37%;
@@ -1960,7 +1956,7 @@ h1.title {
 
 .banner-help {
     height: 240px;
-    background: url(../../images/bg-help-top-01.jpg) center no-repeat #278ff0;
+    background: url(../../images/bg-help-top-01.jpg) center no-repeat #1eaeb9;
 }
 
 @media (max-width: 600px) {
@@ -2078,7 +2074,7 @@ h1.title {
 }
 
 .category-list-help .item-wrap h1:hover {
-    background-color: #3c9ef8;
+    background-color: #3d8c86;
 }
 
 .category-list-help .item-wrap h1 a {
@@ -2122,7 +2118,7 @@ h1.title {
 }
 
 .category-list-help .item-wrap .more a {
-    color: #29adff;
+    color: #008c8c;
 }
 
 .category-list-help .item-wrap .more a:hover {
@@ -2236,7 +2232,7 @@ h1.title {
 }
 
 .category-list-problems .item-excerpt h2 a {
-    color: #29adff;
+    color: #008c8c;
 }
 
 .category-list-problems .item-excerpt h2 a:hover {
@@ -2263,7 +2259,7 @@ h1.title {
     width: 90%;
     margin: 0 auto;
     text-align: right;
-    color: #29adff;
+    color: #008c8c;
 }
 
 .category-list-problems .item-excerpt .more:hover {
@@ -2622,7 +2618,7 @@ h1.title {
 
 .surpport-reg-guide div.cxt a.a-01 {
     margin-top: 45px;
-    background: #eaf5fe;
+    background: #e9f8f9;
     *height: 170px;
 }
 
@@ -2638,14 +2634,14 @@ h1.title {
     margin: 30px auto 30px;
     padding: 3px 0px;
     color: #fff;
-    background: #319df9;
+    background: #008c8c;
 }
 
 .surpport-reg-guide div.cxt li h3 {
     font-size: 24px;
     padding: 10px 0;
     text-align: center;
-    color: #319df9;
+    color: #008c8c;
     *text-indent: 100px;
 }
 
@@ -4477,13 +4473,13 @@ h4.title-feature {
     margin: 0 auto .618em;
     text-align: center;
     color: #fff;
-    border: solid 1px #015082;
+    border: solid 1px #008c8c;
     border-top: none;
     border-bottom-width: 2px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
-    background-color: #0168b8;
+    background-color:#008c8c;
 }
 
 .hero-aside .hero-download img {
@@ -4503,7 +4499,7 @@ h4.title-feature {
     padding: 5px 0;
     text-align: center;
     color: #fff;
-    background-color: #0e8aea;
+    background-color: #008c8c;
 }
 
 .article-relate img {
@@ -4513,7 +4509,6 @@ h4.title-feature {
     display: block;
     margin-bottom: 10px;
     padding-left: 1em;
-    background: #e5f3fd;
 }
 
 
@@ -4556,7 +4551,7 @@ h4.title-feature {
 .article-relate-tags a {
     font-size: 8px;
     padding: .2em .4em;
-    background: #e5f3fd;
+    background: #e9f8f9;
 }
 
 .article-relate-tags a:hover {
@@ -4571,11 +4566,11 @@ h4.title-feature {
     padding: 7px 0;
     text-align: center;
     color: #1583d1;
-    border-bottom: solid 8px #a4d8f1;
+    border-bottom: solid 8px #e9f8f9;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     border-radius: 8px;
-    background-color: #c0eefc;
+    background-color: #e9f8f9;
 }
 
 .aside-qq img {
