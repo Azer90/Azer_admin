@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers;
 
+use App\Admin\Extensions\Tools\ImportLink;
 use App\Link;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\HasResourceActions;
@@ -91,6 +92,10 @@ class LinkController extends Controller
         $grid->show(trans('admin.show'))->switch($states);
         $grid->created_at(trans('admin.created_at'));
         $grid->updated_at(trans('admin.updated_at'));
+        $grid->tools(function ($tools) {
+            $tools->append(new ImportLink());
+        });
+
         $grid->disableExport();
         $grid->actions(function ($actions) {
             $actions->disableView();

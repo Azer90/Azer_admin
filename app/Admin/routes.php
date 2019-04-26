@@ -23,4 +23,6 @@ Route::group([
     $router->resource('tag', 'TagController');
     $router->resource('refundOrder', 'RefundOrderController',['only' => ['index']]);
     $router->post('refund', 'RefundController@init')->name('refund');
+
+    $router->post('linkImport', 'ImportController@linkImport')->name('linkImport');
 });
