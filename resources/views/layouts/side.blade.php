@@ -13,17 +13,17 @@
             <div class="tool-line"></div>
             <img class="imghover" src="{{asset('images/zx.png')}}">
             <div class="hidemobelBox" style="width:100px;">
-                <p>下载</p>
+                <p>软件下载</p>
                 <div class="triangle"> </div>
             </div>
         </div>
 
 
-        <div class="mobel" imgname="mail">
+        <div class="mobel" imgname="mail" onclick="alert('admin@smallpdfer.com')">
             <div class="tool-line"></div>
             <a href="mailto:kefu@makeding.com"><img class="imghover" src="{{asset('images/mail.png')}}"></a>
-            <div class="hidemobelBox">
-                <p><a rel="nofollow" href="mailto:kefu@makeding.com">admin@smallpdfer.com</a></p>
+            <div class="hidemobelBox"  style="width:100px;">
+                <p><a rel="nofollow" href="mailto:admin@smallpdfer.com">客户投诉</a></p>
                 <div class="triangle"> </div>
 
             </div>
