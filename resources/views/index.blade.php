@@ -364,30 +364,9 @@
 @section('link')
     <p class="friendLinks bd-b-2 pt20 pb20 hide-n-xs">
         友情链接：
-
-        <a href="http://www.aiqisoft.com" target="_blank">视频格式转换器</a>
-        <a href="http://www.guitarpro.cc/" target="_blank">吉他编曲软件</a>
-        <a href="https://aimeike.tv/" target="_blank">照片视频制作软件</a>
-        <a href="http://www.hunliji.com/"  target="_blank">拍婚纱照</a>
-        <a href="http://www.alienskins.cn/"  target="_blank">Exposure</a>
-        <a href="https://www.huisuanzhang.com/"  target="_blank">公司注册</a>
-        <a href="https://sunlogin.oray.com/"  target="_blank">远程桌面连接</a>
-        <A target="_blank" href="http://www.w3cschool.cn/" >w3cschool</A>
-        <a href="http://www.xinnet.com?utm_source=yqlj&utm_medium=cpc" target="_blank">新网</a>
-        <a href="http://www.liulanqi.net/" target="_blank">浏览器</a>
-        <a href="http://www.zhuobufan.com" target="_blank">卓不凡福利社</a>
-        <a href="http://www.officezhushou.com/" target="_blank">office教程</a>
-        <a href="http://www.rabbitpre.com/" target="_blank">H5模板</a>
-        <a href="http://www.upanshadu.com/"  target="_blank">U盘杀毒工具</a>
-        <a href="http://www.zwcad.com/"  target="_blank">CAD</a>
-        <a href="http://www.pc6.com/"  target="_blank" rel="nofollow">pc6下载站</a><!--不能删除-->
-        <A target="_blank" href="http://www.pc141.com/" rel="nofollow" >PC141软件下载站</A> <!--不能删除-->
-        <A target="_blank" href="http://www.66868.com/"  rel="nofollow" >系统家园</A> <!--不能删除-->
-        <A target="_blank" href="https://huke88.com/" >AI教程</A>
-        <a href="http://www.yibaixun.com/"  target="_blank">网站制作</a>
-        <a href="http://www.betterzipcn.com/" target="_blank">Mac解压缩软件</a>
-        <a href="http://www.58pic.com/" target="_blank">千图网</a>
-        <a rel="nofollow" target="_blank" href="youqinglianjie.html">更多友情链接</a>
+    @foreach ($link as $value)
+            <a href="{{ $value['url'] }}" target="_blank">{{ $value['name'] }}</a>
+    @endforeach
 
     </p>
 @endsection

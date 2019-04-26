@@ -15,6 +15,7 @@ class ImportLink extends AbstractTool
     }
     protected function script()
     {
+        $url = Request::getRequestUri();
         return <<<EOT
 
     $('input:file.import').change(function () {
@@ -32,8 +33,7 @@ class ImportLink extends AbstractTool
                    processData: false,//用于对data参数进行序列化处理 这里必须false
                    contentType: false, //必须
                    success: function (result) {
-                       console.log(result);
-                      
+                      $.pjax({container:'#pjax-container', url: '$url' });
                    },
                })
 

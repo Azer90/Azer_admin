@@ -5,7 +5,7 @@
 
 <div tabshowbindfilter="x2018Content">
     <div class="x2018Content1">
-        <h2 class="fs36 tac pt100 pb60">为什么使用{{ $config['title'] }}？</h2>
+        <h2 class="fs36 tac pt100 pb60">为什么使用晨光PDF转换器？</h2>
         <div class="all m0a pr">
             <h3 class="fs22"><span class="numBG">1</span>文档转换成功率高</h3>
             <p class="fs16 c6 w31p pl35  lh25 pt5 pb20">文档转换不改变原本排版，转换成功率高。</p>
@@ -22,7 +22,7 @@
 
 
         <div class="all m50a">
-            <h2 class="fs36 tac pb20">{{ $config['title'] }}功能简介</h2>
+            <h2 class="fs36 tac pb20">晨光PDF转换器功能简介</h2>
             <div class="layui-row pt30 pb30">
                 <div class="layui-col-xs6 pr30">
                     <a href="http://218.98.24.73/softdl.360tpcdn.com/auto/20190408/1900060976_110552f78b8161acafdda17e9e0f001c.exe"> <img width="560px" height="306px" src="{{asset('picture/1.png')}}" alt="PDF转换其他文件" /></a>

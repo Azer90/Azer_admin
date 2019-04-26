@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Article;
-use Illuminate\Support\Facades\Request;
+use App\Link;
 
 class IndexController extends Controller
 {
@@ -18,9 +18,9 @@ class IndexController extends Controller
         $name=$this->name;
         $seo=$this->seo;
         $config=$this->system;
-        $config['title_tag']='晨光PDF官网';
+        $link=Link::all();
         $help=Article::select('id','title','description')->where(['classify_id'=>1,'show'=>1])->take(6)->get();//教程
-        return view('index')->with(compact('nav','name','seo','config','help'));
+        return view('index')->with(compact('nav','name','seo','config','help','link'));
     }
 
     public function agreement(){

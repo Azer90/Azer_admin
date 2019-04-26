@@ -2,7 +2,7 @@
 <html lang="{{ app()->getLocale() }}">
 <head>
     @if ($name === '/')
-        <title>{{ $config['title_tag'] }}-{{ $config['title'] }}</title>
+        <title>{{ $config['title'] }}</title>
     @else
         <title>{{ $config['title_tag'] }}|{{ $config['title'] }}</title>
     @endif
