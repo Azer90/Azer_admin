@@ -38,7 +38,7 @@
 
 <div class="full m0a xiazaiBanner pr">
     <div class="all m0a pr" style="padding-top: 40px">
-        <h1 class="fs35">{{ $config['title'] }}(官方客户端)</h1>
+        <h1 class="fs35">晨光PDF转换器(官方客户端)</h1>
         <p class="fs18 pt12 pb6">支持系统：Winxp/Win7/Win8/Win10(32位/64位下载)</p>
         <p class="fs18">更新日期：2019.04.08</p>
         <p class="fs18">文件大小：39.5MB</p>
