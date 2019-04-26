@@ -215,7 +215,7 @@
                         <img src="{{asset('images/banner-pic.png')}}">
                     </li>
                     <li class="right banner-cxt">
-                        <h1><i>{{ $config['title'] }}</i></h1>
+                        <h1><i>晨光PDF转换器</i></h1>
                         <p>一款功能强大、操作简单的PDF处理转换器，支持PDF电子格式和word, ppt，图片及txt等多种格式之间的转换恢复，转换恢复率高，转换质量好。同时兼顾PDF合并分割解密提取等多种功能于一体的的新一代文件格式处理工具。
 
                         </p>
