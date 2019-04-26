@@ -4,23 +4,23 @@
             @yield('link')
 
 
-        <div class="layui-row pt50 pb30 bd-b-2 m_n_pt5 m_n_pb5 m_n_bn">
+        <div class="layui-row pt50 pb30 bd-b-2 m_n_pt5 m_n_pb5 m_n_bn" style="width: 550px;margin: 0 auto;">
 
-            <div class="layui-col-xs2 col-12 pr">
+            <div class="layui-col-xs4 col-12 pr">
                 <p class="fs20 pb20  m_n_pb10r m_n_fs32r">支持</p>
                 <ul class="lh32 hide-n-xs m_n_lh40r m_n_fs24r">
                     <li><a target="_blank" href="{{ route('help') }}">新手入门</a></li>
                     <li><a target="_blank" href="{{ route('problems') }}">常见问题</a></li>
                 </ul>
             </div>
-            <div class="layui-col-xs2 col-12 pr">
+            <div class="layui-col-xs4 col-12 pr">
                 <p class="fs20 pb20  m_n_pb10r m_n_fs32r">关于</p>
                 <ul class="lh32 hide-n-xs m_n_lh40r m_n_fs24r">
                     <li><a target="_blank" href="{{ route('agreement') }}">使用协议</a></li>
                     <li><a target="_blank" href="{{ route('disclaimer') }}">免责声明</a></li>
                 </ul>
             </div>
-            <div class="layui-col-xs2 col-12">
+            <div class="layui-col-xs4 col-12">
                 <h3 class="fs20 pb20 m_n_pb10r m_n_fs32r"><a target="_blank" href="lianxiwomen.html">联系我们</a></h3>
                 <ul class="lh32 hide-n-xs m_n_lh40r m_n_fs24r">
                     @if (isset($config['qq']))
@@ -36,12 +36,12 @@
             </div>
 
         </div>
-        <p class="pt10 pb5" align="center">
+        <p class="dn pt10 pb5" align="center">
             <img src="{{asset('picture/szwj.png')}}" alt="苏州网警">
             <script id="jsgovicon" src="{{asset('js/home/govicon.js')}}" type="text/javascript" charset="utf-8"></script>
         </p>
         @if (isset($config['qq']))
-            <center class="pt10">【友链交换要求：百度权重≥2，友链QQ：{{ $config['qq'] }}】</center>
+            <div class="dn pt10" style="text-align: center">【友链交换要求：百度权重≥2，友链QQ：{{ $config['qq'] }}】</div>
         @endif
 
 

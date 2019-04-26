@@ -167,11 +167,6 @@
            display: block;
        }
     }
-    @media (max-width: 1024px) {
-        .jiaochen{
-            text-align: center;
-        }
-    }
 
 
     @media (min-width: 1024px) {
@@ -201,6 +196,13 @@
         background-position: -56px -101px;
         width: 24px;
         height: 24px;
+    }
+    .jiaochen  >li {
+        line-height: 40px;
+        border-bottom: 1px dashed #084b24;
+    }
+    .jiaochen >li span {
+         float: right;
     }
 </style>
 <body>
@@ -262,16 +264,21 @@
 </div>
 <div class="full m0a tutorial-cxt">
     <h2 class="fs36 pt90 tac hborder">使用教程</h2>
-    <div class="fs18 c9   pt18 pb20">
-        <span class="jiaochen">
-        <p>1、下载安装{{ $config['title'] }}到电脑中。</p>
-        <p>2、运行软件，然后选择要转换的方式，比如选择PDF转word。</p>
-        <p>3、添加要转换的文件即可开始转换。 <a target="_blank" href="{{ route('help') }}">了解更多&gt;</a></p>
-        </span>
+    <div class="fs18 c9  pt18 pb20">
+        <ul class="jiaochen">
+            @foreach ($help as $value)
+                @if ($loop->last)
+                    <li><a href="{{ route('detail',['id'=>$value['id']]) }}" title="{{ $value['title'] }}">{{ $loop->iteration }}、{{ $value['title'] }}<span>{{ $value['created_at'] }}</span></a> </li>
+                @else
+                    <li><a href="{{ route('detail',['id'=>$value['id']]) }}" title="{{ $value['title'] }}">{{ $loop->iteration }}、{{ $value['title'] }}<span>{{ $value['created_at'] }}</span></a></li>
+                @endif
+
+            @endforeach
+        </ul>
 
     </div>
 
-    <ul style="width:800px" class="indexGongxiangTab  c-1 tac fs24 m40a pb40 " tabshow="true" tabshowbind="ziyuan">
+    <ul style="width:800px" class="dn indexGongxiangTab  c-1 tac fs24 m40a pb40 " tabshow="true" tabshowbind="ziyuan">
         <li>
             <dd class="dd-00 current">
                 <i></i>
@@ -295,16 +302,6 @@
     </ul>
 
 </div>
-<ul class="layui-row mt50 mb50" style="width: 1200px;margin: 0 auto">
-    @foreach ($help as $value)
-        <li class="layui-col-xs3 oh pr15">
-            <div class="fr w61p">
-                <h2 class="fs22 fwn overSL"><a style="color:#666" href="{{ route('detail',['id'=>$value['id']]) }}" target="_blank">{{ $value['title'] }}</a></h2>
-                <p class="c6 pt10 pb2">{{ $value['description'] }}</p>
-                <a href="{{ route('detail',['id'=>$value['id']]) }}" target="_blank">查看详情</a></div>
-        </li>
-    @endforeach
-</ul>
 <div class="full m0a" style="display: none">
     <h2 class="fs36 pt90 tac hborder mb30">常见问题</h2>
     <div class="cj_list">

@@ -19,7 +19,7 @@ class IndexController extends Controller
         $seo=$this->seo;
         $config=$this->system;
         $link=Link::all();
-        $help=Article::select('id','title','description')->where(['classify_id'=>1,'show'=>1])->take(6)->get();//教程
+        $help=Article::select('id','title','description','created_at')->where(['classify_id'=>1,'show'=>1])->take(6)->get();//教程
         return view('index')->with(compact('nav','name','seo','config','help','link'));
     }
 
