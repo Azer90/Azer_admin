@@ -30,7 +30,7 @@
                 @endif
 
             </div>
-            <div class="article-tag">推荐阅读：<a href="http://www.xjpdf.com/tag/excelzhuanpdf" rel="tag">excel转pdf</a><a href="http://www.xjpdf.com/tag/pdfzhuanhuanqi" rel="tag">pdf转换器</a></div>
+          {{--  <div class="article-tag">推荐阅读：<a href="#" rel="tag">excel转pdf</a><a href="#" rel="tag">pdf转换器</a></div>--}}
 
         </ul>
         <aside class="hero-aside">
