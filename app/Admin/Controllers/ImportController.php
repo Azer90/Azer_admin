@@ -18,6 +18,9 @@ class ImportController extends Controller
             $reader->ignoreEmpty();
             $data = $reader->get();
            foreach ($data as $k=>$v){
+               if(empty($v[0])){
+                   continue;
+               }
                $link_data[$k]['name']=$v[0];
                $link_data[$k]['url']=$v[1];
                $link_data[$k]['show']=1;
