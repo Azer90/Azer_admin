@@ -11,6 +11,8 @@ use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Show;
+use Encore\Admin\Widgets\Box;
+use Illuminate\Support\Facades\DB;
 
 class PayOrderController extends Controller
 {
@@ -82,6 +84,16 @@ class PayOrderController extends Controller
     protected function grid()
     {
         $grid = new Grid(new PayOrder);
+
+        $grid->header(function ($query) {
+
+            $gender = $query->select(DB::raw('count(status) as count, status'))
+                ->groupBy('status')->get()->pluck('count', 'status')->toArray();
+            $doughnut = view('admin.chart.order', compact('gender'));
+
+            return new Box('性别比例', $doughnut);
+        });
+
         $grid->filter(function($filter){
 
             // 去掉默认的id过滤器
