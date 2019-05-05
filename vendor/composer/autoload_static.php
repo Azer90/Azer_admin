@@ -19,14 +19,14 @@ class ComposerStaticInitf320fc9439f3b09e4a6fbeed5cdc65e3
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
-        'bd9634f2d41831496de0d3dfe4c94881' => __DIR__ . '/..' . '/symfony/polyfill-php56/bootstrap.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
+        'bd9634f2d41831496de0d3dfe4c94881' => __DIR__ . '/..' . '/symfony/polyfill-php56/bootstrap.php',
+        '4e8671d7be9056dcd04ddd9e8e15f9cc' => __DIR__ . '/..' . '/encore/laravel-admin/src/helpers.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         '841780ea2e1d6545ea3a253239d59c05' => __DIR__ . '/..' . '/qiniu/php-sdk/src/Qiniu/functions.php',
         '290dd4ba42f11019134caca05dbefe3f' => __DIR__ . '/..' . '/teamtnt/tntsearch/helper/helpers.php',
-        '4e8671d7be9056dcd04ddd9e8e15f9cc' => __DIR__ . '/..' . '/encore/laravel-admin/src/helpers.php',
         'f40cb564d92ad0e78b0bfdf9b86c5768' => __DIR__ . '/..' . '/fukuball/jieba-php/src/class/Jieba.php',
         'a778fafb0619406705f6fd4bb3ec7d5b' => __DIR__ . '/..' . '/fukuball/jieba-php/src/class/JiebaAnalyse.php',
         '06c61fd667b7f3d9ee59d805e51017e7' => __DIR__ . '/..' . '/fukuball/jieba-php/src/class/Finalseg.php',
@@ -142,6 +142,7 @@ class ComposerStaticInitf320fc9439f3b09e4a6fbeed5cdc65e3
         ),
         'E' => 
         array (
+            'Encore\\Chartjs\\' => 15,
             'Encore\\Admin\\' => 13,
             'Egulias\\EmailValidator\\' => 23,
         ),
@@ -388,6 +389,10 @@ class ComposerStaticInitf320fc9439f3b09e4a6fbeed5cdc65e3
         array (
             0 => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker',
         ),
+        'Encore\\Chartjs\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel-admin-ext/chartjs/src',
+        ),
         'Encore\\Admin\\' => 
         array (
             0 => __DIR__ . '/..' . '/encore/laravel-admin/src',
@@ -489,6 +494,7 @@ class ComposerStaticInitf320fc9439f3b09e4a6fbeed5cdc65e3
         'App\\Admin\\Controllers\\ExampleController' => __DIR__ . '/../..' . '/app/Admin/Controllers/ExampleController.php',
         'App\\Admin\\Controllers\\GoodsController' => __DIR__ . '/../..' . '/app/Admin/Controllers/GoodsController.php',
         'App\\Admin\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Admin/Controllers/HomeController.php',
+        'App\\Admin\\Controllers\\ImportController' => __DIR__ . '/../..' . '/app/Admin/Controllers/ImportController.php',
         'App\\Admin\\Controllers\\LinkController' => __DIR__ . '/../..' . '/app/Admin/Controllers/LinkController.php',
         'App\\Admin\\Controllers\\NavController' => __DIR__ . '/../..' . '/app/Admin/Controllers/NavController.php',
         'App\\Admin\\Controllers\\PayOrderController' => __DIR__ . '/../..' . '/app/Admin/Controllers/PayOrderController.php',
@@ -500,6 +506,7 @@ class ComposerStaticInitf320fc9439f3b09e4a6fbeed5cdc65e3
         'App\\Admin\\Extensions\\Form\\UEditor' => __DIR__ . '/../..' . '/app/Admin/Extensions/Form/UEditor.php',
         'App\\Admin\\Extensions\\Refund' => __DIR__ . '/../..' . '/app/Admin/Extensions/Refund.php',
         'App\\Admin\\Extensions\\RefundOrderExpoter' => __DIR__ . '/../..' . '/app/Admin/Extensions/RefundOrderExpoter.php',
+        'App\\Admin\\Extensions\\Tools\\ImportLink' => __DIR__ . '/../..' . '/app/Admin/Extensions/Tools/ImportLink.php',
         'App\\Article' => __DIR__ . '/../..' . '/app/Article.php',
         'App\\Classify' => __DIR__ . '/../..' . '/app/Classify.php',
         'App\\Config' => __DIR__ . '/../..' . '/app/Config.php',
@@ -1139,6 +1146,8 @@ class ComposerStaticInitf320fc9439f3b09e4a6fbeed5cdc65e3
         'Encore\\Admin\\Widgets\\Tab' => __DIR__ . '/..' . '/encore/laravel-admin/src/Widgets/Tab.php',
         'Encore\\Admin\\Widgets\\Table' => __DIR__ . '/..' . '/encore/laravel-admin/src/Widgets/Table.php',
         'Encore\\Admin\\Widgets\\Widget' => __DIR__ . '/..' . '/encore/laravel-admin/src/Widgets/Widget.php',
+        'Encore\\Chartjs\\Chartjs' => __DIR__ . '/..' . '/laravel-admin-ext/chartjs/src/Chartjs.php',
+        'Encore\\Chartjs\\ChartjsServiceProvider' => __DIR__ . '/..' . '/laravel-admin-ext/chartjs/src/ChartjsServiceProvider.php',
         'Error' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/Error.php',
         'Faker\\Calculator\\Iban' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Calculator/Iban.php',
         'Faker\\Calculator\\Inn' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Calculator/Inn.php',
