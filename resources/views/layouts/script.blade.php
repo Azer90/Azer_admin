@@ -2,7 +2,21 @@
 <script src="{{asset('js/home/31cada2e907c4bf8b68d23794f9714f8.js')}}"></script>
 <div class="dn">
    {{-- 百度站长自动推送--}}
-  {{--  <script>(function(){var bp = document.createElement("script"); bp.src ="//push.zhanzhang.baidu.com/push.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(bp, s);})();</script>--}}
+    <script>
+        (function(){
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            }
+            else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+    </script>
+
 
 
   {{-- 百度统计--}}
