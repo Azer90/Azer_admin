@@ -87,11 +87,17 @@ class PayOrderController extends Controller
 
         $grid->header(function ($query) {
 
-            $gender = $query->select(DB::raw('count(status) as count, status'))
+            $pay_stayus = $query->select(DB::raw('count(status) as count, status'))
                 ->groupBy('status')->get()->pluck('count', 'status')->toArray();
-            $doughnut = view('admin.chart.order', compact('gender'));
+           if(!isset($pay_stayus[1])){
+               $pay_stayus[1]=0;
+           }
+            if(!isset($pay_stayus[2])){
+                $pay_stayus[2]=0;
+            }
+            $doughnut = view('admin.chart.order', compact('pay_stayus'));
 
-            return new Box('性别比例', $doughnut);
+            return new Box('支付比例', $doughnut);
         });
 
         $grid->filter(function($filter){

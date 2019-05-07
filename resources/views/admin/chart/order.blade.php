@@ -7,20 +7,20 @@
             data: {
                 datasets: [{
                     data: [
-                       1,
-                        2,
-                        3
+                        {{ $pay_stayus[0] }},
+                        {{ $pay_stayus[1] }},
+                        {{ $pay_stayus[2] }}
                     ],
                     backgroundColor: [
+                        'rgb(226, 17, 34)',
                         'rgb(54, 162, 235)',
-                        'rgb(255, 99, 132)',
                         'rgb(255, 205, 86)'
                     ]
                 }],
                 labels: [
-                    'Male',
-                    'Female',
-                    'Unknown'
+                    '未支付',
+                    '支付',
+                    '已退款'
                 ]
             },
             options: {
