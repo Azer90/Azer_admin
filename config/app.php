@@ -181,6 +181,7 @@ return [
         Maatwebsite\Excel\ExcelServiceProvider::class,
         Laravel\Scout\ScoutServiceProvider::class,
         Vanry\Scout\TNTSearchScoutServiceProvider::class,
+        Encore\Chartjs\ChartjsServiceProvider::class,
     ],
 
     /*
