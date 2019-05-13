@@ -30,7 +30,7 @@ class SurpportController extends Controller
      *教程
      */
     public function help(){
-        $help=Article::select('id','title','description')->where(['classify_id'=>1,'show'=>1])->paginate(1);
+        $help=Article::select('id','title','description')->where(['classify_id'=>1,'show'=>1])->paginate(8);
         $nav=$this->nav;
         $name=$this->name;
         $seo=$this->seo;
@@ -42,7 +42,7 @@ class SurpportController extends Controller
      *常见问题
      */
     public function problems(){
-        $problems=Article::select('id','title','description')->where(['classify_id'=>2,'show'=>1])->paginate(1);
+        $problems=Article::select('id','title','description')->where(['classify_id'=>2,'show'=>1])->paginate(8);
         $nav=$this->nav;
         $name=$this->name;
         $seo=$this->seo;
@@ -54,7 +54,7 @@ class SurpportController extends Controller
      *知识库
      */
     public function library(){
-        $library=Article::select('id','title','description')->where(['classify_id'=>3,'show'=>1])->paginate(1);
+        $library=Article::select('id','title','description')->where(['classify_id'=>3,'show'=>1])->paginate(8);
         $nav=$this->nav;
         $name=$this->name;
         $seo=$this->seo;
