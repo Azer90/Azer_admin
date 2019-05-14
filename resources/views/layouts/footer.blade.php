@@ -62,7 +62,7 @@
             @endif
 
             @if (isset($config['icp']))
-                <a class="show-xs-n-block" href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action" target="_blank" rel="nofollow">{{ $config['icp'] }}</a>
+                <a class="show-xs-n-block" href="http://www.beian.miit.gov.cn" target="_blank" rel="nofollow">{{ $config['icp'] }}</a>
             @endif
 
         </p>
