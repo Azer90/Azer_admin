@@ -49,7 +49,7 @@
             3. 界面进行简洁优化<br/>
             4. 系统兼容主流windowsXp、7、8、10。<br/>
            </p>
-        <p><a class="a-2 w170 h50 lh50 fs20 tac" href="http://218.98.24.73/softdl.360tpcdn.com/auto/20190408/1900060976_110552f78b8161acafdda17e9e0f001c.exe">立即下载</a> </p>
+        <p><a class="a-2 w170 h50 lh50 fs20 tac" href="http://www.ipdftoword.net/package/CGPDF6.6.0.1.exe">立即下载</a> </p>
 
     </div>
 

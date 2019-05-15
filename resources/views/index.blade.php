@@ -222,7 +222,7 @@
 
                         </p>
                         <div class="btn-wrapper">
-                            <a class="btn btn-yellow" href="http://218.98.24.73/softdl.360tpcdn.com/auto/20190408/1900060976_110552f78b8161acafdda17e9e0f001c.exe" target="_blank">立即下载<img
+                            <a class="btn btn-yellow" href="http://www.ipdftoword.net/package/CGPDF6.6.0.1.exe" target="_blank">立即下载<img
                                         src="{{asset('images/icon-download.png')}}"></a>
                         </div>
                     </li>
