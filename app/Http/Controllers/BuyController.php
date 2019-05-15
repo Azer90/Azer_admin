@@ -232,7 +232,7 @@ class BuyController extends Controller
     }
 
     protected function sendEmail($to,$code){
-        $subject = '北斗pdfer转换器激活码';
+        $subject = '自动发送-晨光pdf转换器注册码';
         $data=['code' => $code];
         Mail::send('email.send', $data, function ($message) use($to, $subject) {
                 $message->to($to)->subject($subject);
