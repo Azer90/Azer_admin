@@ -49,7 +49,7 @@
         window.open('http://wpa.qq.com/msgrd?v=3&uin=2638897163&site=qq&menu=yes','_blank');
     }
     function xiazai() {
-        window.open('http://www.ipdftoword.net/package/CGPDF6.6.0.1.exe','_blank');
+        window.open('http://xiazai.ipdftoword.net/cgpdf.exe','_blank');
     }
 </script>
 <script>
