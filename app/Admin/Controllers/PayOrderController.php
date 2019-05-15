@@ -123,7 +123,7 @@ class PayOrderController extends Controller
             ]);
 
         });
-        $grid->id('ID')->sortable();
+        $grid->id('ID');
         $grid->column('order_no', trans('admin.order_no'));
         $grid->payway(trans('admin.payway'));
         $grid->goods_name(trans('admin.goods'));
