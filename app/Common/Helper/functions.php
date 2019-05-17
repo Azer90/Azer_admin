@@ -10,8 +10,7 @@ function get_host(){
     return $url;
 }
 
-function article_curl($urls=array()){
-    $api = 'http://data.zz.baidu.com/urls?site=www.ipdftoword.net&token=SXtI9P0RvVBs77sh';
+function article_curl($api='',$urls=array()){
     $ch = curl_init();
     $options =  array(
         CURLOPT_URL => $api,
