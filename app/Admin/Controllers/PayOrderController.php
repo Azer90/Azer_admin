@@ -89,6 +89,9 @@ class PayOrderController extends Controller
 
             $pay_stayus = $query->select(DB::raw('count(status) as count, status'))
                 ->groupBy('status')->get()->pluck('count', 'status')->toArray();
+            if(!isset($pay_stayus[0])){
+                $pay_stayus[0]=0;
+            }
            if(!isset($pay_stayus[1])){
                $pay_stayus[1]=0;
            }

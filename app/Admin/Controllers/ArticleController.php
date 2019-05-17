@@ -11,6 +11,7 @@ use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Show;
+use Illuminate\Support\Facades\Log;
 
 class ArticleController extends Controller
 {
@@ -166,7 +167,14 @@ class ArticleController extends Controller
             $footer->disableCreatingCheck();
 
         });
-
+        $form->saved(function (Form $form) {
+            $url=get_host().'/surpport/'.$form->model()->id;
+            $result=article_curl([$url]);
+            $monolog = Log::getMonolog();
+            $monolog->popHandler();
+            Log::useFiles(storage_path('logs/baidu_error.log'));
+            LOG::info($result);
+        });
         return $form;
     }
 }
