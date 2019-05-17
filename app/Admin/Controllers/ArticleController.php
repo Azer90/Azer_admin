@@ -170,7 +170,7 @@ class ArticleController extends Controller
         $form->saved(function (Form $form) {
             $url=get_host().'/surpport/'.$form->model()->id;
             $api = 'http://data.zz.baidu.com/urls?site=www.ipdftoword.net&token=SXtI9P0RvVBs77sh';
-            $original_api = 'http://data.zz.baidu.com/urls?appid=1632142710156602&token=VP0W19wUFRYzdHyS&type=realtime';
+            $original_api = 'http://data.zz.baidu.com/urls?appid=1632142710156602&token=VP0W19wUFRYzdHyS&type=batch';
             $result=article_curl($api,[$url]);
             $original_result=article_curl($original_api,[$url]);
             $monolog = Log::getMonolog();
