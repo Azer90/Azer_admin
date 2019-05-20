@@ -170,14 +170,17 @@ class ArticleController extends Controller
         $form->saved(function (Form $form) {
             $url=get_host().'/surpport/'.$form->model()->id;
             $api = 'http://data.zz.baidu.com/urls?site=www.ipdftoword.net&token=SXtI9P0RvVBs77sh';
-            $original_api = 'http://data.zz.baidu.com/urls?appid=1632142710156602&token=VP0W19wUFRYzdHyS&type=batch';
+            $batch_api = 'http://data.zz.baidu.com/urls?appid=1632142710156602&token=VP0W19wUFRYzdHyS&type=batch';
+            $realtime_api = 'http://data.zz.baidu.com/urls?appid=1632142710156602&token=VP0W19wUFRYzdHyS&type=realtime';
             $result=article_curl($api,[$url]);
-            $original_result=article_curl($original_api,[$url]);
+            $batch_result=article_curl($batch_api,[$url]);
+            $realtime_result=article_curl($realtime_api,[$url]);
             $monolog = Log::getMonolog();
             $monolog->popHandler();
             Log::useFiles(storage_path('logs/baidu_error.log'));
-            LOG::info($result);
-            LOG::info($original_result);
+            Log::info($result);
+            Log::info('batch:'.$batch_result);
+            Log::info('realtime:'.$realtime_result);
         });
         return $form;
     }
