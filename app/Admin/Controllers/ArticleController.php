@@ -103,9 +103,7 @@ class ArticleController extends Controller
 
         $grid->created_at(trans('admin.created_at'));
         $grid->updated_at(trans('admin.updated_at'));
-        if (Admin::user()->can('article')) {
-            $grid->disableActions();
-        }
+
         $grid->actions(function ($actions) {
             if (Admin::user()->can('article')) {
                 $actions->disableDelete();
@@ -113,7 +111,13 @@ class ArticleController extends Controller
             $actions->disableView();
         });
         $grid->disableExport();
-
+        if (Admin::user()->can('article')) {
+            $grid->tools(function ($tools) {
+                $tools->batch(function ($batch) {
+                    $batch->disableDelete();
+                });
+            });
+        }
         return $grid;
     }
 
