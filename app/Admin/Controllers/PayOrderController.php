@@ -84,8 +84,7 @@ class PayOrderController extends Controller
     protected function grid()
     {
         $grid = new Grid(new PayOrder);
-        $grid->model()->orderBy('id', 'desc');
-      /*  $grid->header(function ($query) {
+        $grid->header(function ($query) {
             $pay_stayus = $query->select(DB::raw('count(status) as count, status'))
                 ->groupBy('status')->get()->pluck('count', 'status')->toArray();
             if(!isset($pay_stayus[0])){
@@ -100,7 +99,7 @@ class PayOrderController extends Controller
             $doughnut = view('admin.chart.order', compact('pay_stayus'));
 
             return new Box('支付比例', $doughnut);
-        });*/
+        });
 
         $grid->filter(function($filter){
 

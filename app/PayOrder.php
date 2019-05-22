@@ -18,7 +18,7 @@ class PayOrder extends Model
 
         $start = ($page-1)*$perPage;
 
-        $result = self::skip($start)->take($perPage)->get()->toArray();
+        $result = self::skip($start)->take($perPage)->orderBy('id', 'desc')->get()->toArray();
         $ips=array_column($result,'ip');
         $ips=array_unique($ips);
         foreach ($ips as $value){
