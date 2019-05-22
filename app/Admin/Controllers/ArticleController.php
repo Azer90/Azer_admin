@@ -7,6 +7,7 @@ use App\Classify;
 use App\Http\Controllers\Controller;
 use App\Tag;
 use Encore\Admin\Controllers\HasResourceActions;
+use Encore\Admin\Facades\Admin;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
@@ -104,6 +105,9 @@ class ArticleController extends Controller
         $grid->updated_at(trans('admin.updated_at'));
 
         $grid->actions(function ($actions) {
+            if (Admin::user()->can('article')) {
+                $actions->disableDelete();
+            }
             $actions->disableView();
         });
         $grid->disableExport();

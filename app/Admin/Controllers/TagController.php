@@ -5,6 +5,7 @@ namespace App\Admin\Controllers;
 use App\Tag;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\HasResourceActions;
+use Encore\Admin\Facades\Admin;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
@@ -87,6 +88,9 @@ class TagController extends Controller
         $grid->updated_at(trans('admin.updated_at'));
         $grid->disableExport();
         $grid->actions(function ($actions) {
+            if (Admin::user()->can('article')) {
+                $actions->disableDelete();
+            }
             $actions->disableView();
         });
 
