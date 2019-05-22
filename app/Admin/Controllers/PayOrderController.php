@@ -136,7 +136,7 @@ class PayOrderController extends Controller
         $grid->m_code('注冊码');
         $grid->created_at(trans('admin.created_at'));
         $grid->updated_at(trans('admin.updated_at'));
-        $grid->openid('用户标识');
+        //$grid->openid('用户标识');
         $grid->status(trans('admin.status'))->display(function ($released) {
             switch ($released){
                 case 0:
