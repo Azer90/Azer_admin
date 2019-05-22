@@ -105,13 +105,13 @@ class ArticleController extends Controller
         $grid->updated_at(trans('admin.updated_at'));
 
         $grid->actions(function ($actions) {
-            if (Admin::user()->can('article')) {
+            if (!Admin::user()->isAdministrator()) {
                 $actions->disableDelete();
             }
             $actions->disableView();
         });
         $grid->disableExport();
-        if (Admin::user()->can('article')) {
+        if (!Admin::user()->isAdministrator()) {
             $grid->tools(function ($tools) {
                 $tools->batch(function ($batch) {
                     $batch->disableDelete();
