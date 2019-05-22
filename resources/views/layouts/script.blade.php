@@ -21,8 +21,13 @@
 
   {{-- 百度统计--}}
     <script>
-    /*    var _hmt = _hmt || [];(function() { var hm = document.createElement("script");
-         hm.src = "//hm.baidu.com/hm.js?195f109cedab976fdd32b6e029360081"; var s = document.getElementsByTagName("script")[0];  s.parentNode.insertBefore(hm, s);})();*/
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?24e558d6095cc064d925a7a7b787eabf";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
     </script>
 
 
