@@ -100,6 +100,7 @@
     <ul class="user-infor">
         <div class="buy-step" style="text-align: center"><span class="step-num">  <p>支付成功,请填写邮箱和机器码</p></span>发送注册码</div>
         <span style="text-align: center;display: block;color: red">Tips:请勿关闭该页面,否则后果自负</span>
+        <span style="text-align: center;display: block;color: red">企业邮箱自动发送,可能接收在您的【垃圾邮箱】</span>
         <dl class="buy-input">
             <dd class="dd-01">邮&emsp;箱：</dd>
             <dd class="dd-02"><input name="email" type="text" value="" placeholder="请输入邮箱" class="email" id="email"></dd>
