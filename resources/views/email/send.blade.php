@@ -7,11 +7,13 @@
 </head>
 <body>
 <span>
-    您好，感谢使用晨光pdf转换器软件。<br/>
+    &nbsp;您好，感谢使用晨光pdf转换器软件。<br/>
 晨光pdf转换器软件注册授权官方教程：http://www.ipdftoword.net/surpport/14<br/>
 晨光pdf转换器注册码采用【一机一码】,您的注册码是：{{$code}}<br/>
 
 </span>
+<br/>
+<br/>
 <span>
      苏州图可互联网信息有限公司<br/>
     Linda<br/>

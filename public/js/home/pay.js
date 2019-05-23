@@ -241,8 +241,9 @@ function codeTJ() {
        /* console.log(activecode);*/
         var param = {'email': email, 'code': code, 'order_no': order_no,'_token':$('.token').text()};
         $.post(url, param, function (data) {
-             console.log(data);
+             //console.log(data);
              if(data['code']==1000){
+                 alert('发送成功');
                  $(".pay-success-bg").css("display", "none");
                  $(".pay-success").css("display", "none");
                  if(data['payway']=='wechat'){
@@ -250,6 +251,8 @@ function codeTJ() {
                  }else if(data['payway']=='alipay'){
                      window.location.href=buyUrl;
                  }
+             }else {
+                 alert('发送失败');
              }
 
         });
