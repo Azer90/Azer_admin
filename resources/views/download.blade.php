@@ -111,7 +111,7 @@
     <ul class="layui-row mt50 mb50">
         @foreach ($help as $value)
             <li class="layui-col-xs6 oh pr15">
-                <div class="fr">
+                <div>
                     <h2 class="fs22 fwn overSL"><a style="color:#666" href="{{ route('detail',['id'=>$value['id']]) }}" target="_blank">{{ $value['title'] }}</a></h2>
                     <p class="c6 pt10 pb2">{{ $value['description'] }}</p>
                     <a href="{{ route('detail',['id'=>$value['id']]) }}" target="_blank">查看详情</a></div>
