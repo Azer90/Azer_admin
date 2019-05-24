@@ -83,6 +83,9 @@ class SurpportController extends Controller
             $hot=Article::select('id','title')->where(['type'=>'hot','show'=>1])->take(5)->get();//热门
             $new=Article::select('id','title')->where(['show'=>1])->orderBy('id', 'desc')->take(5)->get();//最新
             $article=Article::find($id);
+            if(empty($article)){
+                return abort(404);
+            }
             $up =Article::select('id','title')->whereRaw('id > ? and `show` = ? and classify_id = ?', [$id,1,$article['classify_id']])->orderBy('id', 'asc')->first();//上一篇
             $down =Article::select('id','title')->whereRaw('id < ? and `show` = ? and classify_id = ?', [$id,1,$article['classify_id']])->orderBy('id', 'desc')->first();//下一篇
 
