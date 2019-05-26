@@ -12,7 +12,7 @@
         </div>
         <ul class="article-content">
 
-            <h1><a href="http://www.xjpdf.com/1222.html">{{ $article['title'] }}</a></h1>
+            <h1><a href="{{ route('detail',['id'=>$article['id']]) }}">{{ $article['title'] }}</a></h1>
             <h6 class="post-update-time">
                 <span class="post-time">发布于：{{ $article['time'] }}</span>
                 <span class="post-cat">分类：<a href="http://www.xjpdf.com/category/library" rel="category tag">{{ $article['class_name'] }}</a></span>
