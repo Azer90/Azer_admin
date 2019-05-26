@@ -15,8 +15,8 @@ class TagController extends Controller
         $name=$this->name;
         $seo=$this->seo;
         $config=$this->system;
-        $config['title_tag']='標簽';
-        $data= Tag::select('tags.name','tags.id as tag_id','ar.title','ar.description','ar.id')->join('article_tag as at', 'at.tag_id', '=', 'tags.id')->join('article as ar', 'at.article_id', '=', 'ar.id')->where(['tags.id'=>$id])->paginate(1);
+        $config['title_tag']='标签';
+        $data= Tag::select('tags.name','tags.id as tag_id','ar.title','ar.description','ar.id')->join('article_tag as at', 'at.tag_id', '=', 'tags.id')->join('article as ar', 'at.article_id', '=', 'ar.id')->where(['tags.id'=>$id])->paginate(8);
         $tag=Tag::select('id','name')->take(15)->get();
     /*   $ids = array_column($tag['data'], 'id');
         $article_tag = DB::table('article_tag as at')
