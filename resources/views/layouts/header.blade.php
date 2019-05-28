@@ -21,18 +21,6 @@
     <script>
        let host= "{{ get_host()}}";
     </script>
-        <script type="application/ld+json">
-    {
-        "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
-        "@id": "http://www.ipdftoword.net/",
-        "appid": "1632142710156602",
-        "title": "晨光PDF转换器",
-        "images": [
-        "http://www.ipdftoword.net/picture/1.png",
 
-        ], //请在此处添加希望在搜索结果中展示图片的url，可以添加1个或3个url
-        "pubDate": "2019-05-13T08:00:01" // 需按照yyyy-mm-ddThh:mm:ss格式编写时间，字母T不能省去
-    }
-</script>
     <!-- TinyMCE Session vars empty -->
 </head>

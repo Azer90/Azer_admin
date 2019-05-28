@@ -6,6 +6,7 @@ use App\Article;
 use App\Tag;
 use App\VisitorIp;
 use Illuminate\Support\Facades\Request;
+use Illuminate\Support\Facades\URL;
 
 
 class SurpportController extends Controller
@@ -100,8 +101,10 @@ class SurpportController extends Controller
             $seo=['keywords'=>$article['keywords'],'description'=>$article['description']];
             $config=$this->system;
             $config['title_tag']= $article['title'];
-        return view('detail')->with(compact('nav','name','seo','config','article','hot','new','up','down','tag'));
+            $img=get_content_img($article['content']);
+            $url=URL::current();
+            //dd($url);
+            return view('detail')->with(compact('nav','name','seo','config','article','hot','new','up','down','tag','img','url'));
     }
-
 
 }

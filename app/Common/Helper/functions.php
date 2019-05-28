@@ -37,3 +37,43 @@ function Yoko_time($time =array()){
     }
     return $date;
 }
+
+
+function get_content_img($str){
+    $pattern="/<[img|IMG].*?src=[\'|\"](.*?(?:[\.gif|\.jpg]))[\'|\"].*?[\/]?>/";
+    preg_match_all($pattern,$str,$match);
+    $article_img = count($match[1]);
+    $img=[];
+    if($article_img<3){
+        $url=CheckUrl($match[1][0]);//1图
+        if(!$url){
+            $img_url=get_host().$match[1][0];
+        }else{
+            $img_url=$match[1][0];
+        }
+        $img[]= '"'.$img_url.'"';
+    }elseif($article_img>=3){
+        for($i=$article_img-1;$i>($article_img-4);$i--){
+            $url=CheckUrl($match[1][$i]);
+           if(!$url){
+               $img_url=get_host().$match[1][$i];
+           }else{
+               $img_url=$match[1][$i];
+           }
+
+                $img[]='"'.$img_url.'"';
+        }
+    }
+    $img= implode(',',$img);
+    return $img;
+}
+
+
+function CheckUrl($C_url){
+    $str="/^http(s?):\/\/(?:[A-za-z0-9-]+\.)+[A-za-z]{2,4}(?:[\/\?#][\/=\?%\-&~`@[\]\':+!\.#\w]*)?$/";
+    if (!preg_match($str,$C_url)){
+        return false;
+    }else{
+        return true;
+    }
+}
