@@ -18,7 +18,7 @@ a:hover {color:#008c8c; text-decoration: none; cursor:pointer;}
 
 .all{width: 1180px;} /* 可结合“m[0a~100a]”使窗口居中: <div class="all m0a"></div> ; */
 
-.full{width:100%; max-width: 1920px; min-width: 1180px;} /*用于铺满屏幕宽度 【铺满容器宽度用width100】*/
+.full{width:100%;  min-width: 1180px;} /*用于铺满屏幕宽度 【铺满容器宽度用width100】*/
 .fullFix{width:100%; min-width: 1100px;} /*用于铺满屏幕宽度 【铺满容器宽度用width100】*/
 
 
