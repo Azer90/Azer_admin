@@ -15,8 +15,8 @@ class SurpportController extends Controller
      * 支持页
      */
     public function index(){
-        $help=Article::select('id','title','description')->where(['classify_id'=>1,'show'=>1])->take(3)->get();//教程
-        $problems=Article::select('id','title','description')->where(['classify_id'=>2,'show'=>1])->take(4)->get();//常见问题
+        $help=Article::select('id','title','description')->where(['classify_id'=>1,'show'=>1])->orderBy('id','desc')->take(3)->get();//教程
+        $problems=Article::select('id','title','description')->where(['classify_id'=>2,'show'=>1])->orderBy('id','desc')->take(4)->get();//常见问题
 
         $nav=$this->nav;
         $name=$this->name;
@@ -30,7 +30,7 @@ class SurpportController extends Controller
      *教程
      */
     public function help(){
-        $help=Article::select('id','title','description')->where(['classify_id'=>1,'show'=>1])->paginate(8);
+        $help=Article::select('id','title','description')->where(['classify_id'=>1,'show'=>1])->orderBy('id','desc')->paginate(8);
         $nav=$this->nav;
         $name=$this->name;
         $seo=$this->seo;
@@ -42,7 +42,7 @@ class SurpportController extends Controller
      *常见问题
      */
     public function problems(){
-        $problems=Article::select('id','title','description')->where(['classify_id'=>2,'show'=>1])->paginate(8);
+        $problems=Article::select('id','title','description')->where(['classify_id'=>2,'show'=>1])->orderBy('id','desc')->paginate(8);
         $nav=$this->nav;
         $name=$this->name;
         $seo=$this->seo;
@@ -54,7 +54,7 @@ class SurpportController extends Controller
      *知识库
      */
     public function library(){
-        $library=Article::select('id','title','description')->where(['classify_id'=>3,'show'=>1])->paginate(8);
+        $library=Article::select('id','title','description')->where(['classify_id'=>3,'show'=>1])->orderBy('id','desc')->paginate(8);
         $nav=$this->nav;
         $name=$this->name;
         $seo=$this->seo;
