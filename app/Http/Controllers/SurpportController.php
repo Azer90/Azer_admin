@@ -103,8 +103,9 @@ class SurpportController extends Controller
             $config['title_tag']= $article['title'];
             $img=get_content_img($article['content']);
             $url=URL::current();
-            //dd($url);
-            return view('detail')->with(compact('nav','name','seo','config','article','hot','new','up','down','tag','img','url'));
+            $pubDate=date('Y-m-d').'T'.date('H:s:i');
+
+            return view('detail')->with(compact('nav','name','seo','config','article','hot','new','up','down','tag','img','url','pubDate'));
     }
 
 }
