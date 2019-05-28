@@ -65,7 +65,7 @@ class BuyController extends Controller
                 'out_trade_no' => $order_no,
                 'total_amount' => $goods['price'],
                 //'total_amount' => 0.01,
-                'subject'      => $goods['name'],
+                'subject'      => $goods['name'].'Ⅰ',
                 'http_method'  => 'URL'
             ];
 
@@ -75,7 +75,7 @@ class BuyController extends Controller
         }else if($data['paymethod']=='wechat'){
             $order = [
                 'out_trade_no' => $order_no,
-                'body' =>  $goods['name'],
+                'body' =>  $goods['name'].'Ⅰ',
                 'total_fee'      => $goods['price']*100,
                 //'total_fee'      =>1,
             ];
