@@ -222,7 +222,14 @@ class BuyController extends Controller
         $msg['code'] = 1001;
         if(!empty($orderData['status'])){
             PayOrder::where(['order_no'=>$data['order_no']])->update(['email' => $data['email'],'m_code'=>$data['code']]);
-            $this->sendEmail($data['email'],$data['code']);
+            try {
+
+               $this->sendEmail($data['email'], $data['code']);
+
+            }catch (\Swift_TransportException $e){
+                $msg['message']=$e->getMessage();
+                return response()->json($msg);
+            }
             $msg['message']='成功';
             $msg['payway'] = $orderData['payway'];
             $msg['code'] = 1000;
