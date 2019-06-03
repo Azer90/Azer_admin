@@ -19,11 +19,11 @@
         </div>
 
 
-        <div class="mobel" imgname="mail" onclick="alert('admin@smallpdfer.com')">
+        <div class="mobel" imgname="mail" onclick="alert('admin@ipdftoword.com')">
             <div class="tool-line"></div>
             <a href="mailto:kefu@makeding.com"><img class="imghover" src="{{asset('images/mail.png')}}"></a>
             <div class="hidemobelBox"  style="width:100px;">
-                <p><a rel="nofollow" href="mailto:admin@smallpdfer.com">客户投诉</a></p>
+                <p><a rel="nofollow" href="mailto:admin@ipdftoword.com">客户投诉</a></p>
                 <div class="triangle"> </div>
 
             </div>

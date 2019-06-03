@@ -11,7 +11,7 @@
     <p class="ti2 pb12 m_pb20r">We need your thought！</p>
     <p class="ti2 pb12 fwb m_pb20r">可以通过以下方式联系我们：</p>
     <p class="ti2 pb12 m_pb20r">
-        <span class="fwb">邮箱：</span>admin@smallpdfer.com
+        <span class="fwb">邮箱：</span>admin@ipdftoword.com
     </p>
     <p class="ti2 pb12 m_pb20r">
         <span class="fwb">客服：</span>{{ $config['email'] }}
