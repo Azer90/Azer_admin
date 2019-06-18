@@ -43,7 +43,11 @@ function get_content_img($str){
     $pattern="/<[img|IMG].*?src=[\'|\"](.*?(?:[\.gif|\.jpg]))[\'|\"].*?[\/]?>/";
     preg_match_all($pattern,$str,$match);
     $article_img = count($match[1]);
+
     $img=[];
+    if(empty($article_img)){
+        return $img;
+    }
     if($article_img<3){
         $url=CheckUrl($match[1][0]);//1图
         if(!$url){
