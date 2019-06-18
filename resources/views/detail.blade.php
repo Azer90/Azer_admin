@@ -104,5 +104,3 @@
 {{--js--}}
 @include('layouts.script')
 
-</body>
-</html>

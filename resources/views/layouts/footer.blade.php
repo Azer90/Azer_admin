@@ -21,7 +21,7 @@
                 </ul>
             </div>
             <div class="layui-col-xs4 col-12">
-                <h3 class="fs20 pb20 m_n_pb10r m_n_fs32r"><a target="_blank" href="lianxiwomen.html">联系我们</a></h3>
+                <h3 class="fs20 pb20 m_n_pb10r m_n_fs32r"><a>联系我们</a></h3>
                 <ul class="lh32 hide-n-xs m_n_lh40r m_n_fs24r" style="width: 500px;">
                     @if (isset($config['qq']))
                         <li><img width="30" height="30" src="{{asset('picture/qq.png')}}" class="mr15">{{ $config['qq'] }}</li>
@@ -68,3 +68,7 @@
         </p>
     </div>
 </div>
+
+
+</body>
+</html>

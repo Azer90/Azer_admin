@@ -62,5 +62,3 @@
 @include('layouts.side')
 {{--js--}}
 @extends('layouts.script')
-</body>
-</html>
