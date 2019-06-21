@@ -197,12 +197,19 @@
         width: 24px;
         height: 24px;
     }
-    .jiaochen  >li {
+    .jiaochen  >li span{
         line-height: 40px;
         border-bottom: 1px dashed #084b24;
     }
-    .jiaochen >li span {
+    .jiaochen >li .span2 {
          float: right;
+    }
+    .jiaochen >li .span1 {
+         width:320px;
+        display: inline-block;
+        overflow:hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 </style>
 <body>
@@ -268,9 +275,9 @@
         <ul class="jiaochen">
             @foreach ($help as $value)
                 @if ($loop->last)
-                    <li><a href="{{ route('detail',['id'=>$value['id']]) }}" title="{{ $value['title'] }}">{{ $loop->iteration }}、{{ $value['title'] }}<span>{{ $value['created_at'] }}</span></a> </li>
+                    <li><a href="{{ route('detail',['id'=>$value['id']]) }}" title="{{ $value['title'] }}"><span class="span1">{{ $loop->iteration }}、{{ $value['title'] }}</span><span class="span2">{{ $value['created_at'] }}</span></a> </li>
                 @else
-                    <li><a href="{{ route('detail',['id'=>$value['id']]) }}" title="{{ $value['title'] }}">{{ $loop->iteration }}、{{ $value['title'] }}<span>{{ $value['created_at'] }}</span></a></li>
+                    <li><a href="{{ route('detail',['id'=>$value['id']]) }}" title="{{ $value['title'] }}"><span class="span1">{{ $loop->iteration }}、{{ $value['title'] }}</span><span class="span2">{{ $value['created_at'] }}</span></a></li>
                 @endif
 
             @endforeach
