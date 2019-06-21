@@ -84,7 +84,7 @@ class ArticleController extends Controller
     protected function grid()
     {
         $grid = new Grid(new Article);
-
+        $grid->model()->orderBy('id','desc');
         $grid->id('ID')->sortable();
         $grid->column('classify.name', '分类名');
         $grid->column('title', trans('admin.title'));
