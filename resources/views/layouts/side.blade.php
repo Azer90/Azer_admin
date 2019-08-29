@@ -22,7 +22,7 @@
         <div class="mobel" imgname="mail" onclick="alert('admin@ipdftoword.com')">
             <div class="tool-line"></div>
             <a href="mailto:kefu@makeding.com"><img class="imghover" src="{{asset('images/mail.png')}}" alt="客户投诉"></a>
-            <div class="hidemobelBox"  style="width:100px;">
+            <div class="hidemobelBox"  style="width:100px;text-align: center">
                 <p><a rel="nofollow" href="mailto:admin@ipdftoword.com">客户投诉</a></p>
                 <div class="triangle"> </div>
 
