@@ -23,7 +23,7 @@
             <div class="tool-line"></div>
             <a href="mailto:kefu@makeding.com"><img class="imghover" src="{{asset('images/mail.png')}}" alt="客户投诉"></a>
             <div class="hidemobelBox"  style="width:100px;text-align: center">
-                <p><a rel="nofollow" href="mailto:admin@ipdftoword.com">客户投诉</a></p>
+                <p><a rel="nofollow" style="text-align: center" href="mailto:admin@ipdftoword.com">客户投诉</a></p>
                 <div class="triangle"> </div>
 
             </div>
