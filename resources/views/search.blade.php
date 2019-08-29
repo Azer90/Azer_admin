@@ -9,7 +9,7 @@
 <div class="all m0a layui-row pb50 m_pb50r">
     <div class="layui-col-sm8 pr20 m_pr0">
         <div class="searchResult">
-            <h1 class="fs16 bg-3 pr pl20 hborder-1 h40 lh40 m_fs36r m_pr20r m_h80r m_lh80r">"{{ $tag }}"搜索结果：</h1>
+            <span class="fs16 bg-3 pr pl20 hborder-1 h40 lh40 m_fs36r m_pr20r m_h80r m_lh80r">"{{ $tag }}"搜索结果：</span>
             <ul class="">
                 @isset($article_index)
                     @foreach ($article_index as $value)

@@ -13,9 +13,9 @@
                 <ul class="category-list">
                     @foreach ($data as $value)
                     <li>
-                        <h1 class="title">
+                        <span class="title">
                             <a href="{{ route('detail',['id'=>$value['id']]) }}" rel="bookmark" title="{{ $value['title'] }}">{{ $value['title'] }}</a>
-                        </h1>
+                        </span>
                         <div rel="bookmark" title="{{ $value['title'] }}" class="excerpt">
                             <p>{{ $value['description'] }}</p>
                         </div>

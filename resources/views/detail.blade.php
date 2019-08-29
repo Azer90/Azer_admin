@@ -26,7 +26,7 @@
         </div>
         <ul class="article-content">
 
-            <h1><a href="{{ route('detail',['id'=>$article['id']]) }}">{{ $article['title'] }}</a></h1>
+            <div class="d_title"><a href="{{ route('detail',['id'=>$article['id']]) }}">{{ $article['title'] }}</a></div>
             <h6 class="post-update-time">
                 <span class="post-time">发布于：{{ $article['time'] }}</span>
                 <span class="post-cat">分类：<a href="http://www.xjpdf.com/category/library" rel="category tag">{{ $article['class_name'] }}</a></span>
@@ -84,11 +84,11 @@
                         @endforeach
                     </div>
                 </div>
-                <a href="http://wpa.qq.com/msgrd?v=3&uin=2638897163&site=qq&menu=yes" target="_blank" class="aside-qq"><img src="{{asset('picture/qq.png')}}" alt="">联系客服...</a>
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=2638897163&site=qq&menu=yes" target="_blank" class="aside-qq"><img src="{{asset('picture/qq.png')}}" alt="联系客服">联系客服...</a>
 
                 <div class="hero-aside-content">
                     <p><span style="color: #084b24">{{ $config['title'] }}</span>功能强大、界面简洁、操作简单的PDF转换成Word或者Word转换成PDF的软件</p>
-                    <a href="http://xiazai.ipdftoword.net/CGPDF6.6.1.exe" class="hero-download"><img src="{{asset('picture/icon-hero-download.png')}}" alt="">立即下载</a>
+                    <a href="http://xiazai.ipdftoword.net/CGPDF6.6.1.exe" class="hero-download"><img src="{{asset('picture/icon-hero-download.png')}}" alt="立即下载">立即下载</a>
                 </div>
             </div>
         </aside>

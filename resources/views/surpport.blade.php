@@ -15,7 +15,7 @@
     <ul class="the-category-list the-category-list-help">
         <li class="the-category-name the-category-help">
             <a href="{{ route('help')  }}">
-                <img src="picture/icon-006.png">
+                <img src="picture/icon-006.png" alt="使用教程">
                 <p>使用教程</p>
                 <div class="more"><i>查看更多>></i></div>
             </a>
@@ -24,7 +24,7 @@
 
             <li class="category-list-help">
                 <div class="item-wrap">
-                    <h1 class="title"><a href="{{ route('detail',['id'=>$value['id']]) }}" title="{{ $value['title'] }}" rel="bookmark">{{ $value['title'] }}</a></h1>
+                    <div class="title"><a href="{{ route('detail',['id'=>$value['id']]) }}" title="{{ $value['title'] }}" rel="bookmark">{{ $value['title'] }}</a></div>
                     <div class="excerpt">{{ $value['description'] }}</div>
                     <p class="more">
                         <a href="{{ route('detail',['id'=>$value['id']]) }}" title="{{ $value['title'] }}" rel="bookmark">更多>></a>
@@ -40,7 +40,7 @@
     <ul class="the-category-list the-category-list-problems">
         <li class="the-category-name the-category-prblems">
             <a href="{{ route('problems') }}">
-                <img src="picture/icon-007.png">
+                <img src="picture/icon-007.png" alt="常见问题">
                 <p>常见问题</p>
                 <div class="more"><i>查看更多>></i></div>
             </a>
@@ -51,7 +51,7 @@
                 @foreach ($problems as $value)
                     <div class="item-wrap">
                         <dl>
-                            <dd class="item-title"><h1><i>{{ $loop->iteration }}</i><span> question</span></h1></dd>
+                            <dd class="item-title"><div><i>{{ $loop->iteration }}</i><span> question</span></div></dd>
                             <dd class="item-excerpt">
                                 <div title="{{ $value['title'] }}" rel="bookmark">
                                     <h2><a href="{{ route('detail',['id'=>$value['id']]) }}" title="{{ $value['title'] }}" rel="bookmark">{{ $value['title'] }}</a></h2>
@@ -70,7 +70,7 @@
 </article>
 
 <section class="wrapper support-tips surpport-reg-guide full">
-    <h1 class="title"><i class="i-01"></i>注册购买<i class="i-02"></i></h1>
+    <div class="title"><i class="i-01"></i>注册购买<i class="i-02"></i></div>
     <div class="title-02">如何购买晨光PDF转换器注册码?</div>
     <ul class="wrapper">
         <div class="left cxt">
@@ -88,7 +88,7 @@
             </a>
         </div>
         <div class="right pic">
-            <img src="picture/end-01.png">
+            <img src="picture/end-01.png" alt="箭头标识">
         </div>
         <div class="clearfix"></div>
     </ul>
@@ -109,7 +109,7 @@
             </a>
         </div>
         <div class="left pic">
-            <img src="picture/end-02.png">
+            <img src="picture/end-02.png" alt="箭头标识">
         </div>
         <div class="clearfix"></div>
     </ul>

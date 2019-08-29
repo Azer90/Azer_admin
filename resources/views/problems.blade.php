@@ -8,10 +8,10 @@
     <ul class="wrapper current">
         <li class="left banner-pic banner-pic"></li>
         <li class="right banner-cxt">
-            <h1>
+            <div class="Problems">
                 <i>常见问题</i><img src="{{asset('picture/banner-cxt-box.png')}}">
                 <span>Common Problems</span>
-            </h1>
+            </div>
             <p>1、成功支付后，多长时间能够收到注册码？应如何激活软件？<br>2、购买一次软件能够使用多长时间？可在几台电脑上使用？<br>3、免费试用版软件和注册版软件有何不同之处？</p>
         </li>
         <div class="clearfix"></div>
@@ -32,7 +32,7 @@
             @foreach ($problems as $value)
             <li>
                 <a href="{{ route('detail',['id'=>$value['id']]) }}" rel="bookmark" title="{{ $value['title'] }}">
-                    <h1><i>{{ $loop->iteration }}</i><span>{{ $value['title'] }}</span></h1>
+                    <div class="help_title"><i>{{ $loop->iteration }}</i><span>{{ $value['title'] }}</span></div>
                     <div class="excerpt"><p>{{ $value['description'] }}</p>
                     </div>
                     <h3>查看详细...</h3>

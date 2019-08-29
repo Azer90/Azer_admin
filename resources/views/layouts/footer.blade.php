@@ -24,11 +24,11 @@
                 <h3 class="fs20 pb20 m_n_pb10r m_n_fs32r"><a>联系我们</a></h3>
                 <ul class="lh32 hide-n-xs m_n_lh40r m_n_fs24r" style="width: 500px;">
                     @if (isset($config['qq']))
-                        <li><img width="30" height="30" src="{{asset('picture/qq.png')}}" class="mr15">{{ $config['qq'] }}</li>
+                        <li><img width="30" height="30" src="{{asset('picture/qq.png')}}" alt="QQ" class="mr15">{{ $config['qq'] }}</li>
                     @endif
 
                     @if (isset($config['email']))
-                        <li><img src="{{asset('picture/footermail.png')}}" class="mr15"><a href="mailto:{{ $config['email'] }}" rel="nofollow">{{ $config['email'] }}</a></li>
+                        <li><img src="{{asset('picture/footermail.png')}}" class="mr15" alt="邮箱"><a href="mailto:{{ $config['email'] }}" rel="nofollow">{{ $config['email'] }}</a></li>
                     @endif
 
 

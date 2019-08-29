@@ -28,7 +28,7 @@
         width: 47%;
     }
 
-    .banner-cxt h1 i {
+    .banner-cxt span i {
         font-size: 32px;
         line-height: 1;
     }
@@ -221,16 +221,16 @@
             <section class="banner banner-index">
                 <ul class="wrapper current">
                     <li class="left banner-pic">
-                        <img src="{{asset('images/banner-pic.png')}}">
+                        <img src="{{asset('images/banner-pic.png')}}" alt="晨光PDF转换器">
                     </li>
                     <li class="right banner-cxt">
-                        <h1><i>晨光PDF转换器</i></h1>
+                        <span><i>晨光PDF转换器</i></span>
                         <p>一款功能强大、操作简单的PDF处理转换器，支持PDF电子格式和word, ppt，图片及txt等多种格式之间的转换恢复，转换恢复率高，转换质量好。同时兼顾PDF合并分割解密提取等多种功能于一体的的新一代文件格式处理工具。
 
                         </p>
                         <div class="btn-wrapper">
                             <a class="btn btn-yellow" href="http://xiazai.ipdftoword.net/CGPDF6.6.1.exe" target="_blank">立即下载<img
-                                        src="{{asset('images/icon-download.png')}}"></a>
+                                        src="{{asset('images/icon-download.png')}}" alt="下载"></a>
                         </div>
                     </li>
                     <div class="clearfix"></div>

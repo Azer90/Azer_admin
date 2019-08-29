@@ -20,7 +20,7 @@
             @foreach ($help as $value)
             <li>
                 <a href="{{ route('detail',['id'=>$value['id']]) }}" rel="bookmark" title="{{ $value['title'] }}">
-                    <h1><i>{{ $loop->iteration }}</i><span>{{ $value['title'] }}</span></h1>
+                    <div class="help_title"><i>{{ $loop->iteration }}</i><span>{{ $value['title'] }}</span></div>
                     <div class="excerpt"><p>{{ $value['description'] }}</p>
                     </div>
                     <h3>查看详细...</h3>

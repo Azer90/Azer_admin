@@ -38,7 +38,7 @@
 
 <div class="full m0a xiazaiBanner pr">
     <div class="all m0a pr" style="padding-top: 40px">
-        <h1 class="fs35">晨光PDF转换器(官方客户端)</h1>
+        <span class="fs35">晨光PDF转换器(官方客户端)</span>
         <p class="fs18 pt12 pb6">支持系统：Winxp/Win7/Win8/Win10(32位/64位下载)</p>
         <p class="fs18">更新日期：2019.04.08</p>
         <p class="fs18">文件大小：39.5MB</p>
@@ -57,25 +57,25 @@
 <div class="all m0a">
     <h2 class="fs32 tac  pt90 hborder">操作引导</h2>
     <ul class="oh tac yingdaoList pt30 pb90">
-        <li class="fl w18p"><img src="picture/xiazai1_1.png" />
+        <li class="fl w18p"><img src="picture/xiazai1_1.png"  alt="下载软件"/>
             <p class="fs16 pt20">下载软件</p>
         </li>
         <li class="fl">
             <hr />
         </li>
-        <li class="fl w18p"><img src="picture/xiazai1_2.png" />
+        <li class="fl w18p"><img src="picture/xiazai1_2.png" alt="点击安装包进行安装"/>
             <p class="fs16 pt20">点击安装包进行安装</p>
         </li>
         <li class="fl">
             <hr />
         </li>
-        <li class="fl w18p"><img src="picture/xiazai1_3.png" />
+        <li class="fl w18p"><img src="picture/xiazai1_3.png" alt="购买获取注册码"/>
             <p class="fs16 pt20">购买获取注册码</p>
         </li>
         <li class="fl">
             <hr />
         </li>
-        <li class="fl w18p"><img src="picture/xiazai1_4.png" />
+        <li class="fl w18p"><img src="picture/xiazai1_4.png" alt="输入注册码激活软件"/>
             <p class="fs16 pt20">输入注册码激活软件</p>
         </li>
     </ul>
@@ -85,23 +85,23 @@
         <div>
             <div class="text-center hero-index-step">
                 <div>
-                    <img src="{{asset('picture/item-001.png')}}" alt="">
+                    <img src="{{asset('picture/item-001.png')}}" alt="下载软件“双击打开”">
                     <p>下载软件“双击打开”</p>
                 </div>
                 <div>
-                    <img src="{{asset('picture/item-002.png')}}" alt="">
+                    <img src="{{asset('picture/item-002.png')}}" alt="点击左侧“文件转Word”">
                     <p>点击左侧“文件转Word”</p>
                 </div>
                 <div>
-                    <img src="{{asset('picture/item-003.png')}}" alt="">
+                    <img src="{{asset('picture/item-003.png')}}" alt="点击“添加文件”，选择转换的pdf文档">
                     <p>点击“添加文件”，选择转换的pdf文档。</p>
                 </div>
                 <div>
-                    <img src="{{asset('picture/item-004.png')}}" alt="">
+                    <img src="{{asset('picture/item-004.png')}}" alt="点击“浏览”按钮，为文档选择一个存储路径。">
                     <p>点击“浏览”按钮，为文档选择一个存储路径。</p>
                 </div>
                 <div>
-                    <img src="{{asset('picture/item-005.png')}}" alt="">
+                    <img src="{{asset('picture/item-005.png')}}" alt="点击“开始转换”， 进入格式转换状态">
                     <p>点击“开始转换”， 进入格式转换状态。</p>
                 </div>
             </div>

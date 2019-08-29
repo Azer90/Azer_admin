@@ -7,4 +7,4 @@
         margin-left: -21px;
     }
 </style>
-<img src="{{ asset('picture/loading1.gif') }}"/>
+<img src="{{ asset('picture/loading1.gif') }}" alt="加载中"/>

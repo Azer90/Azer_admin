@@ -18,9 +18,9 @@
 
                     <div class="plan-titles">
                         @foreach ($goods as $value)
-                            <h1 class="plan-title">{{ $value['title'] }}</h1>
+                            <span class="plan-title">{{ $value['title'] }}</span>
                             @if($loop->last)
-                                <h1 class="plan-title current">{{ $value['title'] }}</h1>
+                                <span class="plan-title current">{{ $value['title'] }}</span>
                             @endif
                         @endforeach
                     </div>
@@ -54,8 +54,8 @@
             <ul class="payment-wrapper">
                 <div class="buy-step"><span class="step-num"><em>2</em><i class="icon-step-diamond"></i></span>请选择付款方式</div>
                 <div class="payment">
-                    <a value="alipay" id="aliPay" class="pay-ali current" ><span class="icon icon-tag"></span><img src="{{ asset('picture/pay-ali.png') }}"></a>
-                    <a value="wechat" id="wechatPay" class="pay-wechat"><span class="icon icon-tag"></span><img src="{{ asset('picture/pay-wechat.png') }}"></a>
+                    <a value="alipay" id="aliPay" class="pay-ali current" ><span class="icon icon-tag"></span><img src="{{ asset('picture/pay-ali.png') }}" alt="支付宝"></a>
+                    <a value="wechat" id="wechatPay" class="pay-wechat"><span class="icon icon-tag"></span><img src="{{ asset('picture/pay-wechat.png') }}" alt="微信"></a>
                 </div>
                 <div style="text-align: center; color:#FF0000;margin-top: 10px"><p>Tips:1.支付成功后填写邮箱和软件机器码进行授权*请勿关闭当前页</p><p>2.请在软件界面右上角点击【注册】，查看软件【机器码】</p></div>
                 <div class="pay-now" id="payNow">
@@ -77,18 +77,18 @@
         </li>
         <li class="li-02">
             <h3>微信扫码支付</h3>
-            <h1 class="price-wechat">￥<span class="thePlanPrice">{{ $endgoods['price'] }}</span></h1>
+            <div class="price-wechat">￥<span class="thePlanPrice">{{ $endgoods['price'] }}</span></div>
             <div class="qr-code-wrapper" id="qrcode">
 
             </div>
             <div class="tips">
-                <img src="{{ asset('picture/icon-scan.png') }}">
+                <img src="{{ asset('picture/icon-scan.png') }}" alt="扫描二维码支付">
                 <p>请使用微信扫一扫</p>
                 <p>扫描二维码支付</p>
             </div>
         </li>
         <li class="li-03">
-            <img src="{{ asset('picture/code-tips.png') }}">
+            <img src="{{ asset('picture/code-tips.png') }}" alt="扫一扫">
         </li>
     </ul>
 </div>

@@ -17,7 +17,7 @@
             <p class="fs16 c6 w31p pl35  lh25 pt5 pb20">软件简化了繁琐的转换过程，为用户提供傻瓜式的一键转换模式。</p>
             <h3 class="fs22"><span class="numBG">5</span>深受喜爱</h3>
             <p class="fs16 c6 w31p pl35  lh25 pt5 pb20">{{ $config['title'] }}凭借其简单易用的功能而广受用户认可。</p>
-            <a href="http://218.98.24.73/softdl.360tpcdn.com/auto/20190408/1900060976_110552f78b8161acafdda17e9e0f001c.exe"><img width="790px" height="422px" src="{{asset('picture/1.png')}}" class="pa r0 t0" /></a>
+            <a href="http://218.98.24.73/softdl.360tpcdn.com/auto/20190408/1900060976_110552f78b8161acafdda17e9e0f001c.exe"><img width="790px" height="422px" src="{{asset('picture/1.png')}}" alt="晨光pdf软件图"  class="pa r0 t0" /></a>
         </div>
 
 

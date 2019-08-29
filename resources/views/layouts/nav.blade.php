@@ -1,10 +1,10 @@
 <div class="full m0a h100 zi999 bd-b-1">
 
     <div class="top all m0a pr m_oh m_o95">
-        <img class="m_menu layui-hide m_w30r" src="{{asset('picture/m_menu.png')}}">
+        <img class="m_menu layui-hide m_w30r" src="{{asset('picture/m_menu.png')}}" alt="菜单">
         <div class="logo">
             <h1 class="fs16 c4 m_fs16r">
-                <img style="margin-bottom: 5px" src="{{asset('picture/logo.png')}}" alt=""><span style="padding-left:10px;font-size: 20px;color: #0a4b3e;height: 40px;line-height: 40px;display: inline-block">{{ $config['title'] }}</span>
+                <img style="margin-bottom: 5px" src="{{asset('picture/logo.png')}}" alt="网站logo"><span style="padding-left:10px;font-size: 20px;color: #0a4b3e;height: 40px;line-height: 40px;display: inline-block">{{ $config['title'] }}</span>
             </h1>
         </div>
 
@@ -17,7 +17,7 @@
         </div>
 
         <div class="topSearchImg hide-n-xs" onclick="$(this).addClass('layui-hide');$('.topMenuNaviList').addClass('layui-hide');$('.topSearch').removeClass('layui-hide');">
-            <img class="hand" src="{{asset('picture/searchbtn.png')}}">
+            <img class="hand" src="{{asset('picture/searchbtn.png')}}" alt="搜索">
         </div>
 
 

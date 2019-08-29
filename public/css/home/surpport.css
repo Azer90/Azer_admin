@@ -1338,7 +1338,7 @@ table{
     text-align: center;
 }
 
-.wechat-pay-dialog .li-02 h1 {
+.wechat-pay-dialog .li-02 .price-wechat {
     font-size: 28px;
     font-weight: bold;
     line-height: 28px;
@@ -1922,11 +1922,11 @@ h1.title {
     width: 63%;
 }
 
-.banner-problems .banner-cxt h1 {
+.banner-problems .banner-cxt .Problems {
     position: relative;
 }
 
-.banner-problems .banner-cxt h1 i {
+.banner-problems .banner-cxt .Problems i {
     font-size: 48px;
     font-style: italic;
     line-height: 1;
@@ -1936,7 +1936,7 @@ h1.title {
     border: none;
 }
 
-.banner-problems .banner-cxt h1 span {
+.banner-problems .banner-cxt .Problems span {
     font-size: 32px;
     font-style: italic;
     line-height: 1;
@@ -1944,7 +1944,7 @@ h1.title {
     color: #b9ccc2;
 }
 
-.banner-problems .banner-cxt h1 img {
+.banner-problems .banner-cxt .Problems img {
     position: absolute;
     left: 35%;
 }
@@ -2065,7 +2065,7 @@ h1.title {
     }
 }
 
-.category-list-help .item-wrap h1 {
+.category-list-help .item-wrap .title {
     font-size: 18px;
     line-height: 1.8;
     padding: 16px;
@@ -2073,15 +2073,15 @@ h1.title {
     background: #008c8c;
 }
 
-.category-list-help .item-wrap h1:hover {
+.category-list-help .item-wrap .title:hover {
     background-color: #3d8c86;
 }
 
-.category-list-help .item-wrap h1 a {
+.category-list-help .item-wrap .title a {
     color: #fff;
 }
 
-.category-list-help .item-wrap h1 a:hover {
+.category-list-help .item-wrap .title a:hover {
     color: #fff;
 }
 
@@ -2168,31 +2168,31 @@ h1.title {
     }
 }
 
-.category-list-problems .item-title h1 {
+.category-list-problems .item-title div {
     overflow: hidden;
 }
 
-.category-list-problems .item-title h1 {
+.category-list-problems .item-title div {
     padding: .3em 1em;
     color: #fff;
     background: #008c8c;
 }
 
 @media(min-width: 1024px) {
-    .category-list-problems .item-title h1 {
+    .category-list-problems .item-title div {
         height: 180px;
         padding: 0;
         text-align: center;
     }
 }
 
-.category-list-problems .item-title h1 i {
+.category-list-problems .item-title div i {
     font-style: normal;
     margin-right: .3em;
 }
 
 @media (min-width: 1024px) {
-    .category-list-problems .item-title h1 i {
+    .category-list-problems .item-title div i {
         font-size: 40px;
         display: block;
         width: 50%;
@@ -2201,7 +2201,7 @@ h1.title {
     }
 }
 
-.category-list-problems .item-title h1 span {
+.category-list-problems .item-title div span {
     font-size: 14px;
     line-height: 1;
 }
@@ -2387,14 +2387,14 @@ h1.title {
     box-shadow: 0 0 20px rgba(0,0,0,.2);
 }
 
-.surpport-cat-excerpt h1 {
+.surpport-cat-excerpt .help_title {
     overflow: hidden;
     width: 100%;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
 
-.surpport-cat-excerpt h1 i {
+.surpport-cat-excerpt .help_title i {
     font-style: normal;
     line-height: 30px;
     display: inline-block;
@@ -2409,7 +2409,7 @@ h1.title {
     background: #008c8c;
 }
 
-.surpport-cat-excerpt h1 span {
+.surpport-cat-excerpt .help_title span {
     font-size: 18px;
     line-height: 1;
     color: #000;
@@ -2433,7 +2433,7 @@ h1.title {
     color: #008c8c;
 }
 
-.surpport-cat-excerpt a:hover h1 span, .surpport-cat-excerpt a:hover h3 {
+.surpport-cat-excerpt a:hover .help_title span, .surpport-cat-excerpt a:hover h3 {
     text-decoration: underline;
     color: #008c8c;
 }
@@ -2472,15 +2472,16 @@ h1.title {
     color: #89949b;
 }
 
-.support-tips h1.title {
+.support-tips div.title {
     line-height: 1;
     position: relative;
     margin: 50px auto;
     text-align: center;
     color: #008c8c;
+    font-size: 24px;
 }
 
-.support-tips h1.title i {
+.support-tips div.title i {
     position: absolute;
     top: 50%;
     display: block;
@@ -2489,12 +2490,12 @@ h1.title {
     background: #a0a0a0;
 }
 
-.support-tips h1.title i.i-01 {
+.support-tips div.title i.i-01 {
     left: 50%;
     margin-left: -240px;
 }
 
-.support-tips h1.title i.i-02 {
+.support-tips div.title i.i-02 {
     right: 50%;
     margin-right: -240px;
 }
@@ -2861,11 +2862,12 @@ h1.title {
 /**
  *文章内容
  */
-.article-content > h1 {
+.article-content > .d_title {
     line-height: 50px;
     height: 50px;
     text-align: center;
     background: #008c8c;
+    font-size: 20px;
 }
 
 .article-content > .update-time {
@@ -2881,11 +2883,11 @@ h1.title {
     }
 }
 
-.article-content > h1 a {
+.article-content > .d_title a {
     color: #fff;
 }
 
-.article-content > h1 a:hover {
+.article-content > .d_title a:hover {
     text-decoration: none;
     color: #fff;
 }
@@ -3939,7 +3941,7 @@ h1.title {
         margin: 0 auto;
     }
 
-    .article-content > h1 {
+    .article-content > .d_title {
         font-size: 18px;
     }
 
